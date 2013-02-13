@@ -184,7 +184,9 @@ public class LoginScreenForm extends javax.swing.JFrame {
             pst.setString(2, password.getText());
             rs = pst.executeQuery();
             if (rs.next()) {
-                JOptionPane.showMessageDialog(null, "username and password are correct");
+                //JOptionPane.showMessageDialog(null, "username and password are correct");
+                //Added this line so when login is successful the StartupScreen.java will initialize.
+                new StartupScreen().setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(null, "Invalid username and password");
             }
