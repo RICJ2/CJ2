@@ -26,7 +26,7 @@ package loginscreen;
 import java.sql.*;
 import javax.swing.*;
 
-class Mediator{
+class Mediator_backup{
 
 Connection conn = null;
     public static Connection ConnectDb(){
