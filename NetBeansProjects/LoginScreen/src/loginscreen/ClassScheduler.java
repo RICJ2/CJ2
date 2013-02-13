@@ -8,6 +8,7 @@ package loginscreen;
  *
  * @author jroberti
  */
+
 public class ClassScheduler {
 
     /**
@@ -19,3 +20,4 @@ public class ClassScheduler {
         log.setVisible(true);
     }
 }
+
