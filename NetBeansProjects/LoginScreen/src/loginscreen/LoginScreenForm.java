@@ -177,7 +177,7 @@ public class LoginScreenForm extends javax.swing.JFrame {
 //        }
 //        else{//through error message
 //        };
-        String sql = "select * from users where login_Name = ? and password = ?";
+        String sql = "select * from where login_Name = ? and password = ?";
         try {
             pst = conn.prepareStatement(sql);
             pst.setString(1, username.getText());
