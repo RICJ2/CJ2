@@ -8,12 +8,14 @@ package loginscreen;
  *
  * @author jroberti
  */
-public class LoginScreen {
+public class ClassScheduler {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Mediator mid = new Mediator();
+        LoginScreenForm log = new LoginScreenForm(mid);
+        log.setVisible(true);
     }
 }
