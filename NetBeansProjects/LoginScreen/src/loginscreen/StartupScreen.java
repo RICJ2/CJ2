@@ -4189,7 +4189,8 @@ try{
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-
+        conn = Mediator.ConnectDb();
+        Fillcombo();
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jComboBox44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox44ActionPerformed
@@ -4260,11 +4261,7 @@ try{
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox8ActionPerformed
 
-    private void formWindowOpened(java.awt.event.WindowEvent evt) {
-        // TODO add your handling code here:
-        conn = Mediator.ConnectDb();
-        Fillcombo();
-}
+
     /**
      * @param args the command line arguments
      */
