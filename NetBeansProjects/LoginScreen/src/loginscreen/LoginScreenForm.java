@@ -6,26 +6,27 @@
  */
 package loginscreen;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+//import java.sql.Connection;
+//import java.sql.PreparedStatement;
+//import java.sql.ResultSet;
 import javax.swing.JOptionPane;
+import sun.awt.resources.awt;
 
 /**
  *
  * @author jroberti
  */
 public class LoginScreenForm extends javax.swing.JFrame {
-    //Mediator mediator;
-
-    Connection conn = null;
-    ResultSet rs = null;
-    PreparedStatement pst = null;
+    Mediator mediator;
+    //Connection conn = null;
+    //ResultSet rs = null;
+    //PreparedStatement pst = null;
 
     /**
      * Creates new form LoginScreenForm
      */
-    public LoginScreenForm() {//(Mediator m) {
+    public LoginScreenForm(Mediator m) {
+        mediator = m;
         initComponents();
     }
 
@@ -170,30 +171,32 @@ public class LoginScreenForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-//        String userName = username.getText();
-//        String passWord = password.getText();
-//        if (mediator.verifyLogin(userName, passWord)){
-//        // transition to next page
-//        }
-//        else{//through error message
-//        };
-        String sql = "select * from users where login_Name = ? and password = ?";
-        try {
-            pst = conn.prepareStatement(sql);
-            pst.setString(1, username.getText());
-            pst.setString(2, password.getText());
-            rs = pst.executeQuery();
-            if (rs.next()) {
-                //JOptionPane.showMessageDialog(null, "username and password are correct");
-                //Added this line so when login is successful the StartupScreen.java will initialize.
-                new StartupScreen().setVisible(true);
-            } else {
-                JOptionPane.showMessageDialog(null, "Invalid username and password");
-            }
 
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
+        String userName = username.getText();
+        String passWord = password.getText();
+        if (mediator.verifyLogin(userName, passWord)){
+        
+        // transition to next page
         }
+        else{JOptionPane.showMessageDialog(null, "Invalid username and password");
+}
+//        String sql = "select * from users where login_Name = ? and password = ?";
+//        try {
+//            pst = conn.prepareStatement(sql);
+//            pst.setString(1, username.getText());
+//            pst.setString(2, password.getText());
+//            rs = pst.executeQuery();
+//            if (rs.next()) {
+//                //JOptionPane.showMessageDialog(null, "username and password are correct");
+//                //Added this line so when login is successful the StartupScreen.java will initialize.
+//                new StartupScreen().setVisible(true);
+//            } else {
+//                JOptionPane.showMessageDialog(null, "Invalid username and password");
+//            }
+//
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(null, e);
+//        }
         //JOPtionPane.showMessageDialog(this, "Inputs: \nUsername:" + username + "\nPassword: " + password);
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -203,7 +206,7 @@ public class LoginScreenForm extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
-        conn = Mediator.ConnectDb();
+        //conn = Mediator.ConnectDb();
 
 
     }//GEN-LAST:event_formWindowOpened
@@ -211,44 +214,44 @@ public class LoginScreenForm extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /*
-         * Set the Nimbus look and feel
-         */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /*
-         * If Nimbus (introduced in Java SE 6) is not available, stay with the
-         * default look and feel. For details see
-         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LoginScreenForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LoginScreenForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LoginScreenForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LoginScreenForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /*
-         * Create and display the form
-         */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-
-            public void run() {
-                new LoginScreenForm().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /*
+//         * Set the Nimbus look and feel
+//         */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /*
+//         * If Nimbus (introduced in Java SE 6) is not available, stay with the
+//         * default look and feel. For details see
+//         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(LoginScreenForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(LoginScreenForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(LoginScreenForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(LoginScreenForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /*
+//         * Create and display the form
+//         */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//
+//            public void run() {
+//                new LoginScreenForm().setVisible(true);
+//            }
+//        });
+//    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
