@@ -10,6 +10,7 @@ package loginscreen;
 //import java.sql.PreparedStatement;
 //import java.sql.ResultSet;
 import javax.swing.JOptionPane;
+import sun.awt.resources.awt;
 
 /**
  *
@@ -170,13 +171,15 @@ public class LoginScreenForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
         String userName = username.getText();
         String passWord = password.getText();
         if (mediator.verifyLogin(userName, passWord)){
+        
         // transition to next page
         }
         else{JOptionPane.showMessageDialog(null, "Invalid username and password");
-        }
+}
 //        String sql = "select * from users where login_Name = ? and password = ?";
 //        try {
 //            pst = conn.prepareStatement(sql);
