@@ -24,7 +24,7 @@ public class StartupScreen extends javax.swing.JFrame {
         initComponents();
     }
     private void Fillcombo(){
-       //String sql = "select * from courses";
+       String sql = "select * from courses";
 //try{
 //    pst = conn.prepareStatement(sql);
 //    rs = pst.executeQuery();
