@@ -14,9 +14,9 @@ class Mediator {
     Connection conn = null;
     PreparedStatement pst = null;
     ResultSet rs = null;
-    
+
    public Mediator(){
-  
+
     //public static Connection ConnectDb(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
@@ -53,9 +53,8 @@ class Mediator {
         catch (Exception e) {
             //JOptionPane.showMessageDialog(null, e);
         }
-       return compareValue; 
+       return compareValue;
     }
-    
+
     //public Connection ConnectDb(){return conn;}
 }
-
