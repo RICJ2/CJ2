@@ -4,35 +4,38 @@
  */
 package loginscreen;
 
-import java.sql.*;
+//import java.sql.*;
 import javax.swing.*;
 /**
  *
  * @author jroberti
  */
 public class StartupScreen extends javax.swing.JFrame {
-Connection conn = null;
-ResultSet rs = null;
-PreparedStatement pst = null;
+ Mediator mediator;
+
+//Connection conn = null;
+//ResultSet rs = null;
+//PreparedStatement pst = null;
     /**
      * Creates new form StartupScreen
      */
-    public StartupScreen() {
+    public StartupScreen(Mediator m) {
+       mediator = m;
         initComponents();
     }
     private void Fillcombo(){
        String sql = "select * from courses";
-try{
-    pst = conn.prepareStatement(sql);
-    rs = pst.executeQuery();
-    while (rs.next()){
-        String cid = rs.getString("course_id");
-        jComboBox1.addItem(cid);
-    }
-}
-    catch(Exception e){
-        JOptionPane.showMessageDialog(null, e);
-    }
+//try{
+//    pst = conn.prepareStatement(sql);
+//    rs = pst.executeQuery();
+//    while (rs.next()){
+//        String cid = rs.getString("course_id");
+//        jComboBox1.addItem(cid);
+//    }
+//}
+//    catch(Exception e){
+//        JOptionPane.showMessageDialog(null, e);
+   // }
     }
 
     /**
@@ -4189,8 +4192,11 @@ try{
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-        conn = Mediator.ConnectDb();
-        Fillcombo();
+//        conn = Mediator.ConnectDb();
+//        Fillcombo();
+
+
+
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jComboBox44ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox44ActionPerformed
@@ -4293,7 +4299,7 @@ try{
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
 
-                new StartupScreen().setVisible(true);
+                //new StartupScreen().setVisible(true);
 
             }
         });
