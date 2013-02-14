@@ -35,16 +35,16 @@ class Mediator {
 //            return s.getPassword();
 //        }
 
-    public Boolean verifyLogin(String un, String pw){
-        Boolean compareValue = false;
+    public void verifyLogin(String un, String pw){
+        //Boolean compareValue = false;
         String sql = "select * from users where login_Name = ? and password = ?";
         try {
             pst = conn.prepareStatement(sql);
             pst.setString(1, un);
             pst.setString(2, pw);
             rs = pst.executeQuery();
-            if (rs.next()) {
-                compareValue = true;
+            while (rs.next()) {
+                //compareValue = true;
                 //JOptionPane.showMessageDialog(null, "username and password are correct");
                 //Added this line so when login is successful the StartupScreen.java will initialize.
                 //new StartupScreen().setVisible(true);
@@ -53,7 +53,7 @@ class Mediator {
         catch (Exception e) {
             //JOptionPane.showMessageDialog(null, e);
         }
-       return compareValue;
+       //return compareValue;
     }
 
     //public Connection ConnectDb(){return conn;}
