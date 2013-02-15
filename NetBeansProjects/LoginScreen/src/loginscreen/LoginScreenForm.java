@@ -175,7 +175,7 @@ public class LoginScreenForm extends javax.swing.JFrame {
         String userName = username.getText();
         String passWord = password.getText();
         if (mediator.verifyLogin(userName, passWord)){
-        
+        System.out.print("true");
         // transition to next page
         }
         else{JOptionPane.showMessageDialog(null, "Invalid username and password");
