@@ -55,7 +55,7 @@ class Mediator {
         }
         catch (Exception e) {
             //logger file should be here
-            //erased this line test12345
+            //erased this line test1234566666
             //JOptionPane.showMessageDialog(null, e);
         }
        return compareValue;
