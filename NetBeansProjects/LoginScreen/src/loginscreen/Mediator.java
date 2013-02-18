@@ -36,7 +36,7 @@ class Mediator {
 //        }
 
     public Boolean verifyLogin(String un, String pw){
-        
+
         Boolean compareValue = false;
         String sql = "select * from users where login_Name = jedixon65 and password = password";
         try {System.out.print("check");
@@ -45,7 +45,7 @@ class Mediator {
             System.out.print(un);
             pst.setString(2, pw);
             rs = pst.executeQuery();
-            
+
             while (rs.next()) {
                 compareValue = true;
                 //JOptionPane.showMessageDialog(null, "username and password are correct");
@@ -54,6 +54,7 @@ class Mediator {
             }
         }
         catch (Exception e) {
+            //logger file should be here
             //JOptionPane.showMessageDialog(null, e);
         }
        return compareValue;
