@@ -28,7 +28,7 @@ class Mediator {
             // JOptionPane.showMessageDialog(null, e);
             //return null;
         // }
-    // }
+     }
 
 
    // public String getPassword(String value){
