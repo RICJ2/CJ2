@@ -16,7 +16,7 @@ class Student
     {}
 
     public Static String getName(String loginN){
-       query = "SELECT name FROM users WHERE Id=loginN";
+       query = "SELECT name FROM users WHERE Id=" + loginN;
        results = executeQuery(query);
        return $results;
     }
