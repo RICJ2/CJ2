@@ -25,8 +25,8 @@ public class LoginScreenForm extends javax.swing.JFrame {
     /**
      * Creates new form LoginScreenForm
      */
-    public LoginScreenForm(Mediator m) {
-        mediator = m;
+    public LoginScreenForm() {
+        //mediator = m;
         initComponents();
     }
 
@@ -123,7 +123,7 @@ public class LoginScreenForm extends javax.swing.JFrame {
         });
 
         jLabel8.setForeground(new java.awt.Color(51, 51, 255));
-        jLabel8.setText("Can't access your accout?");
+        jLabel8.setText("Can't access your account?");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

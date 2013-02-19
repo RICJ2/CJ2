@@ -14,26 +14,27 @@ class Mediator {
     Connection conn = null;
     PreparedStatement pst = null;
     ResultSet rs = null;
+	Student stu = new Student();
 
-   public Mediator(){
-
-    //public static Connection ConnectDb(){
-        try{
-            Class.forName("com.mysql.jdbc.Driver");
-            DriverManager.getConnection("jdbc:mysql://www.savianconsultants.com:3306/savianconsultants_com_2","a0000a6f_1","century4last" );
-            JOptionPane.showMessageDialog(null, "Connection Established");
+   public Mediator(Connection c){
+		conn = c;
+     // public static Connection ConnectDb(){
+        // try{
+            // Class.forName("com.mysql.jdbc.Driver");
+            // conn = DriverManager.getConnection("jdbc:mysql://www.savianconsultants.com:3306/savianconsultants_com_2","a0000a6f_1","century4last" );
+            // JOptionPane.showMessageDialog(null, "Connection Established");
             //return conn;
-        }catch (Exception e){
-            JOptionPane.showMessageDialog(null, e);
+        // }catch (Exception e){
+            // JOptionPane.showMessageDialog(null, e);
             //return null;
-        }
-    }
+        // }
+    // }
 
 
-//    public String getPassword(String value){
-//            Student s = dict.get(value);
-//            return s.getPassword();
-//        }
+   // public String getPassword(String value){
+           // String s = stu.getPassword(value);
+           // return s.getPassword();
+       // }
 
     public Boolean verifyLogin(String un, String pw){
 
