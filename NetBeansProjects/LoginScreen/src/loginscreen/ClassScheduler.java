@@ -26,6 +26,7 @@ public class ClassScheduler {
         try{
             Class.forName("com.mysql.jdbc.Driver");
             DriverManager.getConnection("jdbc:mysql://www.savianconsultants.com:3306/savianconsultants_com_2","a0000a6f_1","century4last" );
+            System.out.print("Connected");
             //JOptionPane.showMessageDialog(null, "Connection Established");
             //return conn;
         }catch (Exception e){
