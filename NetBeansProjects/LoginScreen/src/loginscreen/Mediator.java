@@ -39,7 +39,7 @@ class Mediator {
     public Boolean verifyLogin(String un, String pw){
 
         Boolean compareValue = false;
-        String sql = "select * from users where login_Name = jedixon65 and password = password";
+        String sql = "select * from users where login_Name = ? and password = ?";
         try {System.out.print("check");
             pst = conn.prepareStatement(sql);
             pst.setString(1, un);
