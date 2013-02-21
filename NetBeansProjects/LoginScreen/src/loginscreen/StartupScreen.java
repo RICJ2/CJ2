@@ -3127,7 +3127,7 @@ public class StartupScreen extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\jroberti\\Documents\\GitHub\\CJ2\\NetBeansProjects\\School Images\\ZRICBanner.jpg")); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/loginscreen/resources/ZRICBanner.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
