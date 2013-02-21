@@ -41,9 +41,18 @@ public class CreateAccount extends javax.swing.JFrame {
         yearComboBox = new javax.swing.JComboBox();
         createAccountButton = new javax.swing.JButton();
         cancelButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        emailTextField = new javax.swing.JTextField();
+        usernameLabel = new javax.swing.JLabel();
+        usernameTextField = new javax.swing.JTextField();
+        passwordLabel = new javax.swing.JLabel();
+        passwordTextField = new javax.swing.JTextField();
+        confirmLabel = new javax.swing.JLabel();
+        confirmTextField = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        createAccountLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         createAccountLabel.setText("Create Account");
 
         firstNameLabel.setText("First Name:");
@@ -81,6 +90,14 @@ public class CreateAccount extends javax.swing.JFrame {
 
         cancelButton.setText("Cancel");
 
+        jLabel1.setText("Email:");
+
+        usernameLabel.setText("Username:");
+
+        passwordLabel.setText("Password:");
+
+        confirmLabel.setText("Confirm Password:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -94,37 +111,45 @@ public class CreateAccount extends javax.swing.JFrame {
                             .addComponent(majorLabel)
                             .addComponent(semesterLabel)
                             .addComponent(yearLabel)
-                            .addComponent(firstNameLabel))
+                            .addComponent(firstNameLabel)
+                            .addComponent(jLabel1)
+                            .addComponent(usernameLabel)
+                            .addComponent(passwordLabel)
+                            .addComponent(confirmLabel))
                         .addGap(63, 63, 63)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(firstNameText, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(lastNameText)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(majorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(fallRadioButton)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(springRadioButton)))
-                                    .addGap(0, 0, Short.MAX_VALUE)))))
+                            .addComponent(lastNameText)
+                            .addComponent(firstNameText)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(majorComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(fallRadioButton)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(springRadioButton))
+                                    .addComponent(emailTextField)
+                                    .addComponent(usernameTextField)
+                                    .addComponent(passwordTextField)
+                                    .addComponent(confirmTextField))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(135, 135, 135)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(createAccountButton)
-                        .addGap(27, 27, 27)
-                        .addComponent(cancelButton)))
-                .addContainerGap(138, Short.MAX_VALUE))
+                        .addGap(39, 39, 39)
+                        .addComponent(cancelButton)
+                        .addGap(38, 38, 38)))
+                .addContainerGap(103, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(createAccountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(175, 175, 175))
+                .addGap(169, 169, 169))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addGap(23, 23, 23)
                 .addComponent(createAccountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(firstNameLabel)
                     .addComponent(firstNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -146,11 +171,27 @@ public class CreateAccount extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(yearLabel))
-                .addGap(33, 33, 33)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(usernameLabel)
+                    .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(passwordLabel)
+                    .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(confirmLabel)
+                    .addComponent(confirmTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(createAccountButton)
                     .addComponent(cancelButton))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -200,18 +241,26 @@ public class CreateAccount extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelButton;
+    private javax.swing.JLabel confirmLabel;
+    private javax.swing.JTextField confirmTextField;
     private javax.swing.JButton createAccountButton;
     private javax.swing.JLabel createAccountLabel;
+    private javax.swing.JTextField emailTextField;
     private javax.swing.JRadioButton fallRadioButton;
     private javax.swing.JLabel firstNameLabel;
     private javax.swing.JTextField firstNameText;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lastNameLabel;
     private javax.swing.JTextField lastNameText;
     private javax.swing.JComboBox majorComboBox;
     private javax.swing.JLabel majorLabel;
+    private javax.swing.JLabel passwordLabel;
+    private javax.swing.JTextField passwordTextField;
     private javax.swing.ButtonGroup semesterButtonGroup;
     private javax.swing.JLabel semesterLabel;
     private javax.swing.JRadioButton springRadioButton;
+    private javax.swing.JLabel usernameLabel;
+    private javax.swing.JTextField usernameTextField;
     private javax.swing.JComboBox yearComboBox;
     private javax.swing.JLabel yearLabel;
     // End of variables declaration//GEN-END:variables
