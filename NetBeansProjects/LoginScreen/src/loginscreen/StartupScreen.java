@@ -3148,8 +3148,7 @@ public class StartupScreen extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jLabel10)
-                        .addGap(0, 0, 0)))
+                        .addComponent(jLabel10)))
                 .addComponent(jLabel16))
         );
         jPanel7Layout.setVerticalGroup(
@@ -3516,12 +3515,6 @@ public class StartupScreen extends javax.swing.JFrame {
     private javax.swing.JComboBox jComboBox290;
     private javax.swing.JComboBox jComboBox291;
     private javax.swing.JComboBox jComboBox292;
-    private javax.swing.JComboBox jComboBox293;
-    private javax.swing.JComboBox jComboBox294;
-    private javax.swing.JComboBox jComboBox295;
-    private javax.swing.JComboBox jComboBox296;
-    private javax.swing.JComboBox jComboBox297;
-    private javax.swing.JComboBox jComboBox298;
     private javax.swing.JComboBox jComboBox299;
     private javax.swing.JComboBox jComboBox3;
     private javax.swing.JComboBox jComboBox300;
@@ -3663,13 +3656,6 @@ public class StartupScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel316;
     private javax.swing.JLabel jLabel317;
     private javax.swing.JLabel jLabel318;
-    private javax.swing.JLabel jLabel319;
-    private javax.swing.JLabel jLabel320;
-    private javax.swing.JLabel jLabel321;
-    private javax.swing.JLabel jLabel322;
-    private javax.swing.JLabel jLabel323;
-    private javax.swing.JLabel jLabel324;
-    private javax.swing.JLabel jLabel325;
     private javax.swing.JLabel jLabel326;
     private javax.swing.JLabel jLabel327;
     private javax.swing.JLabel jLabel328;
@@ -3739,7 +3725,6 @@ public class StartupScreen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel2;
@@ -3771,8 +3756,6 @@ public class StartupScreen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel50;
     private javax.swing.JPanel jPanel51;
     private javax.swing.JPanel jPanel52;
-    private javax.swing.JPanel jPanel53;
-    private javax.swing.JPanel jPanel54;
     private javax.swing.JPanel jPanel55;
     private javax.swing.JPanel jPanel56;
     private javax.swing.JPanel jPanel57;
