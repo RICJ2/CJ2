@@ -4,29 +4,33 @@
  */
 package loginscreen;
 
+import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
 /**
  *
  * @author ChrisO
  */
-class Student
-{
+class Student{
+    //Connection conn= null;
     private String name, password, query, results;
 
     public Student()
-    {}
-
-    public Static String getName(String loginN){
-       query = "SELECT name FROM users WHERE Id=" + loginN;
-       results = executeQuery(query);
-       return $results;
-    }
+    {}    
+        
+    public static String getFirstName(String loginN, String get){
+    return DataB.query(loginN, "firstName", "user");}
     
+    public static String getPassword(String loginN){
+      return DataB.query(loginN, "password", "users");}
     
-    public String getPassword(String loginN){
-	this->openConnection();
-        query = "SELECT passwword FROM users WHERE Id=loginN";
-        results = mysql_query(query);
-        mysql_close($this->connection);
-        return $results;
-    }
+//    public static String getPassword(String loginN){
+//	DataB.openConnectDb();
+//        String query = "SELECT passwword FROM users WHERE Id=loginN";
+//        //String results = mysql_query(query);
+//        DataB.closeConnectDb();
+//        return results;
+//    }
 }

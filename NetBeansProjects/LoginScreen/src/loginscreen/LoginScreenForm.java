@@ -10,14 +10,14 @@ package loginscreen;
 //import java.sql.PreparedStatement;
 //import java.sql.ResultSet;
 import javax.swing.JOptionPane;
-import sun.awt.resources.awt;
+//import sun.awt.resources.awt;
 
 /**
  *
  * @author jroberti
  */
 public class LoginScreenForm extends javax.swing.JFrame {
-    Mediator mediator;
+    //Mediator mediator;
     //Connection conn = null;
     //ResultSet rs = null;
     //PreparedStatement pst = null;
@@ -243,12 +243,22 @@ public class LoginScreenForm extends javax.swing.JFrame {
 
         String userName = username.getText();
         String passWord = password.getText();
-        if (mediator.verifyLogin(userName, passWord)){
-        System.out.print("true");
-        // transition to next page
+        
+        if (!userName.equals("") && !passWord.equals("") && (!userName.equals("") || !passWord.equals(""))){
+            if (Mediator.verifyLogin(userName, passWord)){
+            System.out.print("true");
+            // transition to next page
+            }
+            else{JOptionPane.showMessageDialog(null, "Invalid username and password");}}
+        
+        else if(userName.equals("")){
+            JOptionPane.showMessageDialog(null, "No Username Entered.");
+            //return false;
         }
-        else{JOptionPane.showMessageDialog(null, "Invalid username and password");
-}
+        else if(passWord.equals("")){
+           JOptionPane.showMessageDialog(null, "No Password Entered."); 
+           //return false;
+        }
 //        String sql = "select * from users where login_Name = ? and password = ?";
 //        try {
 //            pst = conn.prepareStatement(sql);
