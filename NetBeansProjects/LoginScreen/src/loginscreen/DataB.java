@@ -41,7 +41,7 @@ public class DataB {
     
     public static String query(String loginN, String value, String table){
         Connection conn = DataB.openConnectDb();
-        String sql = "SELECT " + value + " FROM " + table + " WHERE id=" + loginN;
+        String sql = "SELECT " + value + " FROM " + table + " WHERE login_Name=" + loginN;
         System.out.println(sql);
         try {
             PreparedStatement pst = conn.prepareStatement(sql);

@@ -28,10 +28,10 @@ class Student{
     return DataB.query(loginN, "firstName", "user");}
     
     public static String getPassword(String loginN){
-      return DataB.query(loginN, "password", "users");}
+      return DataB.query(loginN, "pword", "users");}
     
     public static String setPassword(String loginN){
-      return DataB.query(loginN, "password", "users");}
+      return DataB.query(loginN, "pword", "users");}
     
     public static String getLastName(String loginN){
         return DataB.query(loginN, "LastName", "users");}
