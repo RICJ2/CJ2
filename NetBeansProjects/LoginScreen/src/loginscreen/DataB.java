@@ -39,19 +39,19 @@ public class DataB {
         catch (Exception e){
             JOptionPane.showMessageDialog(null, e);}}
     
-    public static String query(String loginN, String get, String from){
+    public static String query(String loginN, String value, String table){
         Connection conn = DataB.openConnectDb();
-        String sql = "SELECT " + get + " FROM " + from + " WHERE id=" + loginN;
+        String sql = "SELECT " + value + " FROM " + table + " WHERE id=" + loginN;
         System.out.println(sql);
         try {
             PreparedStatement pst = conn.prepareStatement(sql);
             ResultSet rs = pst.executeQuery();
             if (rs.next()) {
-                String results = rs.getString(get);
+                String results = rs.getString(value);
                 return results;
             }
             else {
-                JOptionPane.showMessageDialog(null, "" + get + " does not exist in " + from + ".");
+                JOptionPane.showMessageDialog(null, "" + value + " does not exist in " + table + ".");
                 return null;
                 }
         } catch (Exception e) {

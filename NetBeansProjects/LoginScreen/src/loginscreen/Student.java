@@ -4,18 +4,19 @@
  */
 package loginscreen;
 
-import java.sql.DriverManager;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import javax.swing.JOptionPane;
+//import java.sql.DriverManager;
+//import java.sql.Connection;
+//import java.sql.PreparedStatement;
+//import java.sql.ResultSet;
+//import javax.swing.JOptionPane;
 /**
  *
  * @author ChrisO
  */
 class Student{
     //Connection conn= null;
-    private String name, password, query, results;
+    private String fName, lName, pWord, query, results;
+    private String email, uName, major, semester;
 
     public Student()
     {}    
@@ -23,8 +24,23 @@ class Student{
     public static String getFirstName(String loginN, String get){
     return DataB.query(loginN, "firstName", "user");}
     
+    public static String setFirstName(String loginN, String get){
+    return DataB.query(loginN, "firstName", "user");}
+    
     public static String getPassword(String loginN){
       return DataB.query(loginN, "password", "users");}
+    
+    public static String setPassword(String loginN){
+      return DataB.query(loginN, "password", "users");}
+    
+    public static String getLastName(String loginN){
+        return DataB.query(loginN, "LastName", "users");}
+    
+    public static String setLastName(String loginN){
+        return DataB.query(loginN, "LastName", "users");}
+    
+    
+    
     
 //    public static String getPassword(String loginN){
 //	DataB.openConnectDb();
