@@ -21,16 +21,16 @@ class Diction {
         Student value;
 	Boolean dictionary;
 	Hashtable<String, Student> dict1;
-        Student Dave = new Student("Dave", "pass123");
-        Student Sue = new Student("Sue", "pass1234");
+        //Student Dave = new Student("Dave", "pass123");
+        //Student Sue = new Student("Sue", "pass1234");
 
 	public Diction() {
 		key = null;
 		value = null;
 		dictionary = true;
 		dict1 = new Hashtable<String, Student>(30);
-		dict1.put("Dave", Dave);
-		dict1.put("Sue", Sue);
+		//dict1.put("Dave", Dave);
+		//dict1.put("Sue", Sue);
 	}
 
 	/**

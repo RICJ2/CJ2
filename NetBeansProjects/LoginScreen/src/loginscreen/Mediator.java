@@ -3,64 +3,50 @@
  * and open the template in the editor.
  */
 package loginscreen;
-import java.sql.*;
-import javax.swing.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ChrisO
  */
 class Mediator {
-    //Diction dict;
-    Connection conn = null;
-    PreparedStatement pst = null;
-    ResultSet rs = null;
-	Student stu = new Student();
 
-   public Mediator(Connection c){
-		conn = c;
-     // public static Connection ConnectDb(){
-        // try{
-            // Class.forName("com.mysql.jdbc.Driver");
-            // conn = DriverManager.getConnection("jdbc:mysql://www.savianconsultants.com:3306/savianconsultants_com_2","a0000a6f_1","century4last" );
-            // JOptionPane.showMessageDialog(null, "Connection Established");
-            //return conn;
-        // }catch (Exception e){
-            // JOptionPane.showMessageDialog(null, e);
-            //return null;
-        // }
-     }
+   public Mediator(){}
 
-
-   // public String getPassword(String value){
-           // String s = stu.getPassword(value);
-           // return s.getPassword();
-       // }
-
-    public Boolean verifyLogin(String un, String pw){
-
-        Boolean compareValue = false;
-        String sql = "select * from users where login_Name = ? and password = ?";
-        try {System.out.print("check");
-            pst = conn.prepareStatement(sql);
-            pst.setString(1, un);
-            System.out.print(un);
-            pst.setString(2, pw);
-            rs = pst.executeQuery();
-
-            while (rs.next()) {
-                compareValue = true;
-                //JOptionPane.showMessageDialog(null, "username and password are correct");
-                //Added this line so when login is successful the StartupScreen.java will initialize.
-                //new StartupScreen().setVisible(true);
-            }
-        }
-        catch (Exception e) {
-            //logger file should be here
-            //erased this line test1234566666
-            //JOptionPane.showMessageDialog(null, e);
-        }
-       return compareValue;
+//    public static String verifyLogin(String un, String pw){
+//        String result = "";
+//        String user_query = "select * from users where login_Name = ?";
+//        try {
+//            PreparedStatement prestmt = DataB.openConnectDb().prepareStatement(user_query);
+//            prestmt.setString(1, un);
+//            ResultSet rs = prestmt.executeQuery();
+//            
+//            if (rs.next()) {
+//                if (rs.getString("login_Name").matches(un) && (rs.getString("pword").matches(pw))) {
+//                    JOptionPane.showMessageDialog(null, "Hello, " + rs.getString("f_Name") + " " + rs.getString("l_Name"));
+//                    result = "valid";
+//                }
+//                else {result = "invalidPassword";}
+//                }
+//            else{result = "invalidUsername";}
+//        }
+//        catch (SQLException e) {
+//            JOptionPane.showMessageDialog(null, e);
+//            result = null;
+//        }
+//        DataB.closeConnectDb();
+//        return result;
+//    }
+    
+    public static String verifyLogin2(String un, String pw){
+        String result = Student.getPassword(un);
+        if(result.equals(pw)){
+            return "valid";}
+        if(result.equals("notFound")){
+            return "invalidUsername";}
+        else {return "invalidPassword";}
     }
-
-    //public Connection ConnectDb(){return conn;}
 }
