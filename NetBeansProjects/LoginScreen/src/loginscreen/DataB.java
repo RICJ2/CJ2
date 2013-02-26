@@ -8,6 +8,7 @@ import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 /**
@@ -58,4 +59,22 @@ public class DataB {
             JOptionPane.showMessageDialog(null, e);
             return null;
         }}
+//    public static String query2(String loginN, String value, String table){
+//       Connection conn = DataB.openConnectDb();
+//        String user_query = "select * from ? where login_Name = ?";
+//        try {
+//            PreparedStatement prestmt = conn.prepareStatement(user_query);
+//            prestmt.setString(1, table);
+//            prestmt.setString(2, loginN);
+//            ResultSet rs = prestmt.executeQuery();
+//            System.out.println(rs.getString("pword"));
+//            if (rs.next()) {
+//                return rs.getString(value);}
+//            else{return null;}
+//        }
+//        catch (SQLException e) {
+//            JOptionPane.showMessageDialog(null, e);
+//            return "false";
+//        }
+//    }
 }

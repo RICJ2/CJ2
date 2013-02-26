@@ -5,48 +5,76 @@
 package loginscreen;
 
 //import java.sql.DriverManager;
-//import java.sql.Connection;
-//import java.sql.PreparedStatement;
-//import java.sql.ResultSet;
-//import javax.swing.JOptionPane;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ChrisO
  */
 class Student{
-    //Connection conn= null;
-    private String fName, lName, pWord, query, results;
-    private String email, uName, major, semester;
-
+    
     public Student()
     {}    
         
-    public static String getFirstName(String loginN, String get){
-    return DataB.query(loginN, "firstName", "user");}
+    public static String getFirstName(String loginN){
+        String result = "";
+        String user_query = "select * from users where login_Name = ?";
+        try {
+            PreparedStatement prestmt = DataB.openConnectDb().prepareStatement(user_query);
+            prestmt.setString(1, loginN);
+            ResultSet rs = prestmt.executeQuery();            
+            if (rs.next()) {result = rs.getString("f_Name");}            
+            else{result = "notFound";}}
+        catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+            result = null;}
+        DataB.closeConnectDb();
+        return result;
+    }
     
     public static String setFirstName(String loginN, String get){
     return DataB.query(loginN, "firstName", "user");}
     
     public static String getPassword(String loginN){
-      return DataB.query(loginN, "pword", "users");}
+        String result = "";
+        String user_query = "select * from users where login_Name = ?";
+        try {
+            PreparedStatement prestmt = DataB.openConnectDb().prepareStatement(user_query);
+            prestmt.setString(1, loginN);
+            ResultSet rs = prestmt.executeQuery();            
+            if (rs.next()) {result = rs.getString("pword");}            
+            else{result = "notFound";}}
+        catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+            result = null;}
+        DataB.closeConnectDb();
+        return result;
+    }
     
     public static String setPassword(String loginN){
       return DataB.query(loginN, "pword", "users");}
     
     public static String getLastName(String loginN){
-        return DataB.query(loginN, "LastName", "users");}
+        String result = "";
+        String user_query = "select * from users where login_Name = ?";
+        try {
+            PreparedStatement prestmt = DataB.openConnectDb().prepareStatement(user_query);
+            prestmt.setString(1, loginN);
+            ResultSet rs = prestmt.executeQuery();            
+            if (rs.next()) {result = rs.getString("l_name");}            
+            else{result = "notFound";}}
+        catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+            result = null;}
+        DataB.closeConnectDb();
+        return result;
+    }
     
     public static String setLastName(String loginN){
         return DataB.query(loginN, "LastName", "users");}
     
-    
-    
-    
-//    public static String getPassword(String loginN){
-//	DataB.openConnectDb();
-//        String query = "SELECT passwword FROM users WHERE Id=loginN";
-//        //String results = mysql_query(query);
-//        DataB.closeConnectDb();
-//        return results;
-//    }
 }

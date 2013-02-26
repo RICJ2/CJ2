@@ -3,7 +3,9 @@
  * and open the template in the editor.
  */
 package loginscreen;
-
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 /**
@@ -14,12 +16,37 @@ class Mediator {
 
    public Mediator(){}
 
-    public static Boolean verifyLogin(String un, String pw){
-        if(un.equals("") | pw.equals("")){
-            //JOptionPane.showMessageDialog(null, "No Username Entered.");
-            return false;
-        }
-        else{
-        String passW = Student.getPassword(un);
-        return (pw.equals(passW)); }}
+//    public static String verifyLogin(String un, String pw){
+//        String result = "";
+//        String user_query = "select * from users where login_Name = ?";
+//        try {
+//            PreparedStatement prestmt = DataB.openConnectDb().prepareStatement(user_query);
+//            prestmt.setString(1, un);
+//            ResultSet rs = prestmt.executeQuery();
+//            
+//            if (rs.next()) {
+//                if (rs.getString("login_Name").matches(un) && (rs.getString("pword").matches(pw))) {
+//                    JOptionPane.showMessageDialog(null, "Hello, " + rs.getString("f_Name") + " " + rs.getString("l_Name"));
+//                    result = "valid";
+//                }
+//                else {result = "invalidPassword";}
+//                }
+//            else{result = "invalidUsername";}
+//        }
+//        catch (SQLException e) {
+//            JOptionPane.showMessageDialog(null, e);
+//            result = null;
+//        }
+//        DataB.closeConnectDb();
+//        return result;
+//    }
+    
+    public static String verifyLogin2(String un, String pw){
+        String result = Student.getPassword(un);
+        if(result.equals(pw)){
+            return "valid";}
+        if(result.equals("notFound")){
+            return "invalidUsername";}
+        else {return "invalidPassword";}
+    }
 }

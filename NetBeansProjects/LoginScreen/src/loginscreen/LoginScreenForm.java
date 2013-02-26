@@ -243,41 +243,27 @@ public class LoginScreenForm extends javax.swing.JFrame {
 
         String userName = username.getText();
         String passWord = password.getText();
-        
+                
         if (!userName.equals("") && !passWord.equals("") && (!userName.equals("") || !passWord.equals(""))){
-            if (Mediator.verifyLogin(userName, passWord)){
-            System.out.print("true");
+            String result = Mediator.verifyLogin2(userName, passWord);
+            if (result.equals("valid")){
+                System.out.println("Success");
             // transition to next page
             }
-            else{JOptionPane.showMessageDialog(null, "Invalid username and password");}}
-        
+            if (result.equals("invalidUsername")){
+                JOptionPane.showMessageDialog(null, "Invalid Username");
+            }
+            else if (result.equals("invalidPassword")){
+                JOptionPane.showMessageDialog(null, "Invalid Password");
+            }
+		}	
         else if(userName.equals("")){
             JOptionPane.showMessageDialog(null, "No Username Entered.");
-            //return false;
         }
         else if(passWord.equals("")){
            JOptionPane.showMessageDialog(null, "No Password Entered."); 
-           //return false;
         }
-//        String sql = "select * from users where login_Name = ? and password = ?";
-//        try {
-//            pst = conn.prepareStatement(sql);
-//            pst.setString(1, username.getText());
-//            pst.setString(2, password.getText());
-//            rs = pst.executeQuery();
-//            if (rs.next()) {
-//                //JOptionPane.showMessageDialog(null, "username and password are correct");
-//                //Added this line so when login is successful the StartupScreen.java will initialize.
-//                new StartupScreen().setVisible(true);
-//            } else {
-//                JOptionPane.showMessageDialog(null, "Invalid username and password");
-//            }
-//
-//        } catch (Exception e) {
-//            JOptionPane.showMessageDialog(null, e);
-//        }
-        //JOPtionPane.showMessageDialog(this, "Inputs: \nUsername:" + username + "\nPassword: " + password);
-    }//GEN-LAST:event_jButton1ActionPerformed
+	}//GEN-LAST:event_jButton1ActionPerformed
 
     private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
         // TODO add your handling code here:
