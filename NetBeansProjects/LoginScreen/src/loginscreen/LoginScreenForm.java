@@ -243,7 +243,7 @@ public class LoginScreenForm extends javax.swing.JFrame {
 
         String userName = username.getText();
         String passWord = password.getText();
-                
+
         if (!userName.equals("") && !passWord.equals("") && (!userName.equals("") || !passWord.equals(""))){
             String result = Mediator.verifyLogin2(userName, passWord);
             if (result.equals("valid")){
@@ -256,12 +256,12 @@ public class LoginScreenForm extends javax.swing.JFrame {
             else if (result.equals("invalidPassword")){
                 JOptionPane.showMessageDialog(null, "Invalid Password");
             }
-		}	
+		}
         else if(userName.equals("")){
             JOptionPane.showMessageDialog(null, "No Username Entered.");
         }
         else if(passWord.equals("")){
-           JOptionPane.showMessageDialog(null, "No Password Entered."); 
+           JOptionPane.showMessageDialog(null, "No Password Entered.");
         }
 	}//GEN-LAST:event_jButton1ActionPerformed
 
@@ -271,9 +271,6 @@ public class LoginScreenForm extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
-        //conn = Mediator.ConnectDb();
-
-
     }//GEN-LAST:event_formWindowOpened
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

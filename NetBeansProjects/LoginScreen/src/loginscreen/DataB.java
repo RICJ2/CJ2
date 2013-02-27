@@ -16,14 +16,15 @@ import javax.swing.JOptionPane;
  * @author ChrisO
  */
 public class DataB {
-    
+
     static Connection conn = null;
-    
+    static PreparedStatement pst;
+    static ResultSet rs;
     public DataB()
-    {}  
-   
-    public static Connection openConnectDb(){       
-        
+    {}
+
+    public static Connection openConnectDb(){
+
         try{
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:mysql://www.savianconsultants.com:3306/savianconsultants_com_2","a0000a6f_1","century4last" );
@@ -32,21 +33,21 @@ public class DataB {
         }catch (Exception e){
             JOptionPane.showMessageDialog(null, e);
             return null;}}
-    
-    
+
+
     public static void closeConnectDb(){
         try{
             conn.close();}
         catch (Exception e){
             JOptionPane.showMessageDialog(null, e);}}
-    
+
     public static String query(String loginN, String value, String table){
-        Connection conn = DataB.openConnectDb();
+        conn = DataB.openConnectDb();
         String sql = "SELECT " + value + " FROM " + table + " WHERE login_Name=" + loginN;
         System.out.println(sql);
         try {
-            PreparedStatement pst = conn.prepareStatement(sql);
-            ResultSet rs = pst.executeQuery();
+            pst = conn.prepareStatement(sql);
+            rs = pst.executeQuery();
             if (rs.next()) {
                 String results = rs.getString(value);
                 return results;
