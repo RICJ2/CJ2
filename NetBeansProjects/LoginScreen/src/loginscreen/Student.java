@@ -39,7 +39,7 @@ class Student{
     }
 
     public static String setFirstName(String loginN, String get){
-    return DataB.query(loginN, "firstName", "user");}
+    return DataB.query(loginN, "firstName", "users");}
 
     public static String getPassword(String loginN){
         String result = "";
