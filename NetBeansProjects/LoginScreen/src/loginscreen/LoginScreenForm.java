@@ -236,28 +236,28 @@ public class LoginScreenForm extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        String userName = username.getText();
-        String passWord = password.getPassword();
+        //String userName = username.getText();
+      //  String passWord = password.getPassword();
 
-        if (!userName.equals("") && !passWord.equals("") && (!userName.equals("") || !passWord.equals(""))){
-            String result = Mediator.verifyLogin2(userName, passWord);
-            if (result.equals("valid")){
-                System.out.println("Success");
+        //if (!userName.equals("") && !passWord.equals("") && (!userName.equals("") || !passWord.equals(""))){
+          //  String result = Mediator.verifyLogin2(userName, passWord);
+            //if (result.equals("valid")){
+    //            System.out.println("Success");
             // transition to next page
-            }
-            if (result.equals("invalidUsername")){
-                JOptionPane.showMessageDialog(null, "Invalid Username");
-            }
-            else if (result.equals("invalidPassword")){
-                JOptionPane.showMessageDialog(null, "Invalid Password");
-            }
-		}
-        else if(userName.equals("")){
-            JOptionPane.showMessageDialog(null, "No Username Entered.");
-        }
-        else if(passWord.equals("")){
-           JOptionPane.showMessageDialog(null, "No Password Entered.");
-        }
+  //          }
+          //  if (result.equals("invalidUsername")){
+            //    JOptionPane.showMessageDialog(null, "Invalid Username");
+      //      }
+            //else if (result.equals("invalidPassword")){
+              //  JOptionPane.showMessageDialog(null, "Invalid Password");
+//            }
+//		}
+       // else if(userName.equals("")){
+           // JOptionPane.showMessageDialog(null, "No Username Entered.");
+        //}
+        //else if(passWord.equals("")){
+        //   JOptionPane.showMessageDialog(null, "No Password Entered.");
+       // }
 	}//GEN-LAST:event_jButton1ActionPerformed
 
     private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
