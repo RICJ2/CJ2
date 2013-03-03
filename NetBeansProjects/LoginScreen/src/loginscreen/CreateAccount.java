@@ -59,11 +59,15 @@ public class CreateAccount extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(361, 468));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        yearLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         yearLabel.setText("Year:");
 
+        semesterLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         semesterLabel.setText("Semester:");
 
+        confirmLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         confirmLabel.setText("Confirm Password:");
 
         lastNameText.addActionListener(new java.awt.event.ActionListener() {
@@ -72,6 +76,7 @@ public class CreateAccount extends javax.swing.JFrame {
             }
         });
 
+        springRadioButton.setBackground(new java.awt.Color(255, 255, 255));
         semesterButtonGroup.add(springRadioButton);
         springRadioButton.setText("Spring");
         springRadioButton.addActionListener(new java.awt.event.ActionListener() {
@@ -80,12 +85,18 @@ public class CreateAccount extends javax.swing.JFrame {
             }
         });
 
+        firstNameText.setNextFocusableComponent(firstNameText);
+
+        passwordLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         passwordLabel.setText("Password:");
 
+        usernameLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         usernameLabel.setText("Username:");
 
+        firstNameLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         firstNameLabel.setText("First Name:");
 
+        cancelButton.setForeground(new java.awt.Color(255, 0, 0));
         cancelButton.setText("Cancel");
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,22 +104,30 @@ public class CreateAccount extends javax.swing.JFrame {
             }
         });
 
+        createAccountLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         createAccountLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         createAccountLabel.setText("Create Account");
 
+        createAccountButton.setBackground(new java.awt.Color(0, 0, 255));
+        createAccountButton.setForeground(new java.awt.Color(255, 255, 255));
         createAccountButton.setText("Create Account");
 
+        majorLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         majorLabel.setText("Major:");
 
         yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        lastNameLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lastNameLabel.setText("Last Name");
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel1.setText("Email:");
 
         majorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Computer Science - BA", "Computer Science - BS" }));
 
+        fallRadioButton.setBackground(new java.awt.Color(255, 255, 255));
         semesterButtonGroup.add(fallRadioButton);
+        fallRadioButton.setSelected(true);
         fallRadioButton.setText("Fall");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -119,44 +138,47 @@ public class CreateAccount extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(createAccountButton)
-                        .addGap(39, 39, 39)
-                        .addComponent(cancelButton))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lastNameLabel)
-                            .addComponent(majorLabel)
-                            .addComponent(semesterLabel)
-                            .addComponent(yearLabel)
-                            .addComponent(firstNameLabel)
-                            .addComponent(jLabel1)
-                            .addComponent(usernameLabel)
-                            .addComponent(passwordLabel)
-                            .addComponent(confirmLabel))
-                        .addGap(63, 63, 63)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(createAccountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(majorComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(fallRadioButton)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(springRadioButton))
-                                .addComponent(emailTextField)
-                                .addComponent(usernameTextField)
-                                .addComponent(passwordTextField)
-                                .addComponent(confirmTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(firstNameText)
-                                .addComponent(lastNameText, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap())
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(createAccountButton)
+                                .addGap(39, 39, 39)
+                                .addComponent(cancelButton))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lastNameLabel)
+                                    .addComponent(majorLabel)
+                                    .addComponent(semesterLabel)
+                                    .addComponent(yearLabel)
+                                    .addComponent(firstNameLabel)
+                                    .addComponent(jLabel1)
+                                    .addComponent(usernameLabel)
+                                    .addComponent(passwordLabel)
+                                    .addComponent(confirmLabel))
+                                .addGap(63, 63, 63)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(majorComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(fallRadioButton)
+                                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(springRadioButton))
+                                    .addComponent(emailTextField)
+                                    .addComponent(usernameTextField)
+                                    .addComponent(passwordTextField)
+                                    .addComponent(confirmTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(firstNameText)
+                                    .addComponent(lastNameText, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(createAccountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(81, 81, 81))))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(6, 6, 6)
                 .addComponent(createAccountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(firstNameLabel)
                     .addComponent(firstNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -208,7 +230,7 @@ public class CreateAccount extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(188, 188, 188)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(227, Short.MAX_VALUE))
+                .addContainerGap(213, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
