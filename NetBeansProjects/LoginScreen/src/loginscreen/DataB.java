@@ -41,25 +41,25 @@ public class DataB {
         catch (Exception e){
             JOptionPane.showMessageDialog(null, e);}}
 
-    public static String query(String loginN, String value, String table){
-        conn = DataB.openConnectDb();
-        String sql = "SELECT " + value + " FROM " + table + " WHERE login_Name=" + loginN;
-        System.out.println(sql);
-        try {
-            pst = conn.prepareStatement(sql);
-            rs = pst.executeQuery();
-            if (rs.next()) {
-                String results = rs.getString(value);
-                return results;
-            }
-            else {
-                JOptionPane.showMessageDialog(null, "" + value + " does not exist in " + table + ".");
-                return null;
-                }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-            return null;
-        }}
+//    public static String query(String loginN, String value, String table){
+//        conn = DataB.openConnectDb();
+//        String sql = "SELECT " + value + " FROM " + table + " WHERE login_Name=" + loginN;
+//        System.out.println(sql);
+//        try {
+//            pst = conn.prepareStatement(sql);
+//            rs = pst.executeQuery();
+//            if (rs.next()) {
+//                String results = rs.getString(value);
+//                return results;
+//            }
+//            else {
+//                JOptionPane.showMessageDialog(null, "" + value + " does not exist in " + table + ".");
+//                return null;
+//                }
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(null, e);
+//            return null;
+//        }}
 //    public static String query2(String loginN, String value, String table){
 //       Connection conn = DataB.openConnectDb();
 //        String user_query = "select * from ? where login_Name = ?";

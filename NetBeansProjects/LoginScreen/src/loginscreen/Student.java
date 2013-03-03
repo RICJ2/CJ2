@@ -38,8 +38,8 @@ class Student{
         return result;
     }
 
-    public static String setFirstName(String loginN, String get){
-    return DataB.query(loginN, "firstName", "users");}
+//    public static String setFirstName(String loginN, String get){
+//    return DataB.query(loginN, "firstName", "users");}
 
     public static String getPassword(String loginN){
         String result = "";
@@ -57,8 +57,8 @@ class Student{
         return result;
     }
 
-    public static String setPassword(String loginN){
-      return DataB.query(loginN, "pword", "users");}
+//    public static String setPassword(String loginN){
+//      return DataB.query(loginN, "pword", "users");}
 
     public static String getLastName(String loginN){
         String result = "";
@@ -76,7 +76,7 @@ class Student{
         return result;
     }
 
-    public static String setLastName(String loginN){
-        return DataB.query(loginN, "LastName", "users");}
+//    public static String setLastName(String loginN){
+//        return DataB.query(loginN, "LastName", "users");}
 
 }
