@@ -96,7 +96,8 @@ public class CreateAccount extends javax.swing.JFrame {
         firstNameLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         firstNameLabel.setText("First Name:");
 
-        cancelButton.setForeground(new java.awt.Color(255, 0, 0));
+        cancelButton.setBackground(new java.awt.Color(255, 0, 0));
+        cancelButton.setForeground(new java.awt.Color(255, 255, 255));
         cancelButton.setText("Cancel");
         cancelButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,14 +136,14 @@ public class CreateAccount extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(59, 59, 59)
                                 .addComponent(createAccountButton)
-                                .addGap(39, 39, 39)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(cancelButton))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -167,11 +168,11 @@ public class CreateAccount extends javax.swing.JFrame {
                                     .addComponent(passwordTextField)
                                     .addComponent(confirmTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(firstNameText)
-                                    .addComponent(lastNameText, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(createAccountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(81, 81, 81))))
+                                    .addComponent(lastNameText, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(85, 85, 85)
+                        .addComponent(createAccountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
