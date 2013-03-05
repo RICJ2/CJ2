@@ -13,8 +13,9 @@ public class ClassScheduler {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        LoginScreenForm log = new LoginScreenForm();
-        log.setVisible(true);
+        Mediator m = new Mediator();
+        //LoginScreenForm log = new LoginScreenForm();
+        //log.setVisible(true);
     }
 
 }

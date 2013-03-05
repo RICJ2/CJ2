@@ -12,15 +12,16 @@ import javax.swing.*;
  */
 public class StartupScreen extends javax.swing.JFrame {
  Mediator mediator;
-
+ String loginName;
 //Connection conn = null;
 //ResultSet rs = null;
 //PreparedStatement pst = null;
     /**
      * Creates new form StartupScreen
      */
-    public StartupScreen(Mediator m) {
-       mediator = m;
+    public StartupScreen(Mediator m, String ln) {
+        mediator = m;
+		loginName = ln;
         initComponents();
     }
     private void Fillcombo(){
@@ -3069,11 +3070,11 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jLabel196.setText("Student Name: ");
 
-        jTextField1.setText("CSCI");
+        jTextField1.setText(Student.getMajor(loginName));
 
         jLabel199.setText("Student Major:");
 
-        jTextField2.setText("Davey Jones");
+        jTextField2.setText(Student.getFullName(loginName));
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);

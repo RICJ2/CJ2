@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
  * @author jroberti
  */
 public class LoginScreenForm extends javax.swing.JFrame {
-    //Mediator mediator;
+    Mediator mediator;
     //Connection conn = null;
     //ResultSet rs = null;
     //PreparedStatement pst = null;
@@ -25,8 +25,8 @@ public class LoginScreenForm extends javax.swing.JFrame {
     /**
      * Creates new form LoginScreenForm
      */
-    public LoginScreenForm() {
-        //mediator = m;
+    public LoginScreenForm(Mediator m) {
+        mediator = m;
         initComponents();
     }
 
@@ -257,8 +257,7 @@ public class LoginScreenForm extends javax.swing.JFrame {
         if (!userName.equals("") && !passWord.equals("") && (!userName.equals("") || !passWord.equals(""))){
            String result = Mediator.verifyLogin2(userName, passWord);
             if (result.equals("valid")){
-               System.out.println("Success");
-            //transition to next page
+            mediator.createStartupScreen(userName);
            }
            if (result.equals("invalidUsername")){
                JOptionPane.showMessageDialog(null, "Invalid Username");
@@ -284,8 +283,7 @@ public class LoginScreenForm extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        CreateAccount accountNew = new CreateAccount ();
-        accountNew.setVisible(true);
+        mediator.newCreateAccountPage();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**

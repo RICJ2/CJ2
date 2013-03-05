@@ -9,11 +9,12 @@ package loginscreen;
  * @author Chris
  */
 public class CreateAccount extends javax.swing.JFrame {
-
+    Mediator mediator;
     /**
      * Creates new form CreateAccount
      */
-    public CreateAccount() {
+    public CreateAccount(Mediator m) {
+        mediator = m;
         initComponents();
     }
 
@@ -112,6 +113,11 @@ public class CreateAccount extends javax.swing.JFrame {
         createAccountButton.setBackground(new java.awt.Color(0, 0, 255));
         createAccountButton.setForeground(new java.awt.Color(255, 255, 255));
         createAccountButton.setText("Create Account");
+        createAccountButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createAccountButtonActionPerformed(evt);
+            }
+        });
 
         majorLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         majorLabel.setText("Major:");
@@ -264,9 +270,14 @@ public class CreateAccount extends javax.swing.JFrame {
     }//GEN-LAST:event_lastNameTextActionPerformed
 
     private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
-        LoginScreenForm returnLogin = new LoginScreenForm ();
-        returnLogin.setVisible(true);
+        mediator.createLoginScreen();
+        //LoginScreenForm returnLogin = new LoginScreenForm ();
+        //returnLogin.setVisible(true);
     }//GEN-LAST:event_cancelButtonActionPerformed
+
+    private void createAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountButtonActionPerformed
+        Student.setPassword(usernameTextField.getText(), passwordTextField.getText());
+    }//GEN-LAST:event_createAccountButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -298,7 +309,7 @@ public class CreateAccount extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CreateAccount().setVisible(true);
+                //new CreateAccount().setVisible(true);
             }
         });
     }

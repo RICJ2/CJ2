@@ -13,35 +13,34 @@ import javax.swing.JOptionPane;
  * @author ChrisO
  */
 class Mediator {
-
-   public Mediator(){}
-
-//    public static String verifyLogin(String un, String pw){
-//        String result = "";
-//        String user_query = "select * from users where login_Name = ?";
-//        try {
-//            PreparedStatement prestmt = DataB.openConnectDb().prepareStatement(user_query);
-//            prestmt.setString(1, un);
-//            ResultSet rs = prestmt.executeQuery();
-//            
-//            if (rs.next()) {
-//                if (rs.getString("login_Name").matches(un) && (rs.getString("pword").matches(pw))) {
-//                    JOptionPane.showMessageDialog(null, "Hello, " + rs.getString("f_Name") + " " + rs.getString("l_Name"));
-//                    result = "valid";
-//                }
-//                else {result = "invalidPassword";}
-//                }
-//            else{result = "invalidUsername";}
-//        }
-//        catch (SQLException e) {
-//            JOptionPane.showMessageDialog(null, e);
-//            result = null;
-//        }
-//        DataB.closeConnectDb();
-//        return result;
-//    }
+    String loginName;
+    LoginScreenForm log = new LoginScreenForm(this);
+    CreateAccount acc = new CreateAccount(this);
+    StartupScreen start;
     
-    public static String verifyLogin2(String un, String pw){
+   public Mediator(){
+       log.setVisible(true);
+   }
+
+   public void newCreateAccountPage(){
+       acc.setVisible(true);
+       log.setVisible(false);
+       
+   }
+   
+   public void createStartupScreen(String ln){
+       loginName = ln;
+       start = new StartupScreen(this, ln);
+       start.setVisible(true);
+       log.setVisible(false);
+   }
+   
+    public void createLoginScreen(){
+       log.setVisible(true);
+       acc.setVisible(false);
+   }
+   
+   public static String verifyLogin2(String un, String pw){
         String result = Student.getPassword(un);
         if(result.equals(pw)){
             return "valid";}
