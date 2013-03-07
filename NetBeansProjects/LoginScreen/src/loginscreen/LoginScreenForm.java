@@ -252,7 +252,7 @@ public class LoginScreenForm extends javax.swing.JFrame {
 
        String userName = username.getText();
        String passWord = new String (password.getPassword());
-       System.out.println(passWord);
+       //System.out.println(passWord);
 
         if (!userName.equals("") && !passWord.equals("") && (!userName.equals("") || !passWord.equals(""))){
            String result = Mediator.verifyLogin2(userName, passWord);
