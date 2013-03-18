@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package loginscreen;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -13,16 +14,20 @@ import javax.swing.JOptionPane;
  * @author ChrisO
  */
 class Mediator {
+    static Connection conn;
     String loginName;
     LoginScreenForm log = new LoginScreenForm(this);
-    CreateAccount acc = new CreateAccount(this);
+    CreateAccount acc;
     StartupScreen start;
+    
     
    public Mediator(){
        log.setVisible(true);
+       conn = DataB.openConnectDb();
    }
 
    public void newCreateAccountPage(){
+       acc = new CreateAccount(this, conn);
        acc.setVisible(true);
        log.setVisible(false);
        
@@ -30,7 +35,7 @@ class Mediator {
    
    public void createStartupScreen(String ln){
        loginName = ln;
-       start = new StartupScreen(this, ln);
+       start = new StartupScreen(this, ln, conn);
        start.setVisible(true);
        log.setVisible(false);
    }
@@ -41,7 +46,7 @@ class Mediator {
    }
    
    public static String verifyLogin2(String un, String pw){
-        String result = Student.getPassword(un);
+        String result = Student.getPassword(un, conn);
         if(result.equals(pw)){
             return "valid";}
         if(result.equals("notFound")){
