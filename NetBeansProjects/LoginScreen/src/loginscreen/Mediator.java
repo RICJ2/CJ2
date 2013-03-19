@@ -4,10 +4,6 @@
  */
 package loginscreen;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -16,14 +12,16 @@ import javax.swing.JOptionPane;
 class Mediator {
     static Connection conn;
     String loginName;
-    LoginScreenForm log = new LoginScreenForm(this);
+    LoginScreenForm log;
     CreateAccount acc;
     StartupScreen start;
     
     
-   public Mediator(){
+   public Mediator(Connection c){
+       conn = c;
+       log = new LoginScreenForm(this, conn);
        log.setVisible(true);
-       conn = DataB.openConnectDb();
+       
    }
 
    public void newCreateAccountPage(){
@@ -45,8 +43,8 @@ class Mediator {
        acc.setVisible(false);
    }
    
-   public static String verifyLogin2(String un, String pw){
-        String result = Student.getPassword(un, conn);
+   public static String verifyLogin2(String un, String pw, Connection c){
+        String result = Student.getPassword(un, c);
         if(result.equals(pw)){
             return "valid";}
         if(result.equals("notFound")){

@@ -40,12 +40,8 @@ class Student{
         catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
             result = null;}
-        DataB.closeConnectDb();
         return result;
     }
-
-//    public static String setFirstName(String loginN, String get){
-//    return DataB.query(loginN, "firstName", "users");}
 
     public static String getPassword(String loginN, Connection c){
         String result = "";
@@ -59,7 +55,6 @@ class Student{
         catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
             result = null;}
-        DataB.closeConnectDb();
         return result;
     }
 
@@ -70,7 +65,6 @@ class Student{
             prestmt.setString(1, password);
             prestmt.setString(2, loginN);
             prestmt.executeUpdate();
-            DataB.closeConnectDb();
         }    
         catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
@@ -89,14 +83,10 @@ class Student{
         catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
             result = null;}
-        DataB.closeConnectDb();
         return result;
     }
 
-//    public static String setLastName(String loginN){
-//        return DataB.query(loginN, "LastName", "users");}
-
-	public static String getMajor(String loginN, Connection c){
+    public static String getMajor(String loginN, Connection c){
         String result = "";
         String user_query = "select * from users where login_Name = ?";
         try {
@@ -108,14 +98,12 @@ class Student{
         catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
             result = null;}
-        DataB.closeConnectDb();
         return result;
     }
 
 	public static void createAccount(String firstN, String lastN, String major, String semester, String year, String email, String username, String password, Connection conn){
-	//INSERT INTO users(f_Name, l_Name, login_Name, pword, major, sem_start, s_email)
-        //VALUES(firstN, lastN, username, password, major, semester, email);
-	String user_query = "INSERT INTO users (f_Name, l_Name, login_Name, pword, pword_val, major, sem_start, gr_date, s_email)VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	
+        String user_query = "INSERT INTO users (f_Name, l_Name, login_Name, pword, pword_val, major, sem_start, gr_date, s_email)VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             prestmt = conn.prepareStatement(user_query);
             prestmt.setString(1, firstN);
@@ -128,7 +116,6 @@ class Student{
             prestmt.setString(8, year);
             prestmt.setString(9, email);
             prestmt.execute();
-            //DataB.closeConnectDb();
         }    
         catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);

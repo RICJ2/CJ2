@@ -9,6 +9,7 @@ package loginscreen;
 //import java.sql.Connection;
 //import java.sql.PreparedStatement;
 //import java.sql.ResultSet;
+import java.sql.Connection;
 import javax.swing.JOptionPane;
 //import sun.awt.resources.awt;
 
@@ -18,15 +19,16 @@ import javax.swing.JOptionPane;
  */
 public class LoginScreenForm extends javax.swing.JFrame {
     Mediator mediator;
-    //Connection conn = null;
+    Connection conn = null;
     //ResultSet rs = null;
     //PreparedStatement pst = null;
 
     /**
      * Creates new form LoginScreenForm
      */
-    public LoginScreenForm(Mediator m) {
+    public LoginScreenForm(Mediator m, Connection c) {
         mediator = m;
+        conn = c;
         initComponents();
     }
 
@@ -255,7 +257,7 @@ public class LoginScreenForm extends javax.swing.JFrame {
        //System.out.println(passWord);
 
         if (!userName.equals("") && !passWord.equals("") && (!userName.equals("") || !passWord.equals(""))){
-           String result = Mediator.verifyLogin2(userName, passWord);
+           String result = Mediator.verifyLogin2(userName, passWord, conn);
             if (result.equals("valid")){
             mediator.createStartupScreen(userName);
            }
