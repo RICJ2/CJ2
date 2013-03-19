@@ -279,7 +279,10 @@ public class CreateAccount extends javax.swing.JFrame {
 
     private void createAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountButtonActionPerformed
         if (passwordTextField.getText().equals(confirmTextField.getText())){
-		Student.createAccount(firstNameText.getText(), lastNameText.getText(), (String)majorComboBox.getSelectedItem(), (String)semesterComboBox1.getSelectedItem(), (String)yearComboBox.getSelectedItem(), emailTextField.getText(), usernameTextField.getText(), passwordTextField.getText(), conn);
+		Student.createAccount(firstNameText.getText(), lastNameText.getText(),
+                        (String)majorComboBox.getSelectedItem(), (String)semesterComboBox1.getSelectedItem(), 
+                        (String)yearComboBox.getSelectedItem(), emailTextField.getText(), usernameTextField.getText(),
+                         passwordTextField.getText(), conn);
 		//Student.setPassword(usernameTextField.getText(), passwordTextField.getText(), conn);
         }
 	else{
