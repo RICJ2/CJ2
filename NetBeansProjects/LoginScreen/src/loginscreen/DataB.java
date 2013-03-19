@@ -27,7 +27,7 @@ public class DataB {
         try{
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:mysql://www.savianconsultants.com:3306/savianconsultants_com_2","a0000a6f_1","century4last" );
-            //JOptionPane.showMessageDialog(null, "Connection Established");
+            JOptionPane.showMessageDialog(null, "Connection Established");
             return conn;
         }catch (Exception e){
             JOptionPane.showMessageDialog(null, e);
