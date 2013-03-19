@@ -29,7 +29,7 @@ class Student{
     }
 	
     public static String getFirstName(String loginN, Connection c){
-        String result = "";
+        String result;
         String user_query = "select * from users where login_Name = ?";
         try {
             prestmt = c.prepareStatement(user_query);
@@ -48,7 +48,7 @@ class Student{
 //    return DataB.query(loginN, "firstName", "users");}
 
     public static String getPassword(String loginN, Connection c){
-        String result = "";
+        String result;
         String user_query = "select * from users where login_Name = ?";
         try {
             prestmt = c.prepareStatement(user_query);
@@ -78,7 +78,7 @@ class Student{
     }
 
     public static String getLastName(String loginN, Connection c){
-        String result = "";
+        String result;
         String user_query = "select * from users where login_Name = ?";
         try {
             prestmt = c.prepareStatement(user_query);
@@ -97,7 +97,7 @@ class Student{
 //        return DataB.query(loginN, "LastName", "users");}
 
 	public static String getMajor(String loginN, Connection c){
-        String result = "";
+        String result;
         String user_query = "select * from users where login_Name = ?";
         try {
             prestmt = c.prepareStatement(user_query);

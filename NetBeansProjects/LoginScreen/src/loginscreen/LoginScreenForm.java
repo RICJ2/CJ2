@@ -26,7 +26,7 @@ public class LoginScreenForm extends javax.swing.JFrame {
      * Creates new form LoginScreenForm
      */
     public LoginScreenForm(Mediator m) {
-        mediator = m;
+       mediator = m;
         initComponents();
     }
 
