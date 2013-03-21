@@ -104,6 +104,7 @@ class Student{
 	public static void createAccount(String firstN, String lastN, String major, String semester, String year, String email, String username, String password, Connection conn){
 
         String user_query = "INSERT INTO users (f_Name, l_Name, login_Name, pword, pword_val, major, sem_start, gr_date, s_email)VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
         try {
             prestmt = conn.prepareStatement(user_query);
             prestmt.setString(1, firstN);
@@ -111,8 +112,8 @@ class Student{
             prestmt.setString(3, username);
             prestmt.setString(4, password);
             prestmt.setString(5, password);
-            prestmt.setString(6, "17");
-            prestmt.setString(7, "1");
+            prestmt.setString(6, major);
+            prestmt.setString(7, semester);
             prestmt.setString(8, year);
             prestmt.setString(9, email);
             prestmt.execute();
