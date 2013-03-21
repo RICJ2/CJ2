@@ -27,7 +27,7 @@ class Student{
 	String fullName = Student.getFirstName(loginN, c) + " " + Student.getLastName(loginN, c);
 	return fullName;
     }
-	
+
     public static String getFirstName(String loginN, Connection c){
         String result = "";
         String user_query = "select * from users where login_Name = ?";
@@ -65,7 +65,7 @@ class Student{
             prestmt.setString(1, password);
             prestmt.setString(2, loginN);
             prestmt.executeUpdate();
-        }    
+        }
         catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
         }
@@ -102,7 +102,7 @@ class Student{
     }
 
 	public static void createAccount(String firstN, String lastN, String major, String semester, String year, String email, String username, String password, Connection conn){
-	
+
         String user_query = "INSERT INTO users (f_Name, l_Name, login_Name, pword, pword_val, major, sem_start, gr_date, s_email)VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             prestmt = conn.prepareStatement(user_query);
@@ -116,10 +116,10 @@ class Student{
             prestmt.setString(8, year);
             prestmt.setString(9, email);
             prestmt.execute();
-        }    
+        }
         catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
         }
-	
+
 	}
 }
