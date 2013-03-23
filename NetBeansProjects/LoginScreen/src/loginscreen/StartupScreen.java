@@ -3,8 +3,8 @@
  * and open the template in the editor.
  */
 package loginscreen;
-
-//import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.PreparedStatement;
 import java.sql.Connection;
 import javax.swing.*;
 /**
@@ -15,8 +15,8 @@ public class StartupScreen extends javax.swing.JFrame {
  Mediator mediator;
  String loginName;
  Connection conn = null;
-//ResultSet rs = null;
-//PreparedStatement pst = null;
+ ResultSet rs = null;
+ PreparedStatement pst = null;
     /**
      * Creates new form StartupScreen
      */
@@ -25,20 +25,23 @@ public class StartupScreen extends javax.swing.JFrame {
 	loginName = ln;
         conn = c;
         initComponents();
+        Fillcombo();
     }
     private void Fillcombo(){
-       //String sql = "select * from courses";
-//try{
-//    pst = conn.prepareStatement(sql);
-//    rs = pst.executeQuery();
-//    while (rs.next()){
-//        String cid = rs.getString("course_id");
-//        jComboBox1.addItem(cid);
-//    }
-//}
-//    catch(Exception e){
-//        JOptionPane.showMessageDialog(null, e);
-   // }
+       
+        try{
+            String sql = "select * from courses WHERE course_type = 'CSCI'";
+            pst = conn.prepareStatement(sql);
+            rs = pst.executeQuery();
+            while (rs.next()){
+            String cid = rs.getString("course_id");
+            jComboBox1.addItem(cid);
+            /*for(int i = 1; i<48; i++){
+            jComboBox1.addItem(cid);*/
+           }
+            } catch(Exception e){
+                JOptionPane.showMessageDialog(null, e);
+            }
     }
 
     /**
@@ -444,7 +447,6 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jLabel2.setText("Course 2");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -458,7 +460,6 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jLabel4.setText("Course 4");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
