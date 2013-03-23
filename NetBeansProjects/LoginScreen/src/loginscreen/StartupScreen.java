@@ -28,22 +28,37 @@ public class StartupScreen extends javax.swing.JFrame {
         Fillcombo();
     }
     private void Fillcombo(){
-       
+
         try{
-            String sql = "select * from courses WHERE course_type = 'CSCI'";
+            String sql = "select * from courses WHERE course_type = 'CSCI' AND course_num >= 157 AND course_num <= 201";
             pst = conn.prepareStatement(sql);
             rs = pst.executeQuery();
             while (rs.next()){
-            String cid = rs.getString("course_id");
-            jComboBox1.addItem(cid);
-            /*for(int i = 1; i<48; i++){
-            jComboBox1.addItem(cid);*/
-           }
-            } catch(Exception e){
-                JOptionPane.showMessageDialog(null, e);
-            }
-    }
+                String cid = rs.getString("course_id");
+                jComboBox1.addItem(cid);
+                jComboBox2.addItem(cid);
 
+                /*for(int i = 1; i<48; i++){
+                jComboBox1.addItem(cid);*/
+            }
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+        try{
+            String sql2 = "select * from courses WHERE course_type = 'CSCI' AND course_num >= 201 AND course_num <= 312";
+            pst = conn.prepareStatement(sql2);
+            rs = pst.executeQuery();
+            while (rs.next()){
+                String cid = rs.getString("course_id");
+                jComboBox7.addItem(cid);
+                jComboBox8.addItem(cid);
+                jComboBox9.addItem(cid);
+                jComboBox10.addItem(cid);
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -453,8 +468,6 @@ public class StartupScreen extends javax.swing.JFrame {
             }
         });
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLabel3.setText("Course 3");
         jLabel3.setToolTipText("");
 
@@ -466,15 +479,9 @@ public class StartupScreen extends javax.swing.JFrame {
             }
         });
 
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLabel5.setText("Course 5");
 
         jLabel9.setText("Course 6");
-
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jPanel14.setBackground(new java.awt.Color(204, 0, 0));
 
@@ -560,36 +567,26 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jLabel238.setText("Course 2");
 
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox7ActionPerformed(evt);
             }
         });
 
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLabel239.setText("Course 3");
         jLabel239.setToolTipText("");
 
         jLabel240.setText("Course 4");
 
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox8ActionPerformed(evt);
             }
         });
 
-        jComboBox11.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLabel241.setText("Course 5");
 
         jLabel242.setText("Course 6");
-
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jComboBox12.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jPanel28.setBackground(new java.awt.Color(102, 102, 0));
         jPanel28.setForeground(new java.awt.Color(255, 255, 255));
