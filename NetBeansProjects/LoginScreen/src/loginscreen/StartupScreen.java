@@ -435,8 +435,8 @@ public class StartupScreen extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        logoutButton = new javax.swing.JButton();
+        editAccountButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Courses");
@@ -3412,17 +3412,21 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jPanel5.setBackground(new java.awt.Color(83, 13, 47));
 
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Logout");
-        jButton2.setBorder(null);
-        jButton2.setBorderPainted(false);
-        jButton2.setContentAreaFilled(false);
+        logoutButton.setForeground(new java.awt.Color(255, 255, 255));
+        logoutButton.setText("Logout");
+        logoutButton.setBorder(null);
+        logoutButton.setContentAreaFilled(false);
 
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Settings");
-        jButton3.setBorder(null);
-        jButton3.setBorderPainted(false);
-        jButton3.setContentAreaFilled(false);
+        editAccountButton.setForeground(new java.awt.Color(255, 255, 255));
+        editAccountButton.setText("Settings");
+        editAccountButton.setBorder(null);
+        editAccountButton.setBorderPainted(false);
+        editAccountButton.setContentAreaFilled(false);
+        editAccountButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editAccountButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -3430,9 +3434,9 @@ public class StartupScreen extends javax.swing.JFrame {
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addComponent(editAccountButton)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2)
+                .addComponent(logoutButton)
                 .addGap(54, 54, 54))
         );
         jPanel5Layout.setVerticalGroup(
@@ -3440,8 +3444,8 @@ public class StartupScreen extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(0, 2, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
+                    .addComponent(logoutButton)
+                    .addComponent(editAccountButton))
                 .addGap(0, 4, Short.MAX_VALUE))
         );
 
@@ -3707,6 +3711,10 @@ public class StartupScreen extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox45ActionPerformed
 
+    private void editAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAccountButtonActionPerformed
+        mediator.createEditScreen();
+    }//GEN-LAST:event_editAccountButtonActionPerformed
+
 
     /**
      * @param args the command line arguments
@@ -3745,8 +3753,7 @@ public class StartupScreen extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton editAccountButton;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JComboBox jComboBox10;
     private javax.swing.JComboBox jComboBox11;
@@ -4114,5 +4121,6 @@ public class StartupScreen extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
+    private javax.swing.JButton logoutButton;
     // End of variables declaration//GEN-END:variables
 }
