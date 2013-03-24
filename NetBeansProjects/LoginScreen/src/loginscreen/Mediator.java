@@ -15,6 +15,7 @@ class Mediator {
     LoginScreenForm log;
     CreateAccount acc;
     StartupScreen start;
+    EditAccount editAcc;
     
     
    public Mediator(Connection c){
@@ -38,6 +39,11 @@ class Mediator {
        log.setVisible(false);
    }
    
+      public void createEditScreen(){
+       editAcc.setVisible(true);
+       start.setVisible(false);
+   }
+   
     public void createLoginScreen(){
        log.setVisible(true);
        acc.setVisible(false);
@@ -51,4 +57,7 @@ class Mediator {
             return "invalidUsername";}
         else {return "invalidPassword";}
     }
+   
+
+   
 }
