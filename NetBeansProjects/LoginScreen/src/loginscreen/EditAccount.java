@@ -28,6 +28,8 @@ public class EditAccount extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
+        yearLabel = new javax.swing.JLabel();
+        semesterLabel = new javax.swing.JLabel();
         confirmLabel = new javax.swing.JLabel();
         lastNameText = new javax.swing.JTextField();
         passwordTextField = new javax.swing.JTextField();
@@ -39,9 +41,11 @@ public class EditAccount extends javax.swing.JFrame {
         editAccountLabel = new javax.swing.JLabel();
         createAccountButton = new javax.swing.JButton();
         majorLabel = new javax.swing.JLabel();
+        yearComboBox = new javax.swing.JComboBox();
         lastNameLabel = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         majorComboBox = new javax.swing.JComboBox();
+        semesterComboBox1 = new javax.swing.JComboBox();
         emailTextField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
@@ -52,6 +56,12 @@ public class EditAccount extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        yearLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        yearLabel.setText("Year:");
+
+        semesterLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        semesterLabel.setText("Semester:");
 
         confirmLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         confirmLabel.setText("Confirm Password:");
@@ -93,6 +103,8 @@ public class EditAccount extends javax.swing.JFrame {
         majorLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         majorLabel.setText("Major:");
 
+        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         lastNameLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lastNameLabel.setText("Last Name");
 
@@ -100,6 +112,13 @@ public class EditAccount extends javax.swing.JFrame {
         jLabel1.setText("Email:");
 
         majorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Computer Science - BA", "Computer Science - BS" }));
+
+        semesterComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        semesterComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                semesterComboBox1ActionPerformed(evt);
+            }
+        });
 
         emailTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,35 +133,38 @@ public class EditAccount extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lastNameLabel)
+                            .addComponent(majorLabel)
+                            .addComponent(semesterLabel)
+                            .addComponent(yearLabel)
+                            .addComponent(firstNameLabel)
+                            .addComponent(confirmLabel)
+                            .addComponent(passwordLabel))
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(63, 63, 63)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(majorComboBox, 0, 136, Short.MAX_VALUE)
+                                    .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(firstNameText)
+                                    .addComponent(semesterComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lastNameText)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(passwordTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(confirmTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(emailTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(85, 85, 85)
                         .addComponent(editAccountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                                .addComponent(confirmLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(confirmTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                                .addComponent(passwordLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lastNameLabel)
-                                    .addComponent(majorLabel)
-                                    .addComponent(firstNameLabel))
-                                .addGap(104, 104, 104)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(majorComboBox, 0, 136, Short.MAX_VALUE)
-                                    .addComponent(firstNameText)
-                                    .addComponent(lastNameText)))))
+                        .addComponent(jLabel1))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(72, 72, 72)
+                        .addGap(71, 71, 71)
                         .addComponent(createAccountButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cancelButton)))
@@ -165,15 +187,23 @@ public class EditAccount extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(majorLabel)
                     .addComponent(majorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(11, 11, 11)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(semesterLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(semesterComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(yearLabel)
+                    .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(passwordLabel)
-                    .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(passwordLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(confirmLabel)
                     .addComponent(confirmTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -181,7 +211,7 @@ public class EditAccount extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(createAccountButton)
                     .addComponent(cancelButton))
-                .addGap(158, 158, 158))
+                .addGap(61, 61, 61))
         );
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/loginscreen/resources/index.jpg"))); // NOI18N
@@ -220,7 +250,7 @@ public class EditAccount extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 686, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 668, Short.MAX_VALUE)
         );
 
         pack();
@@ -241,6 +271,10 @@ public class EditAccount extends javax.swing.JFrame {
     private void emailTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_emailTextFieldActionPerformed
+
+    private void semesterComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_semesterComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_semesterComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -295,5 +329,9 @@ public class EditAccount extends javax.swing.JFrame {
     private javax.swing.JLabel majorLabel;
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JTextField passwordTextField;
+    private javax.swing.JComboBox semesterComboBox1;
+    private javax.swing.JLabel semesterLabel;
+    private javax.swing.JComboBox yearComboBox;
+    private javax.swing.JLabel yearLabel;
     // End of variables declaration//GEN-END:variables
 }
