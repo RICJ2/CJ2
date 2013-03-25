@@ -40,6 +40,7 @@ class Mediator {
    }
    
       public void createEditScreen(){
+       editAcc = new EditAccount(this, loginName, conn);
        editAcc.setVisible(true);
        start.setVisible(false);
    }
@@ -58,6 +59,19 @@ class Mediator {
         else {return "invalidPassword";}
     }
    
-
+	public void logout(Connection c){
+       DataB.closeConnectDb();
+	   start.setVisible(false);
+   }
+   
+    public void showStartup(){
+		start.setVisible(true);
+		editAcc.setVisible(false);
+	}	
+   
+   
+   
+   
+   
    
 }

@@ -22,7 +22,7 @@ public class StartupScreen extends javax.swing.JFrame {
      */
     public StartupScreen(Mediator m, String ln, Connection c) {
         mediator = m;
-	loginName = ln;
+		loginName = ln;
         conn = c;
         initComponents();
         Fillcombo();
@@ -3348,12 +3348,12 @@ public class StartupScreen extends javax.swing.JFrame {
         jLabel196.setForeground(new java.awt.Color(255, 255, 255));
         jLabel196.setText("Student Name: ");
 
-        jTextField1.setText("CSCI");
+        jTextField1.setText(Student.getMajor(loginName, conn));
 
         jLabel199.setForeground(new java.awt.Color(255, 255, 255));
         jLabel199.setText("Student Major:");
 
-        jTextField2.setText("Davey Jones");
+        jTextField2.setText(Student.getFirstName(loginName, conn) + " " + Student.getLastName(loginName, conn));
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -3416,15 +3416,20 @@ public class StartupScreen extends javax.swing.JFrame {
         logoutButton.setText("Logout");
         logoutButton.setBorder(null);
         logoutButton.setContentAreaFilled(false);
+        logoutButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                logoutButtonMouseClicked(evt);
+            }
+        });
 
         editAccountButton.setForeground(new java.awt.Color(255, 255, 255));
         editAccountButton.setText("Settings");
         editAccountButton.setBorder(null);
         editAccountButton.setBorderPainted(false);
         editAccountButton.setContentAreaFilled(false);
-        editAccountButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editAccountButtonActionPerformed(evt);
+        editAccountButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                editAccountButtonMouseClicked(evt);
             }
         });
 
@@ -3711,9 +3716,13 @@ public class StartupScreen extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox45ActionPerformed
 
-    private void editAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editAccountButtonActionPerformed
+    private void logoutButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutButtonMouseClicked
+       mediator.logout(conn);
+    }//GEN-LAST:event_logoutButtonMouseClicked
+
+    private void editAccountButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editAccountButtonMouseClicked
         mediator.createEditScreen();
-    }//GEN-LAST:event_editAccountButtonActionPerformed
+    }//GEN-LAST:event_editAccountButtonMouseClicked
 
 
     /**

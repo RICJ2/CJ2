@@ -4,6 +4,8 @@
  */
 package loginscreen;
 
+import java.sql.Connection;
+
 /**
  *
  * @author Chris
@@ -13,7 +15,14 @@ public class EditAccount extends javax.swing.JFrame {
     /**
      * Creates new form EditAccount
      */
-    public EditAccount() {
+	 Mediator mediator;
+	 Connection conn;
+	 String loginName;
+	 
+    public EditAccount(Mediator m, String l, Connection c) {
+	mediator = m;
+	loginName = l;
+	conn = c;
         initComponents();
     }
 
@@ -71,9 +80,9 @@ public class EditAccount extends javax.swing.JFrame {
         cancelButton.setBackground(new java.awt.Color(255, 0, 0));
         cancelButton.setForeground(new java.awt.Color(255, 255, 255));
         cancelButton.setText("Cancel");
-        cancelButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelButtonActionPerformed(evt);
+        cancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cancelButtonMouseClicked(evt);
             }
         });
 
@@ -84,6 +93,11 @@ public class EditAccount extends javax.swing.JFrame {
         createAccountButton.setBackground(new java.awt.Color(0, 0, 255));
         createAccountButton.setForeground(new java.awt.Color(255, 255, 255));
         createAccountButton.setText("Save Changes");
+        createAccountButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                createAccountButtonMouseClicked(evt);
+            }
+        });
         createAccountButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createAccountButtonActionPerformed(evt);
@@ -230,9 +244,9 @@ public class EditAccount extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_lastNameTextActionPerformed
 
-    private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
+    //private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
 
-    }//GEN-LAST:event_cancelButtonActionPerformed
+    //}//GEN-LAST:event_cancelButtonActionPerformed
 
     private void createAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountButtonActionPerformed
 
@@ -241,6 +255,14 @@ public class EditAccount extends javax.swing.JFrame {
     private void emailTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_emailTextFieldActionPerformed
+
+    private void cancelButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelButtonMouseClicked
+        mediator.showStartup();
+    }//GEN-LAST:event_cancelButtonMouseClicked
+
+    private void createAccountButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createAccountButtonMouseClicked
+        //TODO add your handling code here:
+    }//GEN-LAST:event_createAccountButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -272,7 +294,7 @@ public class EditAccount extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EditAccount().setVisible(true);
+            //new EditAccount().setVisible(true);
             }
         });
     }
