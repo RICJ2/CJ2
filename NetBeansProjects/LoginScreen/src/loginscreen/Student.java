@@ -27,7 +27,7 @@ class Student{
 	String fullName = Student.getFirstName(loginN, c) + " " + Student.getLastName(loginN, c);
 	return fullName;
     }
-	
+
     public static String getFirstName(String loginN, Connection c){
         String result = "";
         String user_query = "select * from users where login_Name = ?";
@@ -65,7 +65,7 @@ class Student{
             prestmt.setString(1, password);
             prestmt.setString(2, loginN);
             prestmt.executeUpdate();
-        }    
+        }
         catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
         }
@@ -101,25 +101,26 @@ class Student{
         return result;
     }
 
-	public static void createAccount(String firstN, String lastN, String major, String semester, String year, String email, String username, String password, Connection conn){
-	
-        String user_query = "INSERT INTO users (f_Name, l_Name, login_Name, pword, pword_val, major, sem_start, gr_date, s_email)VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+	public static void createAccount(String firstN, String lastN, String major, String semester, String year, String email, String username, String password, String passval, Connection conn){
+//needed to have String passval added due to the expectation that there are nine(9) parameters but was only passing over 8 and with the select query embedded in the insert it made the problem stand out because of the uniqueness of the insert query. So on the CreateAccount java code I added in the confirmTextField.getText() and I am passing that to the passval. So to sum it up, we can't pass 'password' twice as a unique parameter value we needed to have something unique so I passed the actual password validator field.
+            String user_query = "INSERT INTO users (f_name, l_name, login_name, pword, pword_val,major, sem_start, gr_date, s_email)Values(?,?,?,?,?,(SELECT iddegree_prog from degree_prog where degree_desc = ?), ?,?,?)";
+       // String user_query = "INSERT INTO users (f_Name, l_Name, login_Name, pword, pword_val, major, sem_start, gr_date, s_email)VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             prestmt = conn.prepareStatement(user_query);
             prestmt.setString(1, firstN);
             prestmt.setString(2, lastN);
             prestmt.setString(3, username);
             prestmt.setString(4, password);
-            prestmt.setString(5, password);
-            prestmt.setString(6, "17");
+            prestmt.setString(5, passval);
+            prestmt.setString(6, major);
             prestmt.setString(7, "1");
-            prestmt.setString(8, year);
+            prestmt.setString(8, "2013");
             prestmt.setString(9, email);
             prestmt.execute();
-        }    
+        }
         catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
         }
-	
+
 	}
 }
