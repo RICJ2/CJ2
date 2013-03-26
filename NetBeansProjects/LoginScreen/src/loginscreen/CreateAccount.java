@@ -82,7 +82,7 @@ public class CreateAccount extends javax.swing.JFrame {
             }
         });
 
-        firstNameText.setNextFocusableComponent(firstNameText);
+        firstNameText.setNextFocusableComponent(lastNameText);
 
         passwordLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         passwordLabel.setText("Password:");
@@ -251,12 +251,12 @@ public class CreateAccount extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(255, 255, 255)
                         .addComponent(jLabel2)))
-                .addContainerGap(193, Short.MAX_VALUE))
+                .addContainerGap(196, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
