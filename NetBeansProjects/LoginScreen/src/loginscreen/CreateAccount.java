@@ -11,12 +11,14 @@ import javax.swing.JOptionPane;
  *
  * @author Chris
  */
+//declaration of the variables for this class
 public class CreateAccount extends javax.swing.JFrame {
     Mediator mediator;
     Connection conn;
     /**
      * Creates new form CreateAccount
      */
+    //Constructor initializes the variables for this class
     public CreateAccount(Mediator m, Connection c) {
         mediator = m;
         conn = c;
@@ -286,16 +288,17 @@ public class CreateAccount extends javax.swing.JFrame {
         //LoginScreenForm returnLogin = new LoginScreenForm ();
         //returnLogin.setVisible(true);
     }//GEN-LAST:event_cancelButtonActionPerformed
-
+    //when the create account buttom is <clicked> by the mouse the following fields are 
+    //captured and passed if the password and the validate password match. The values from 
+    //text fields are passed and the Student.createAccount method is called in the Student Class
     private void createAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountButtonActionPerformed
         if (passwordTextField.getText().equals(confirmTextField.getText())){
 		Student.createAccount(firstNameText.getText(), lastNameText.getText(),
                         (String)majorComboBox.getSelectedItem(), (String)semesterComboBox1.getSelectedItem(),
                         (String)yearComboBox.getSelectedItem(), emailTextField.getText(), usernameTextField.getText(),
                          passwordTextField.getText(),confirmTextField.getText(), conn);
-		//Student.setPassword(usernameTextField.getText(), passwordTextField.getText(), conn);
         }
-	else{
+	else{//if error on password entries this will capture and throw the message below.
 		JOptionPane.showMessageDialog(null, "Password and Comfirm Password do not match");
         }
     }//GEN-LAST:event_createAccountButtonActionPerformed
@@ -338,7 +341,7 @@ public class CreateAccount extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                //new CreateAccount().setVisible(true);
+                
             }
         });
     }
