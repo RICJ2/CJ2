@@ -119,7 +119,7 @@ class Student{
             prestmt.setString(4, password);
             prestmt.setString(5, passval);
             prestmt.setString(6, major);
-            prestmt.setString(7, "1");
+            prestmt.setString(7, semester);
             prestmt.setString(8, "2013");
             prestmt.setString(9, email);
             prestmt.execute();
