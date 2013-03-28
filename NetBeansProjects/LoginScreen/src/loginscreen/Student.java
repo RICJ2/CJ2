@@ -4,7 +4,7 @@
  */
 package loginscreen;
 
-//import java.sql.DriverManager;
+
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,19 +16,24 @@ import javax.swing.JOptionPane;
  *
  * @author ChrisO
  */
+//declaration of the variables for this class
 class Student{
+    
     static PreparedStatement prestmt;
     static ResultSet rs;
     static Connection c;
-
+    
+    //empty Constructor
     public Student()
     {}
-
+    
+    
     public static String getFullName(String loginN, Connection c){
 	String fullName = Student.getFirstName(loginN, c) + " " + Student.getLastName(loginN, c);
 	return fullName;
     }
-
+    //this query calls for the login name from the users table that matches the
+    //parameter value which was entered in the 
     public static String getFirstName(String loginN, Connection c){
         String result;
         String user_query = "select * from users where login_Name = ?";
@@ -104,7 +109,7 @@ class Student{
 
 	public static void createAccount(String firstN, String lastN, String major, String semester, String year, String email, String username, String password, String passval, Connection c){
 //needed to have String passval added due to the expectation that there are nine(9) parameters but was only passing over 8 and with the select query embedded in the insert it made the problem stand out because of the uniqueness of the insert query. So on the CreateAccount java code I added in the confirmTextField.getText() and I am passing that to the passval. So to sum it up, we can't pass 'password' twice as a unique parameter value we needed to have something unique so I passed the actual password validator field.
-            String user_query = "INSERT INTO users (f_name, l_name, login_name, pword, pword_val,major, sem_start, gr_date, s_email)Values(?,?,?,?,?,(SELECT iddegree_prog from degree_prog where degree_desc = ?), ?,?,?)";
+            String user_query = "INSERT INTO users (f_name, l_name, login_name, pword, pword_val,major, sem_start, gr_date, s_email)Values(?,?,?,?,?,(SELECT iddegree_prog from degree_prog where degree_desc = ?), (Select ?,?,?)";
        // String user_query = "INSERT INTO users (f_Name, l_Name, login_Name, pword, pword_val, major, sem_start, gr_date, s_email)VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             prestmt = c.prepareStatement(user_query);
