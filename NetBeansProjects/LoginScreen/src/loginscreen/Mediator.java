@@ -4,6 +4,10 @@
  */
 package loginscreen;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -16,6 +20,8 @@ class Mediator {
     CreateAccount acc;
     StartupScreen start;
     EditAccount editAcc;
+    PreparedStatement prestmt;
+    ResultSet rs;
     
     
    public Mediator(Connection c){
@@ -69,8 +75,23 @@ class Mediator {
 		editAcc.setVisible(false);
 	}	
    
-   
-   
+    public ArrayList fillCombo(String course1, String course2){
+		ArrayList <String> l = new ArrayList ();
+        
+            String sql = "select * from courses WHERE course_type = 'CSCI' AND course_num >= ? AND course_num <= ?";
+        try{ 
+            prestmt = conn.prepareStatement(sql);
+            prestmt.setString(1, course1);
+            prestmt.setString(1, course2);
+            rs = prestmt.executeQuery();
+            while (rs.next()){
+                l.add("CSCI" + rs.getString("course_id") + rs.getString("course_title"));
+            }
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(null, e);
+        }
+        return l;
+    }
    
    
    
