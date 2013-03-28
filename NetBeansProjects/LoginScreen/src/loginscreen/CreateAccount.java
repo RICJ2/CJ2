@@ -130,7 +130,7 @@ public class CreateAccount extends javax.swing.JFrame {
 
         majorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Computer Science - BA", "Computer Science - BS" }));
 
-        semesterComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        semesterComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Fall", "Spring", "Summer"}));
         semesterComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 semesterComboBox1ActionPerformed(evt);
