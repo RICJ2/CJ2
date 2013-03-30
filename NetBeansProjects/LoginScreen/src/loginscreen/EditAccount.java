@@ -5,6 +5,7 @@
 package loginscreen;
 
 import java.sql.Connection;
+import java.util.Calendar;
 
 /**
  *
@@ -117,7 +118,9 @@ public class EditAccount extends javax.swing.JFrame {
         majorLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         majorLabel.setText("Major:");
 
-        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+		Calendar now = Calendar.getInstance();
+		int year = now.get(Calendar.YEAR);
+        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { Integer.toString(year), Integer.toString(year+1), Integer.toString(year+2), Integer.toString(year+3) }));
 
         lastNameLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lastNameLabel.setText("Last Name");
@@ -127,7 +130,7 @@ public class EditAccount extends javax.swing.JFrame {
 
         majorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Computer Science - BA", "Computer Science - BS" }));
 
-        semesterComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        semesterComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Fall", "Spring", "Summer"}));
         semesterComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 //semesterComboBox1ActionPerformed(evt);
