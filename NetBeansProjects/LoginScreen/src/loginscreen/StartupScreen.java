@@ -6,6 +6,8 @@ package loginscreen;
 import java.sql.ResultSet;
 import java.sql.PreparedStatement;
 import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.Arrays;
 import javax.swing.*;
 /**
  *
@@ -22,10 +24,24 @@ public class StartupScreen extends javax.swing.JFrame {
      */
     public StartupScreen(Mediator m, String ln, Connection c) {
         mediator = m;
-		loginName = ln;
+	loginName = ln;
         conn = c;
         initComponents();
-        Fillcombo();
+        ArrayList list;
+        ArrayList<JComboBox> comboGrp1;
+        //Fillcombo();
+		
+	// Method calls to fill combo boxes
+//        list = mediator.fillCombo("157", "201");
+//        for (int i = 0; i < list.size(); i++) {
+//	jComboBox1.addItem(list.get(i));
+//        jComboBox2.addItem(list.get(i));
+//        }
+//        comboGrp1 = new ArrayList<JComboBox>(jComboBox7, jComboBox8, jComboBox9, jComboBox10);
+//        list = mediator.fillCombo("201", "312");
+//        for (int i = 0; i < list.size(); i++) {
+//	comboGrp1.get(i).addItem(list.get(i));
+//        }
     }
     private void Fillcombo(){
 
