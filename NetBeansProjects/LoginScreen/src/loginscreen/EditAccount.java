@@ -60,15 +60,6 @@ public class EditAccount extends javax.swing.JFrame {
         semesterComboBox1 = new javax.swing.JComboBox();
         emailTextField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-		
-		firstNameText.setText(Student.getFirstName(loginName, conn));
-		lastNameText.setText(Student.getLastName(loginName, conn));
-		emailTextField.setText(Student.getEmail(loginName, conn));
-		passwordTextField.setText(Student.getPassword(loginName, conn));
-		confirmTextField.setText(Student.getConfirmPassword(loginName, conn));
-		//semesterComboBox1.setSelectedIndex(Integer.parseInt(Student.getSemester(loginName, conn)));
-		//majorComboBox.setSelectedIndex(Integer.parseInt(Student.getMajor(loginName, conn)));
-		//yearComboBox.setSelectedIndex(Integer.parseInt(Student.getYear(loginName, conn)) - year);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -140,7 +131,7 @@ public class EditAccount extends javax.swing.JFrame {
         majorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Computer Science - BA", "Computer Science - BS" }));
 
         semesterComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Fall", "Spring", "Summer"}));
-        semesterComboBox1.addActionListener(new java.awt.event.ActionListener() {
+		semesterComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 //semesterComboBox1ActionPerformed(evt);
             }
@@ -152,6 +143,16 @@ public class EditAccount extends javax.swing.JFrame {
             }
         });
 
+		// Filing in text fields
+		firstNameText.setText(Student.getFirstName(loginName, conn));
+		lastNameText.setText(Student.getLastName(loginName, conn));
+		emailTextField.setText(Student.getEmail(loginName, conn));
+		passwordTextField.setText(Student.getPassword(loginName, conn));
+		confirmTextField.setText(Student.getConfirmPassword(loginName, conn));
+		semesterComboBox1.setSelectedIndex(Integer.parseInt(Student.getSemester(loginName, conn)) - 1);
+		//majorComboBox.setSelectedIndex(Integer.parseInt(Student.getMajor(loginName, conn)) - 1);
+		//yearComboBox.setSelectedIndex(Integer.parseInt(Student.getYear(loginName, conn)) - year);
+		
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
