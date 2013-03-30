@@ -35,7 +35,9 @@ public class EditAccount extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
+		Calendar now = Calendar.getInstance();
+		int year = now.get(Calendar.YEAR);
+	
         jPanel1 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         yearLabel = new javax.swing.JLabel();
@@ -58,6 +60,15 @@ public class EditAccount extends javax.swing.JFrame {
         semesterComboBox1 = new javax.swing.JComboBox();
         emailTextField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+		
+		firstNameText.setText(Student.getFirstName(loginName, conn));
+		lastNameText.setText(Student.getLastName(loginName, conn));
+		emailTextField.setText(Student.getEmail(loginName, conn));
+		passwordTextField.setText(Student.getPassword(loginName, conn));
+		confirmTextField.setText(Student.getConfirmPassword(loginName, conn));
+		//semesterComboBox1.setSelectedIndex(Integer.parseInt(Student.getSemester(loginName, conn)));
+		//majorComboBox.setSelectedIndex(Integer.parseInt(Student.getMajor(loginName, conn)));
+		//yearComboBox.setSelectedIndex(Integer.parseInt(Student.getYear(loginName, conn)) - year);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -118,9 +129,7 @@ public class EditAccount extends javax.swing.JFrame {
         majorLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         majorLabel.setText("Major:");
 
-		Calendar now = Calendar.getInstance();
-		int year = now.get(Calendar.YEAR);
-        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { Integer.toString(year), Integer.toString(year+1), Integer.toString(year+2), Integer.toString(year+3) }));
+		yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { Integer.toString(year), Integer.toString(year+1), Integer.toString(year+2), Integer.toString(year+3) }));
 
         lastNameLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lastNameLabel.setText("Last Name");
