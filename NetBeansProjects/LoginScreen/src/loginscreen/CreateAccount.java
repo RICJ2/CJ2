@@ -13,8 +13,10 @@ import javax.swing.JOptionPane;
  */
 //declaration of the variables for this class
 public class CreateAccount extends javax.swing.JFrame {
+
     Mediator mediator;
     Connection conn;
+
     /**
      * Creates new form CreateAccount
      */
@@ -288,18 +290,24 @@ public class CreateAccount extends javax.swing.JFrame {
         //LoginScreenForm returnLogin = new LoginScreenForm ();
         //returnLogin.setVisible(true);
     }//GEN-LAST:event_cancelButtonActionPerformed
-    //when the create account buttom is <clicked> by the mouse the following fields are 
-    //captured and passed if the password and the validate password match. The values from 
-    //text fields are passed and the Student.createAccount method is called in the Student Class
+    /**
+     * When the create account button is <clicked> by the mouse the following
+     * fields are captured and passed if the password and the validate password
+     * match. The values from text fields are passed and the
+     * Student.createAccount method is called in the Student Class
+     */
     private void createAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountButtonActionPerformed
-        if (passwordTextField.getText().equals(confirmTextField.getText())){
-		Student.createAccount(firstNameText.getText(), lastNameText.getText(),
-                        (String)majorComboBox.getSelectedItem(), (String)semesterComboBox1.getSelectedItem(),
-                        (String)yearComboBox.getSelectedItem(), emailTextField.getText(), usernameTextField.getText(),
-                         passwordTextField.getText(),confirmTextField.getText(), conn);
-        }
-	else{//if error on password entries this will capture and throw the message below.
-		JOptionPane.showMessageDialog(null, "Password and Comfirm Password do not match");
+        if (passwordTextField.getText().equals(confirmTextField.getText())) {
+            Student.createAccount(firstNameText.getText(), lastNameText.getText(),
+                    (String) majorComboBox.getSelectedItem(), (String) semesterComboBox1.getSelectedItem(),
+                    (String) yearComboBox.getSelectedItem(), emailTextField.getText(), usernameTextField.getText(),
+                    passwordTextField.getText(), confirmTextField.getText(), conn);
+        } else {
+            /**
+             * if error on password entry, the errir will be captured and thrown
+             * and the message below will be shown to the end user.
+             */
+            JOptionPane.showMessageDialog(null, "Password and Comfirm Password do not match");
         }
     }//GEN-LAST:event_createAccountButtonActionPerformed
 
@@ -342,7 +350,6 @@ public class CreateAccount extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                
             }
         });
     }
