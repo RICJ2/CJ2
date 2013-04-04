@@ -19,7 +19,7 @@ public class EditAccount extends javax.swing.JFrame {
 	 Mediator mediator;
 	 Connection conn;
 	 String loginName;
-	 
+
     public EditAccount(Mediator m, String l, Connection c) {
 	mediator = m;
 	loginName = l;
@@ -35,11 +35,9 @@ public class EditAccount extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-		Calendar now = Calendar.getInstance();
-		int year = now.get(Calendar.YEAR);
-	
-        jPanel1 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
+
+        LeftJPanel = new javax.swing.JPanel();
+        RightInnerJpanel = new javax.swing.JPanel();
         yearLabel = new javax.swing.JLabel();
         semesterLabel = new javax.swing.JLabel();
         confirmLabel = new javax.swing.JLabel();
@@ -51,23 +49,25 @@ public class EditAccount extends javax.swing.JFrame {
         firstNameLabel = new javax.swing.JLabel();
         cancelButton = new javax.swing.JButton();
         editAccountLabel = new javax.swing.JLabel();
-        createAccountButton = new javax.swing.JButton();
+        editAccountButton = new javax.swing.JButton();
         majorLabel = new javax.swing.JLabel();
         yearComboBox = new javax.swing.JComboBox();
+        yearComboBox1 = new javax.swing.JComboBox();
+        yearComboBox2 = new javax.swing.JComboBox();
         lastNameLabel = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        emailLabel = new javax.swing.JLabel();
         majorComboBox = new javax.swing.JComboBox();
-        semesterComboBox1 = new javax.swing.JComboBox();
+        semesterComboBox = new javax.swing.JComboBox();
         emailTextField = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        RICImgLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setPreferredSize(new java.awt.Dimension(361, 468));
+        LeftJPanel.setBackground(new java.awt.Color(255, 255, 255));
+        LeftJPanel.setPreferredSize(new java.awt.Dimension(361, 468));
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        RightInnerJpanel.setBackground(new java.awt.Color(255, 255, 255));
+        RightInnerJpanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         yearLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         yearLabel.setText("Year:");
@@ -77,12 +77,6 @@ public class EditAccount extends javax.swing.JFrame {
 
         confirmLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         confirmLabel.setText("Confirm Password:");
-
-        lastNameText.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lastNameTextActionPerformed(evt);
-            }
-        });
 
         passwordLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         passwordLabel.setText("Password:");
@@ -103,65 +97,38 @@ public class EditAccount extends javax.swing.JFrame {
         editAccountLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         editAccountLabel.setText("Edit Account");
 
-        createAccountButton.setBackground(new java.awt.Color(0, 0, 255));
-        createAccountButton.setForeground(new java.awt.Color(255, 255, 255));
-        createAccountButton.setText("Save Changes");
-        createAccountButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                createAccountButtonMouseClicked(evt);
-            }
-        });
-        createAccountButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                createAccountButtonActionPerformed(evt);
-            }
-        });
+        editAccountButton.setBackground(new java.awt.Color(0, 0, 255));
+        editAccountButton.setForeground(new java.awt.Color(255, 255, 255));
+        editAccountButton.setText("Save Changes");
 
         majorLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         majorLabel.setText("Major:");
 
-		yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { Integer.toString(year), Integer.toString(year+1), Integer.toString(year+2), Integer.toString(year+3) }));
+        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        yearComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        yearComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         lastNameLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lastNameLabel.setText("Last Name");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel1.setText("Email:");
+        emailLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        emailLabel.setText("Email:");
 
         majorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Computer Science - BA", "Computer Science - BS" }));
 
-        semesterComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Fall", "Spring", "Summer"}));
-		semesterComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                //semesterComboBox1ActionPerformed(evt);
-            }
-        });
+        semesterComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        emailTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailTextFieldActionPerformed(evt);
-            }
-        });
-
-		// Filing in text fields
-		firstNameText.setText(Student.getFirstName(loginName, conn));
-		lastNameText.setText(Student.getLastName(loginName, conn));
-		emailTextField.setText(Student.getEmail(loginName, conn));
-		passwordTextField.setText(Student.getPassword(loginName, conn));
-		confirmTextField.setText(Student.getConfirmPassword(loginName, conn));
-		semesterComboBox1.setSelectedIndex(Integer.parseInt(Student.getSemester(loginName, conn)) - 1);
-		//majorComboBox.setSelectedIndex(Integer.parseInt(Student.getMajor(loginName, conn)) - 1);
-		//yearComboBox.setSelectedIndex(Integer.parseInt(Student.getYear(loginName, conn)) - year);
-		
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout RightInnerJpanelLayout = new javax.swing.GroupLayout(RightInnerJpanel);
+        RightInnerJpanel.setLayout(RightInnerJpanelLayout);
+        RightInnerJpanelLayout.setHorizontalGroup(
+            RightInnerJpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RightInnerJpanelLayout.createSequentialGroup()
+                .addGroup(RightInnerJpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(RightInnerJpanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(RightInnerJpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lastNameLabel)
                             .addComponent(majorLabel)
                             .addComponent(semesterLabel)
@@ -169,101 +136,101 @@ public class EditAccount extends javax.swing.JFrame {
                             .addComponent(firstNameLabel)
                             .addComponent(confirmLabel)
                             .addComponent(passwordLabel))
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(RightInnerJpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(RightInnerJpanelLayout.createSequentialGroup()
                                 .addGap(63, 63, 63)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(RightInnerJpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(majorComboBox, 0, 136, Short.MAX_VALUE)
                                     .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(firstNameText)
-                                    .addComponent(semesterComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(semesterComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(lastNameText)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, RightInnerJpanelLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(RightInnerJpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(passwordTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(confirmTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(emailTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGroup(RightInnerJpanelLayout.createSequentialGroup()
                         .addGap(85, 85, 85)
                         .addComponent(editAccountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGroup(RightInnerJpanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(emailLabel))
+                    .addGroup(RightInnerJpanelLayout.createSequentialGroup()
                         .addGap(71, 71, 71)
-                        .addComponent(createAccountButton)
+                        .addComponent(editAccountButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(cancelButton)))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        RightInnerJpanelLayout.setVerticalGroup(
+            RightInnerJpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(RightInnerJpanelLayout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addComponent(editAccountLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(RightInnerJpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(firstNameLabel)
                     .addComponent(firstNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(RightInnerJpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lastNameLabel)
                     .addComponent(lastNameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(RightInnerJpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(majorLabel)
                     .addComponent(majorComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(11, 11, 11)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(RightInnerJpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(semesterLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(semesterComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(semesterComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(RightInnerJpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(yearLabel)
                     .addComponent(yearComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                .addGroup(RightInnerJpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(emailLabel)
                     .addComponent(emailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(RightInnerJpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(passwordLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(RightInnerJpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(confirmLabel)
                     .addComponent(confirmTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(createAccountButton)
+                .addGroup(RightInnerJpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(editAccountButton)
                     .addComponent(cancelButton))
                 .addGap(61, 61, 61))
         );
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/loginscreen/resources/index.jpg"))); // NOI18N
+        RICImgLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/loginscreen/resources/index.jpg"))); // NOI18N
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout LeftJPanelLayout = new javax.swing.GroupLayout(LeftJPanel);
+        LeftJPanel.setLayout(LeftJPanelLayout);
+        LeftJPanelLayout.setHorizontalGroup(
+            LeftJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LeftJPanelLayout.createSequentialGroup()
+                .addGroup(LeftJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(LeftJPanelLayout.createSequentialGroup()
                         .addGap(176, 176, 176)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(RightInnerJpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(LeftJPanelLayout.createSequentialGroup()
                         .addGap(255, 255, 255)
-                        .addComponent(jLabel2)))
-                .addContainerGap(140, Short.MAX_VALUE))
+                        .addComponent(RICImgLabel)))
+                .addContainerGap(143, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        LeftJPanelLayout.setVerticalGroup(
+            LeftJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(LeftJPanelLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
+                .addComponent(RICImgLabel)
                 .addGap(18, 18, 18)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(RightInnerJpanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(68, 68, 68))
         );
 
@@ -272,40 +239,20 @@ public class EditAccount extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 671, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(LeftJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 671, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 668, Short.MAX_VALUE)
+            .addComponent(LeftJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 668, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void lastNameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastNameTextActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lastNameTextActionPerformed
-
-    //private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelButtonActionPerformed
-
-    //}//GEN-LAST:event_cancelButtonActionPerformed
-
-    private void createAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountButtonActionPerformed
-
-    }//GEN-LAST:event_createAccountButtonActionPerformed
-
-    private void emailTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailTextFieldActionPerformed
-
     private void cancelButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelButtonMouseClicked
         mediator.showStartup();
     }//GEN-LAST:event_cancelButtonMouseClicked
-
-    private void createAccountButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createAccountButtonMouseClicked
-        //TODO add your handling code here:
-    }//GEN-LAST:event_createAccountButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -314,7 +261,7 @@ public class EditAccount extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -337,32 +284,34 @@ public class EditAccount extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-            //new EditAccount().setVisible(true);
+          
             }
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel LeftJPanel;
+    private javax.swing.JLabel RICImgLabel;
+    private javax.swing.JPanel RightInnerJpanel;
     private javax.swing.JButton cancelButton;
     private javax.swing.JLabel confirmLabel;
     private javax.swing.JTextField confirmTextField;
-    private javax.swing.JButton createAccountButton;
+    private javax.swing.JButton editAccountButton;
     private javax.swing.JLabel editAccountLabel;
+    private javax.swing.JLabel emailLabel;
     private javax.swing.JTextField emailTextField;
     private javax.swing.JLabel firstNameLabel;
     private javax.swing.JTextField firstNameText;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel lastNameLabel;
     private javax.swing.JTextField lastNameText;
     private javax.swing.JComboBox majorComboBox;
     private javax.swing.JLabel majorLabel;
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JTextField passwordTextField;
-    private javax.swing.JComboBox semesterComboBox1;
+    private javax.swing.JComboBox semesterComboBox;
     private javax.swing.JLabel semesterLabel;
     private javax.swing.JComboBox yearComboBox;
+    private javax.swing.JComboBox yearComboBox1;
+    private javax.swing.JComboBox yearComboBox2;
     private javax.swing.JLabel yearLabel;
     // End of variables declaration//GEN-END:variables
 }
