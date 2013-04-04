@@ -155,38 +155,16 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jPanel13" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jPanel27" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jPanel53" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jPanel72" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jPanel76" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jPanel74" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jPanel78" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jPanel80" min="-2" max="-2" attributes="0"/>
-                                      </Group>
+                                      <Component id="jPanel72" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jPanel76" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jPanel74" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jPanel78" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jPanel80" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jPanel53" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jPanel27" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jPanel13" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -195,23 +173,23 @@
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel13" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel27" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel53" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel72" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel74" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel76" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel78" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel80" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="44" max="32767" attributes="0"/>
+                                  <EmptySpace pref="137" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -662,7 +640,7 @@
                                           </Group>
                                           <Component id="jPanel54" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="12" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -1038,10 +1016,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel73">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="0" green="66" red="66" type="rgb"/>
-                                </Property>
-                                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                               </Properties>
 
@@ -1063,9 +1038,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel382">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                                Fall Semester 1"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -1271,7 +1243,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel75">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="0" green="66" red="66" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -1296,9 +1268,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel389">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                                Fall Semester 1"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -1504,7 +1473,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel77">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="0" green="66" red="66" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -1529,9 +1498,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel396">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                                Fall Semester 1"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -1737,7 +1703,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel79">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="0" green="66" red="66" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -1762,9 +1728,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel403">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                                Fall Semester 1"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -1970,7 +1933,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel81">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="0" green="66" red="66" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -1995,9 +1958,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel410">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                                Fall Semester 1"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -2039,34 +1999,39 @@
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
                     <Container class="javax.swing.JPanel" name="jPanel10">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                      </Properties>
 
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace pref="65" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jPanel49" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jPanel51" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jPanel45" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jPanel47" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jPanel51" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                  <EmptySpace pref="67" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel49" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel45" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel47" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel51" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="416" max="32767" attributes="0"/>
+                                  <EmptySpace pref="452" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2075,7 +2040,7 @@
                         <Container class="javax.swing.JPanel" name="jPanel45">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="d1" green="b4" red="99" type="rgb"/>
+                              <Color blue="e1" green="e1" red="e1" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2269,7 +2234,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel46">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="ff" green="33" red="33" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                               </Properties>
 
@@ -2291,9 +2256,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel300">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                               Spring Semester 2"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -2305,7 +2267,7 @@
                         <Container class="javax.swing.JPanel" name="jPanel47">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="cc" red="66" type="rgb"/>
+                              <Color blue="e1" green="e1" red="e1" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2421,7 +2383,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel48">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="66" green="99" red="0" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                               </Properties>
 
@@ -2443,9 +2405,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel304">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                               Summer Semester 2.5"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -2457,7 +2416,7 @@
                         <Container class="javax.swing.JPanel" name="jPanel49">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="cc" red="cc" type="rgb"/>
+                              <Color blue="e1" green="e1" red="e1" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2651,7 +2610,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel50">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="0" green="66" red="66" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2676,9 +2635,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel311">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                                Fall Semester 1"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -2690,7 +2646,7 @@
                         <Container class="javax.swing.JPanel" name="jPanel51">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="cc" red="cc" type="rgb"/>
+                              <Color blue="e1" green="e1" red="e1" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2884,7 +2840,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel52">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="0" green="66" red="66" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -2909,9 +2865,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel318">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                                Fall Semester 3"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -2956,34 +2909,39 @@
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
                     <Container class="javax.swing.JPanel" name="jPanel12">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                      </Properties>
 
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jPanel41" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jPanel43" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jPanel37" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jPanel39" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jPanel43" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel41" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel37" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel39" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel43" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="295" max="32767" attributes="0"/>
+                                  <EmptySpace pref="331" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2992,7 +2950,7 @@
                         <Container class="javax.swing.JPanel" name="jPanel37">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="d1" green="b4" red="99" type="rgb"/>
+                              <Color blue="e1" green="e1" red="e1" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -3186,7 +3144,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel38">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="ff" green="33" red="33" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                               </Properties>
 
@@ -3208,9 +3166,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel278">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                               Spring Semester 2"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -3222,7 +3177,7 @@
                         <Container class="javax.swing.JPanel" name="jPanel39">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="cc" red="66" type="rgb"/>
+                              <Color blue="e1" green="e1" red="e1" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -3338,7 +3293,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel40">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="66" green="99" red="0" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                               </Properties>
 
@@ -3360,9 +3315,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel279">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                               Summer Semester 2.5"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -3374,7 +3326,7 @@
                         <Container class="javax.swing.JPanel" name="jPanel41">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="cc" red="cc" type="rgb"/>
+                              <Color blue="e1" green="e1" red="e1" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -3568,7 +3520,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel42">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="0" green="66" red="66" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -3593,9 +3545,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel286">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                                Fall Semester 1"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -3607,7 +3556,7 @@
                         <Container class="javax.swing.JPanel" name="jPanel43">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="cc" red="cc" type="rgb"/>
+                              <Color blue="e1" green="e1" red="e1" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -3801,7 +3750,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel44">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="0" green="66" red="66" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -3826,9 +3775,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel293">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                                Fall Semester 3"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -3870,34 +3816,39 @@
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
                     <Container class="javax.swing.JPanel" name="jPanel17">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                      </Properties>
 
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jPanel59" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jPanel61" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jPanel55" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jPanel57" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jPanel61" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel59" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel55" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel57" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel61" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="416" max="32767" attributes="0"/>
+                                  <EmptySpace pref="452" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -3906,7 +3857,7 @@
                         <Container class="javax.swing.JPanel" name="jPanel55">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="d1" green="b4" red="99" type="rgb"/>
+                              <Color blue="e1" green="e1" red="e1" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -4100,7 +4051,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel56">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="ff" green="33" red="33" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                               </Properties>
 
@@ -4122,9 +4073,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel332">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                               Spring Semester 2"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -4136,7 +4084,7 @@
                         <Container class="javax.swing.JPanel" name="jPanel57">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="cc" red="66" type="rgb"/>
+                              <Color blue="e1" green="e1" red="e1" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -4252,7 +4200,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel58">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="66" green="99" red="0" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                               </Properties>
 
@@ -4274,9 +4222,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel336">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                               Summer Semester 2.5"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -4288,7 +4233,7 @@
                         <Container class="javax.swing.JPanel" name="jPanel59">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="cc" red="cc" type="rgb"/>
+                              <Color blue="e1" green="e1" red="e1" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -4482,7 +4427,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel60">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="0" green="66" red="66" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4507,9 +4452,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel343">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                                Fall Semester 1"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -4521,7 +4463,7 @@
                         <Container class="javax.swing.JPanel" name="jPanel61">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="cc" red="cc" type="rgb"/>
+                              <Color blue="e1" green="e1" red="e1" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -4715,7 +4657,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel62">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="0" green="66" red="66" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -4740,9 +4682,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel350">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                                Fall Semester 3"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -4787,34 +4726,39 @@
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
                     <Container class="javax.swing.JPanel" name="jPanel63">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                        </Property>
+                      </Properties>
 
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jPanel68" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jPanel70" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jPanel64" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jPanel66" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jPanel70" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel68" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel64" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel66" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel70" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="416" max="32767" attributes="0"/>
+                                  <EmptySpace pref="452" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -4823,7 +4767,7 @@
                         <Container class="javax.swing.JPanel" name="jPanel64">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="d1" green="b4" red="99" type="rgb"/>
+                              <Color blue="e1" green="e1" red="e1" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -5017,7 +4961,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel65">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="ff" green="33" red="33" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                               </Properties>
 
@@ -5039,9 +4983,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel357">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                               Spring Semester 2"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -5053,7 +4994,7 @@
                         <Container class="javax.swing.JPanel" name="jPanel66">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="cc" red="66" type="rgb"/>
+                              <Color blue="e1" green="e1" red="e1" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -5169,7 +5110,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel67">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="66" green="99" red="0" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                               </Properties>
 
@@ -5191,9 +5132,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel361">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                               Summer Semester 2.5"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -5205,7 +5143,7 @@
                         <Container class="javax.swing.JPanel" name="jPanel68">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="cc" red="cc" type="rgb"/>
+                              <Color blue="e1" green="e1" red="e1" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -5399,7 +5337,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel69">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="0" green="66" red="66" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -5424,9 +5362,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel368">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                                Fall Semester 1"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>
@@ -5438,7 +5373,7 @@
                         <Container class="javax.swing.JPanel" name="jPanel70">
                           <Properties>
                             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                              <Color blue="0" green="cc" red="cc" type="rgb"/>
+                              <Color blue="e1" green="e1" red="e1" type="rgb"/>
                             </Property>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -5632,7 +5567,7 @@
                             <Container class="javax.swing.JPanel" name="jPanel71">
                               <Properties>
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                  <Color blue="0" green="66" red="66" type="rgb"/>
+                                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
                                 </Property>
                                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -5657,9 +5592,6 @@
                               <SubComponents>
                                 <Component class="javax.swing.JLabel" name="jLabel375">
                                   <Properties>
-                                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                                    </Property>
                                     <Property name="text" type="java.lang.String" value="                                                                                                                                Fall Semester 3"/>
                                     <Property name="horizontalTextPosition" type="int" value="0"/>
                                   </Properties>

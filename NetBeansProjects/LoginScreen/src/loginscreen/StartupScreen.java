@@ -765,7 +765,7 @@ public class StartupScreen extends javax.swing.JFrame {
                             .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jPanel54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         jPanel53Layout.setVerticalGroup(
             jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -830,10 +830,8 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox24.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel73.setBackground(new java.awt.Color(102, 102, 0));
-        jPanel73.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel73.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel382.setForeground(new java.awt.Color(255, 255, 255));
         jLabel382.setText("                                                                                                                                Fall Semester 1");
         jLabel382.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -947,10 +945,9 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox30.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel75.setBackground(new java.awt.Color(102, 102, 0));
+        jPanel75.setBackground(new java.awt.Color(204, 204, 204));
         jPanel75.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel389.setForeground(new java.awt.Color(255, 255, 255));
         jLabel389.setText("                                                                                                                                Fall Semester 1");
         jLabel389.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -1064,10 +1061,9 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox36.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel77.setBackground(new java.awt.Color(102, 102, 0));
+        jPanel77.setBackground(new java.awt.Color(204, 204, 204));
         jPanel77.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel396.setForeground(new java.awt.Color(255, 255, 255));
         jLabel396.setText("                                                                                                                                Fall Semester 1");
         jLabel396.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -1181,10 +1177,9 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox42.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel79.setBackground(new java.awt.Color(102, 102, 0));
+        jPanel79.setBackground(new java.awt.Color(204, 204, 204));
         jPanel79.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel403.setForeground(new java.awt.Color(255, 255, 255));
         jLabel403.setText("                                                                                                                                Fall Semester 1");
         jLabel403.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -1298,10 +1293,9 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox48.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel81.setBackground(new java.awt.Color(102, 102, 0));
+        jPanel81.setBackground(new java.awt.Color(204, 204, 204));
         jPanel81.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel410.setForeground(new java.awt.Color(255, 255, 255));
         jLabel410.setText("                                                                                                                                Fall Semester 1");
         jLabel410.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -1381,52 +1375,38 @@ public class StartupScreen extends javax.swing.JFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jPanel72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addContainerGap()
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel72, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel74, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel76, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel78, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel80, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel6);
@@ -1444,7 +1424,9 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Computer Science", jPanel1);
 
-        jPanel45.setBackground(new java.awt.Color(153, 180, 209));
+        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel45.setBackground(new java.awt.Color(225, 225, 225));
         jPanel45.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel294.setText("Course 1");
@@ -1483,9 +1465,8 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox277.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel46.setBackground(new java.awt.Color(51, 51, 255));
+        jPanel46.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel300.setForeground(new java.awt.Color(255, 255, 255));
         jLabel300.setText("                                                                                                                               Spring Semester 2");
         jLabel300.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -1560,7 +1541,7 @@ public class StartupScreen extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
         );
 
-        jPanel47.setBackground(new java.awt.Color(102, 204, 0));
+        jPanel47.setBackground(new java.awt.Color(225, 225, 225));
         jPanel47.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel301.setText("Course 1");
@@ -1587,9 +1568,8 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox280.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel48.setBackground(new java.awt.Color(0, 153, 102));
+        jPanel48.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel304.setForeground(new java.awt.Color(255, 255, 255));
         jLabel304.setText("                                                                                                                               Summer Semester 2.5");
         jLabel304.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -1644,7 +1624,7 @@ public class StartupScreen extends javax.swing.JFrame {
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        jPanel49.setBackground(new java.awt.Color(204, 204, 0));
+        jPanel49.setBackground(new java.awt.Color(225, 225, 225));
         jPanel49.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel305.setText("Course 1");
@@ -1683,10 +1663,9 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox286.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel50.setBackground(new java.awt.Color(102, 102, 0));
+        jPanel50.setBackground(new java.awt.Color(204, 204, 204));
         jPanel50.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel311.setForeground(new java.awt.Color(255, 255, 255));
         jLabel311.setText("                                                                                                                                Fall Semester 1");
         jLabel311.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -1761,7 +1740,7 @@ public class StartupScreen extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
         );
 
-        jPanel51.setBackground(new java.awt.Color(204, 204, 0));
+        jPanel51.setBackground(new java.awt.Color(225, 225, 225));
         jPanel51.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel312.setText("Course 1");
@@ -1800,10 +1779,9 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox292.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel52.setBackground(new java.awt.Color(102, 102, 0));
+        jPanel52.setBackground(new java.awt.Color(204, 204, 204));
         jPanel52.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel318.setForeground(new java.awt.Color(255, 255, 255));
         jLabel318.setText("                                                                                                                                Fall Semester 3");
         jLabel318.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -1883,26 +1861,26 @@ public class StartupScreen extends javax.swing.JFrame {
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
-                .addContainerGap(65, Short.MAX_VALUE)
+                .addContainerGap()
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12))
+                    .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addContainerGap()
                 .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(416, Short.MAX_VALUE))
+                .addContainerGap(452, Short.MAX_VALUE))
         );
 
         jScrollPane3.setViewportView(jPanel10);
@@ -1920,7 +1898,9 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("          Science          ", jPanel4);
 
-        jPanel37.setBackground(new java.awt.Color(153, 180, 209));
+        jPanel12.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel37.setBackground(new java.awt.Color(225, 225, 225));
         jPanel37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel272.setText("Course 1");
@@ -1959,9 +1939,8 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox259.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel38.setBackground(new java.awt.Color(51, 51, 255));
+        jPanel38.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel278.setForeground(new java.awt.Color(255, 255, 255));
         jLabel278.setText("                                                                                                                               Spring Semester 2");
         jLabel278.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -2036,7 +2015,7 @@ public class StartupScreen extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
         );
 
-        jPanel39.setBackground(new java.awt.Color(102, 204, 0));
+        jPanel39.setBackground(new java.awt.Color(225, 225, 225));
         jPanel39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel217.setText("Course 1");
@@ -2063,9 +2042,8 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox211.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel40.setBackground(new java.awt.Color(0, 153, 102));
+        jPanel40.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel279.setForeground(new java.awt.Color(255, 255, 255));
         jLabel279.setText("                                                                                                                               Summer Semester 2.5");
         jLabel279.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -2120,7 +2098,7 @@ public class StartupScreen extends javax.swing.JFrame {
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        jPanel41.setBackground(new java.awt.Color(204, 204, 0));
+        jPanel41.setBackground(new java.awt.Color(225, 225, 225));
         jPanel41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel280.setText("Course 1");
@@ -2159,10 +2137,9 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox265.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel42.setBackground(new java.awt.Color(102, 102, 0));
+        jPanel42.setBackground(new java.awt.Color(204, 204, 204));
         jPanel42.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel286.setForeground(new java.awt.Color(255, 255, 255));
         jLabel286.setText("                                                                                                                                Fall Semester 1");
         jLabel286.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -2237,7 +2214,7 @@ public class StartupScreen extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
         );
 
-        jPanel43.setBackground(new java.awt.Color(204, 204, 0));
+        jPanel43.setBackground(new java.awt.Color(225, 225, 225));
         jPanel43.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel287.setText("Course 1");
@@ -2276,10 +2253,9 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox271.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel44.setBackground(new java.awt.Color(102, 102, 0));
+        jPanel44.setBackground(new java.awt.Color(204, 204, 204));
         jPanel44.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel293.setForeground(new java.awt.Color(255, 255, 255));
         jLabel293.setText("                                                                                                                                Fall Semester 3");
         jLabel293.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -2358,27 +2334,27 @@ public class StartupScreen extends javax.swing.JFrame {
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12))
+                    .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addContainerGap()
                 .addComponent(jPanel41, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(295, Short.MAX_VALUE))
+                .addContainerGap(331, Short.MAX_VALUE))
         );
 
         jScrollPane4.setViewportView(jPanel12);
@@ -2398,7 +2374,9 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("           Core            ", jPanel2);
 
-        jPanel55.setBackground(new java.awt.Color(153, 180, 209));
+        jPanel17.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel55.setBackground(new java.awt.Color(225, 225, 225));
         jPanel55.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel326.setText("Course 1");
@@ -2437,9 +2415,8 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox304.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel56.setBackground(new java.awt.Color(51, 51, 255));
+        jPanel56.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel332.setForeground(new java.awt.Color(255, 255, 255));
         jLabel332.setText("                                                                                                                               Spring Semester 2");
         jLabel332.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -2514,7 +2491,7 @@ public class StartupScreen extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
         );
 
-        jPanel57.setBackground(new java.awt.Color(102, 204, 0));
+        jPanel57.setBackground(new java.awt.Color(225, 225, 225));
         jPanel57.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel333.setText("Course 1");
@@ -2541,9 +2518,8 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox307.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel58.setBackground(new java.awt.Color(0, 153, 102));
+        jPanel58.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel336.setForeground(new java.awt.Color(255, 255, 255));
         jLabel336.setText("                                                                                                                               Summer Semester 2.5");
         jLabel336.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -2598,7 +2574,7 @@ public class StartupScreen extends javax.swing.JFrame {
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        jPanel59.setBackground(new java.awt.Color(204, 204, 0));
+        jPanel59.setBackground(new java.awt.Color(225, 225, 225));
         jPanel59.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel337.setText("Course 1");
@@ -2637,10 +2613,9 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox313.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel60.setBackground(new java.awt.Color(102, 102, 0));
+        jPanel60.setBackground(new java.awt.Color(204, 204, 204));
         jPanel60.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel343.setForeground(new java.awt.Color(255, 255, 255));
         jLabel343.setText("                                                                                                                                Fall Semester 1");
         jLabel343.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -2715,7 +2690,7 @@ public class StartupScreen extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
         );
 
-        jPanel61.setBackground(new java.awt.Color(204, 204, 0));
+        jPanel61.setBackground(new java.awt.Color(225, 225, 225));
         jPanel61.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel344.setText("Course 1");
@@ -2754,10 +2729,9 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox319.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel62.setBackground(new java.awt.Color(102, 102, 0));
+        jPanel62.setBackground(new java.awt.Color(204, 204, 204));
         jPanel62.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel350.setForeground(new java.awt.Color(255, 255, 255));
         jLabel350.setText("                                                                                                                                Fall Semester 3");
         jLabel350.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -2837,26 +2811,26 @@ public class StartupScreen extends javax.swing.JFrame {
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
+                .addContainerGap()
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12))
+                    .addComponent(jPanel57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addContainerGap()
                 .addComponent(jPanel59, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel57, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel61, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(416, Short.MAX_VALUE))
+                .addContainerGap(452, Short.MAX_VALUE))
         );
 
         jScrollPane5.setViewportView(jPanel17);
@@ -2874,7 +2848,9 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("         Electives         ", jPanel18);
 
-        jPanel64.setBackground(new java.awt.Color(153, 180, 209));
+        jPanel63.setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel64.setBackground(new java.awt.Color(225, 225, 225));
         jPanel64.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel351.setText("Course 1");
@@ -2913,9 +2889,8 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox325.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel65.setBackground(new java.awt.Color(51, 51, 255));
+        jPanel65.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel357.setForeground(new java.awt.Color(255, 255, 255));
         jLabel357.setText("                                                                                                                               Spring Semester 2");
         jLabel357.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -2990,7 +2965,7 @@ public class StartupScreen extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
         );
 
-        jPanel66.setBackground(new java.awt.Color(102, 204, 0));
+        jPanel66.setBackground(new java.awt.Color(225, 225, 225));
         jPanel66.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel358.setText("Course 1");
@@ -3017,9 +2992,8 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox328.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel67.setBackground(new java.awt.Color(0, 153, 102));
+        jPanel67.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel361.setForeground(new java.awt.Color(255, 255, 255));
         jLabel361.setText("                                                                                                                               Summer Semester 2.5");
         jLabel361.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -3074,7 +3048,7 @@ public class StartupScreen extends javax.swing.JFrame {
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
-        jPanel68.setBackground(new java.awt.Color(204, 204, 0));
+        jPanel68.setBackground(new java.awt.Color(225, 225, 225));
         jPanel68.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel362.setText("Course 1");
@@ -3113,10 +3087,9 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox334.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel69.setBackground(new java.awt.Color(102, 102, 0));
+        jPanel69.setBackground(new java.awt.Color(204, 204, 204));
         jPanel69.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel368.setForeground(new java.awt.Color(255, 255, 255));
         jLabel368.setText("                                                                                                                                Fall Semester 1");
         jLabel368.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -3191,7 +3164,7 @@ public class StartupScreen extends javax.swing.JFrame {
                 .addGap(24, 24, 24))
         );
 
-        jPanel70.setBackground(new java.awt.Color(204, 204, 0));
+        jPanel70.setBackground(new java.awt.Color(225, 225, 225));
         jPanel70.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel369.setText("Course 1");
@@ -3230,10 +3203,9 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jComboBox340.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jPanel71.setBackground(new java.awt.Color(102, 102, 0));
+        jPanel71.setBackground(new java.awt.Color(204, 204, 204));
         jPanel71.setForeground(new java.awt.Color(255, 255, 255));
 
-        jLabel375.setForeground(new java.awt.Color(255, 255, 255));
         jLabel375.setText("                                                                                                                                Fall Semester 3");
         jLabel375.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
@@ -3313,26 +3285,26 @@ public class StartupScreen extends javax.swing.JFrame {
         jPanel63Layout.setHorizontalGroup(
             jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel63Layout.createSequentialGroup()
-                .addGap(12, 12, 12)
+                .addContainerGap()
                 .addGroup(jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12))
+                    .addComponent(jPanel66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
         jPanel63Layout.setVerticalGroup(
             jPanel63Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel63Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addContainerGap()
                 .addComponent(jPanel68, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel64, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel66, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel70, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(416, Short.MAX_VALUE))
+                .addContainerGap(452, Short.MAX_VALUE))
         );
 
         jScrollPane2.setViewportView(jPanel63);
@@ -3364,12 +3336,12 @@ public class StartupScreen extends javax.swing.JFrame {
         jLabel196.setForeground(new java.awt.Color(255, 255, 255));
         jLabel196.setText("Student Name: ");
 
-        jTextField1.setText(Student.getMajor(loginName, conn));
+        jTextField1.setText("CSCI");
 
         jLabel199.setForeground(new java.awt.Color(255, 255, 255));
         jLabel199.setText("Student Major:");
 
-        jTextField2.setText(Student.getFirstName(loginName, conn) + " " + Student.getLastName(loginName, conn));
+        jTextField2.setText("Davey Jones");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -3446,6 +3418,11 @@ public class StartupScreen extends javax.swing.JFrame {
         editAccountButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 editAccountButtonMouseClicked(evt);
+            }
+        });
+        editAccountButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editAccountButtonActionPerformed(evt);
             }
         });
 
