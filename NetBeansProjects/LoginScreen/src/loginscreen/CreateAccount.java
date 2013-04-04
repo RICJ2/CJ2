@@ -304,7 +304,7 @@ public class CreateAccount extends javax.swing.JFrame {
                     passwordTextField.getText(), confirmTextField.getText(), conn);
         } else {
             /**
-             * if error on password entry, the errir will be captured and thrown
+             * if error on password entry, the error will be captured and thrown
              * and the message below will be shown to the end user.
              */
             JOptionPane.showMessageDialog(null, "Password and Comfirm Password do not match");
@@ -350,6 +350,7 @@ public class CreateAccount extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
+
             }
         });
     }

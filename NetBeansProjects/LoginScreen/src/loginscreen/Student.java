@@ -140,8 +140,20 @@ class Student {
 
     }
     public static void editAccount(String loginN, Connection c){
-        String result;
         String user_query = "Select f_name, l_name, (select degree_desc from degree_prog where degree_prog.iddegree_prog = users.major), (select semester_desc from semesters where semester_id = users.sem_start), gr_date, s_email from users where login_name = ? ";
     try {
+        prestmt = c.prepareStatement(user_query);
+        prestmt.setString(1, loginN);
+        rs = prestmt.executeQuery();
+        String firstN = rs.getString("f_name");
+        String lastN = rs.getString("lname");
+        String major = rs.getString("degree_desc");
+        String semester = rs.getString("semester_desc");
+        String grdate = rs.getString("semester_desc");
+        String email = rs.getString("s_email");
+        prestmt.execute();
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
     }
             }
