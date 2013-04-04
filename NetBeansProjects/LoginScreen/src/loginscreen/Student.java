@@ -77,6 +77,21 @@ class Student{
         }
     }
 
+	public static String getConfirmPassword(String loginN, Connection c){
+        String result;
+        String user_query = "select * from users where login_Name = ?";
+        try {
+            prestmt = c.prepareStatement(user_query);
+            prestmt.setString(1, loginN);
+            rs = prestmt.executeQuery();
+            if (rs.next()) {result = rs.getString("pword_val");}
+            else{result = "notFound";}}
+        catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+            result = null;}
+        return result;
+    }
+	
     public static String getLastName(String loginN, Connection c){
         String result;
         String user_query = "select * from users where login_Name = ?";
@@ -100,6 +115,51 @@ class Student{
             prestmt.setString(1, loginN);
             rs = prestmt.executeQuery();
             if (rs.next()) {result = rs.getString("major");}
+            else{result = "notFound";}}
+        catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+            result = null;}
+        return result;
+    }
+	
+	public static String getSemester(String loginN, Connection c){
+        String result;
+        String user_query = "select * from users where login_Name = ?";
+        try {
+            prestmt = c.prepareStatement(user_query);
+            prestmt.setString(1, loginN);
+            rs = prestmt.executeQuery();
+            if (rs.next()) {result = rs.getString("sem_start");}
+            else{result = "notFound";}}
+        catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+            result = null;}
+        return result;
+    }
+	
+	public static String getEmail(String loginN, Connection c){
+        String result;
+        String user_query = "select * from users where login_Name = ?";
+        try {
+            prestmt = c.prepareStatement(user_query);
+            prestmt.setString(1, loginN);
+            rs = prestmt.executeQuery();
+            if (rs.next()) {result = rs.getString("s_email");}
+            else{result = "notFound";}}
+        catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+            result = null;}
+        return result;
+    }
+	
+	public static String getYear(String loginN, Connection c){
+        String result;
+        String user_query = "select * from users where login_Name = ?";
+        try {
+            prestmt = c.prepareStatement(user_query);
+            prestmt.setString(1, loginN);
+            rs = prestmt.executeQuery();
+            if (rs.next()) {result = rs.getString("gr_date");}
             else{result = "notFound";}}
         catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);

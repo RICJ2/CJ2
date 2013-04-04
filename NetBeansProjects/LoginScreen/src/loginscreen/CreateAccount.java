@@ -5,6 +5,7 @@
 package loginscreen;
 
 import java.sql.Connection;
+import java.util.Calendar;
 import javax.swing.JOptionPane;
 
 /**
@@ -70,7 +71,7 @@ public class CreateAccount extends javax.swing.JFrame {
         jPanel4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         yearLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        yearLabel.setText("Year:");
+        yearLabel.setText("Start Year:");
 
         semesterLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         semesterLabel.setText("Semester:");
@@ -120,7 +121,9 @@ public class CreateAccount extends javax.swing.JFrame {
         majorLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         majorLabel.setText("Major:");
 
-        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+		Calendar now = Calendar.getInstance();
+		int year = now.get(Calendar.YEAR);		
+        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { Integer.toString(year), Integer.toString(year+1), Integer.toString(year+2), Integer.toString(year+3) }));
 
         lastNameLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lastNameLabel.setText("Last Name");
@@ -297,6 +300,7 @@ public class CreateAccount extends javax.swing.JFrame {
                         (String)majorComboBox.getSelectedItem(), (String)semesterComboBox1.getSelectedItem(),
                         (String)yearComboBox.getSelectedItem(), emailTextField.getText(), usernameTextField.getText(),
                          passwordTextField.getText(),confirmTextField.getText(), conn);
+		mediator.createLoginScreen();				 
         }
 	else{//if error on password entries this will capture and throw the message below.
 		JOptionPane.showMessageDialog(null, "Password and Comfirm Password do not match");
