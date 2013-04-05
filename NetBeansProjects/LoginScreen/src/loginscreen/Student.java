@@ -18,22 +18,22 @@ import javax.swing.JOptionPane;
  */
 //declaration of the variables for this class
 class Student{
-    
+
     static PreparedStatement prestmt;
     static ResultSet rs;
     static Connection c;
-    
+
     //empty Constructor
     public Student()
     {}
-    
-    
+
+
     public static String getFullName(String loginN, Connection c){
 	String fullName = Student.getFirstName(loginN, c) + " " + Student.getLastName(loginN, c);
 	return fullName;
     }
     //this query calls for the login name from the users table that matches the
-    //parameter value which was entered in the 
+    //parameter value which was entered in the
     public static String getFirstName(String loginN, Connection c){
         String result;
         String user_query = "select * from users where login_Name = ?";
@@ -91,7 +91,7 @@ class Student{
             result = null;}
         return result;
     }
-	
+
     public static String getLastName(String loginN, Connection c){
         String result;
         String user_query = "select * from users where login_Name = ?";
@@ -121,7 +121,7 @@ class Student{
             result = null;}
         return result;
     }
-	
+
 	public static String getSemester(String loginN, Connection c){
         String result;
         String user_query = "select * from users where login_Name = ?";
@@ -136,7 +136,7 @@ class Student{
             result = null;}
         return result;
     }
-	
+
 	public static String getEmail(String loginN, Connection c){
         String result;
         String user_query = "select * from users where login_Name = ?";
@@ -151,7 +151,7 @@ class Student{
             result = null;}
         return result;
     }
-	
+
 	public static String getYear(String loginN, Connection c){
         String result;
         String user_query = "select * from users where login_Name = ?";
@@ -189,24 +189,24 @@ class Student{
         }
 
         }
-        public static void editAccount(String loginN, Connection c){
+        public static String geteditAccount(String loginN, Connection c){
         String result;
          String user_query = "Select f_name, l_name, (select degree_desc from degree_prog where degree_prog.iddegree_prog = users.major), (select semester_desc from semesters where semester_id = users.sem_start), gr_date, s_email from users where login_name = ? ";
      try {
-     prestmt = c.prepareStatement(user_query);
+        prestmt = c.prepareStatement(user_query);
         prestmt.setString(1, loginN);
         rs = prestmt.executeQuery();
-        String firstN = rs.getString("f_name");
-        String lastN = rs.getString("lname");
-        String major = rs.getString("degree_desc");
-        String semester = rs.getString("semester_desc");
-        String grdate = rs.getString("semester_desc");
-        String email = rs.getString("s_email");
-        prestmt.execute();
-        } catch (SQLException e) {
+        if (rs.next()) {result =
+        rs.getString("f_name");
+        rs.getString("lname");
+        rs.getString("degree_desc");
+        rs.getString("semester_desc");
+        rs.getString("semester_desc");
+        rs.getString("s_email");}
+        else{result = "notFound";}}
+        catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
+            result = null;}
+        return result;
         }
-        }
-}        
-             
-
+}
