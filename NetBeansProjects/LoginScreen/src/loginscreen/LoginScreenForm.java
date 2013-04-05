@@ -4,12 +4,10 @@
  */
 package loginscreen;
 
-//import java.sql.Connection;
-//import java.sql.PreparedStatement;
-//import java.sql.ResultSet;
+
 import java.sql.Connection;
 import javax.swing.JOptionPane;
-//import sun.awt.resources.awt;
+
 
 /**
  *
@@ -18,8 +16,7 @@ import javax.swing.JOptionPane;
 public class LoginScreenForm extends javax.swing.JFrame {
     Mediator mediator;
     Connection conn = null;
-    //ResultSet rs = null;
-    //PreparedStatement pst = null;
+
 
     /**
      * Creates new form LoginScreenForm
