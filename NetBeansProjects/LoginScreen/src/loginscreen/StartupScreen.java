@@ -3422,7 +3422,7 @@ public class StartupScreen extends javax.swing.JFrame {
         });
         editAccountButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editAccountButtonActionPerformed(evt);
+                //editAccountButtonActionPerformed(evt);
             }
         });
 
