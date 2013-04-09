@@ -20,6 +20,7 @@ class Mediator {
     CreateAccount acc;
     StartupScreen start;
     EditAccount editAcc;
+    DragNdrop drag;
     PreparedStatement prestmt;
     ResultSet rs;
     
@@ -50,7 +51,11 @@ class Mediator {
        editAcc.setVisible(true);
        start.setVisible(false);
    }
-   
+      public void createDragNdrop(){
+          drag = new DragNdrop(this, conn);
+          drag.setVisible(true);
+          log.setVisible(false);
+      }
     public void createLoginScreen(){
        log.setVisible(true);
        acc.setVisible(false);
