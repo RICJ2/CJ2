@@ -3563,6 +3563,78 @@ public class StartupScreen extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
+    private void logoutButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutButtonMouseClicked
+       mediator.logout(conn);
+    }//GEN-LAST:event_logoutButtonMouseClicked
+
+    private void editAccountButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editAccountButtonMouseClicked
+        mediator.createEditScreen();
+    }//GEN-LAST:event_editAccountButtonMouseClicked
+
+    private void jComboBox337ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox337ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox337ActionPerformed
+
+    private void jComboBox335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox335ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox335ActionPerformed
+
+    private void jComboBox331ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox331ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox331ActionPerformed
+
+    private void jComboBox329ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox329ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox329ActionPerformed
+
+    private void jComboBox327ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox327ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox327ActionPerformed
+
+    private void jComboBox326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox326ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox326ActionPerformed
+
+    private void jComboBox322ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox322ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox322ActionPerformed
+
+    private void jComboBox320ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox320ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox320ActionPerformed
+
+    private void jComboBox316ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox316ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox316ActionPerformed
+
+    private void jComboBox314ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox314ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox314ActionPerformed
+
+    private void jComboBox310ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox310ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox310ActionPerformed
+
+    private void jComboBox308ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox308ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox308ActionPerformed
+
+    private void jComboBox306ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox306ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox306ActionPerformed
+
+    private void jComboBox305ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox305ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox305ActionPerformed
+
+    private void jComboBox301ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox301ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox301ActionPerformed
+
+    private void jComboBox299ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox299ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox299ActionPerformed
+
     private void jComboBox268ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox268ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox268ActionPerformed
@@ -3627,6 +3699,54 @@ public class StartupScreen extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox272ActionPerformed
 
+    private void jComboBox45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox45ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox45ActionPerformed
+
+    private void jComboBox43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox43ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox43ActionPerformed
+
+    private void jComboBox39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox39ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox39ActionPerformed
+
+    private void jComboBox37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox37ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox37ActionPerformed
+
+    private void jComboBox33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox33ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox33ActionPerformed
+
+    private void jComboBox31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox31ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox31ActionPerformed
+
+    private void jComboBox27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox27ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox27ActionPerformed
+
+    private void jComboBox25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox25ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox25ActionPerformed
+
+    private void jComboBox21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox21ActionPerformed
+
+    private void jComboBox19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox19ActionPerformed
+
+    private void jComboBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox15ActionPerformed
+
+    private void jComboBox13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox13ActionPerformed
+
     private void jComboBox8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox8ActionPerformed
@@ -3644,126 +3764,6 @@ public class StartupScreen extends javax.swing.JFrame {
         //        conn = Mediator.ConnectDb();
         //        Fillcombo();
     }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void jComboBox299ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox299ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox299ActionPerformed
-
-    private void jComboBox301ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox301ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox301ActionPerformed
-
-    private void jComboBox305ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox305ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox305ActionPerformed
-
-    private void jComboBox306ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox306ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox306ActionPerformed
-
-    private void jComboBox308ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox308ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox308ActionPerformed
-
-    private void jComboBox310ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox310ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox310ActionPerformed
-
-    private void jComboBox314ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox314ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox314ActionPerformed
-
-    private void jComboBox316ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox316ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox316ActionPerformed
-
-    private void jComboBox320ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox320ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox320ActionPerformed
-
-    private void jComboBox322ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox322ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox322ActionPerformed
-
-    private void jComboBox326ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox326ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox326ActionPerformed
-
-    private void jComboBox327ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox327ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox327ActionPerformed
-
-    private void jComboBox329ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox329ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox329ActionPerformed
-
-    private void jComboBox331ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox331ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox331ActionPerformed
-
-    private void jComboBox335ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox335ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox335ActionPerformed
-
-    private void jComboBox337ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox337ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox337ActionPerformed
-
-    private void jComboBox13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox13ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox13ActionPerformed
-
-    private void jComboBox15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox15ActionPerformed
-
-    private void jComboBox19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox19ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox19ActionPerformed
-
-    private void jComboBox21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox21ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox21ActionPerformed
-
-    private void jComboBox25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox25ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox25ActionPerformed
-
-    private void jComboBox27ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox27ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox27ActionPerformed
-
-    private void jComboBox31ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox31ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox31ActionPerformed
-
-    private void jComboBox33ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox33ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox33ActionPerformed
-
-    private void jComboBox37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox37ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox37ActionPerformed
-
-    private void jComboBox39ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox39ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox39ActionPerformed
-
-    private void jComboBox43ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox43ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox43ActionPerformed
-
-    private void jComboBox45ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox45ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox45ActionPerformed
-
-    private void logoutButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutButtonMouseClicked
-       mediator.logout(conn);
-    }//GEN-LAST:event_logoutButtonMouseClicked
-
-    private void editAccountButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editAccountButtonMouseClicked
-        mediator.createEditScreen();
-    }//GEN-LAST:event_editAccountButtonMouseClicked
 
 
     /**

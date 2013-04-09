@@ -27,171 +27,215 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jScrollPane1" min="-2" pref="203" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="163" max="-2" attributes="0"/>
-                      <Component id="jScrollPane4" min="-2" pref="129" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace pref="552" max="32767" attributes="0"/>
+              <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jScrollPane1" max="32767" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                      <Component id="jScrollPane4" min="-2" pref="82" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="145" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+              <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JTree" name="tree">
-          <AuxValues>
-            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="//Create a tree.&#xa;DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode(&quot;Major&quot;);&#xa;DefaultMutableTreeNode folder = new DefaultMutableTreeNode(&quot;CSCI&quot;);&#xa;rootNode.add(folder);&#xa;try{&#xa;            String sql = &quot;select * from courses WHERE course_type = &apos;CSCI&apos;&quot;;&#xa;            pst = conn.prepareStatement(sql);&#xa;            rs = pst.executeQuery();&#xa;            while (rs.next()){&#xa;                String cid = rs.getString(&quot;course_id&quot;);&#xa;                DefaultMutableTreeNode majorCoruses = new DefaultMutableTreeNode(cid);&#xa;                folder.add(majorCoruses);&#xa;&#xa;            }&#xa;        } catch(Exception e){&#xa;            JOptionPane.showMessageDialog(null, e);&#xa;        }&#xa;DefaultMutableTreeNode subFolder = new DefaultMutableTreeNode(&quot;Math&quot;);&#xa;rootNode.add(subFolder);&#xa;try{&#xa;            String sql = &quot;select * from courses WHERE course_type = &apos;MATH&apos;&quot;;&#xa;            pst = conn.prepareStatement(sql);&#xa;            rs = pst.executeQuery();&#xa;            while (rs.next()){&#xa;                String cid = rs.getString(&quot;course_id&quot;);&#xa;                DefaultMutableTreeNode majorCoruses = new DefaultMutableTreeNode(cid);&#xa;                subFolder.add(majorCoruses);&#xa;&#xa;            }&#xa;        } catch(Exception e){&#xa;            JOptionPane.showMessageDialog(null, e);&#xa;        }&#xa;//DefaultMutableTreeNode anya = new DefaultMutableTreeNode(&quot;Anya&quot;);&#xa;//folder.add(anya);&#xa;//folder.add(new DefaultMutableTreeNode(&quot;Bongo&quot;));&#xa;&#xa;//anya.add(new DefaultMutableTreeNode(&quot;Winky&quot;));&#xa;DefaultTreeModel model = new DefaultTreeModel(rootNode);&#xa;tree = new JTree(model);&#xa;tree.getSelectionModel().setSelectionMode&#xa;(TreeSelectionModel.DISCONTIGUOUS_TREE_SELECTION);&#xa;tree.setDragEnabled(true);"/>
-          </AuxValues>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JScrollPane" name="jScrollPane4">
-      <AuxValues>
-        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-      </AuxValues>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
-      <SubComponents>
-        <Component class="javax.swing.JList" name="jList2">
-          <Properties>
-            <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-              <StringArray count="5">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
-                <StringItem index="4" value="Item 5"/>
-              </StringArray>
-            </Property>
-          </Properties>
-        </Component>
-      </SubComponents>
-    </Container>
-    <Container class="javax.swing.JPanel" name="jPanel1">
-      <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="e1" green="e1" red="e1" type="rgb"/>
-        </Property>
-        <Property name="toolTipText" type="java.lang.String" value=""/>
-      </Properties>
+    <Container class="javax.swing.JPanel" name="jPanel3">
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                          <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="182" max="-2" attributes="0"/>
-                          <Component id="jScrollPane3" min="-2" pref="343" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace pref="88" max="32767" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" min="-2" pref="203" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jPanel13" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jScrollPane3" min="-2" pref="149" max="-2" attributes="0"/>
-                  <EmptySpace pref="37" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jPanel13" min="-2" pref="195" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="jScrollPane1" pref="518" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
-          <AuxValues>
-            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
-          </AuxValues>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JList" name="list">
-              <Properties>
-                <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                  <StringArray count="0"/>
-                </Property>
-                <Property name="toolTipText" type="java.lang.String" value=""/>
-              </Properties>
+            <Component class="javax.swing.JTree" name="tree">
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="list = new JList(listModel);&#xa;        //list.setVisibleRowCount(-1);&#xa;        list.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);&#xa;&#xa;        list.setTransferHandler(new TransferHandler() {&#xa;&#xa;                public boolean canImport(TransferHandler.TransferSupport info) {&#xa;                    // we only import Strings&#xa;                    if (!info.isDataFlavorSupported(DataFlavor.stringFlavor)) {&#xa;                        return false;&#xa;                    }&#xa;&#xa;                    JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();&#xa;                    if (dl.getIndex() == -1) {&#xa;                        return false;&#xa;                    }&#xa;                    return true;&#xa;                }&#xa;&#xa;                public boolean importData(TransferHandler.TransferSupport info) {&#xa;                    if (!info.isDrop()) {&#xa;                        return false;&#xa;                    }&#xa;&#xa;                    // Check for String flavor&#xa;                    if (!info.isDataFlavorSupported(DataFlavor.stringFlavor)) {&#xa;                        displayDropLocation(&quot;List doesn&apos;t accept a drop of this type.&quot;);&#xa;                        return false;&#xa;                    }&#xa;&#xa;                    JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();&#xa;                    DefaultListModel listModel = (DefaultListModel)list.getModel();&#xa;                    int index = dl.getIndex();&#xa;                    boolean insert = dl.isInsert();&#xa;                    // Get the current string under the drop.&#xa;                    String value = (String)listModel.getElementAt(index);&#xa;&#xa;                    // Get the string that is being dropped.&#xa;                    Transferable t = info.getTransferable();&#xa;                    String data;&#xa;                    try {&#xa;                        data = (String)t.getTransferData(DataFlavor.stringFlavor);&#xa;                    }&#xa;                    catch (Exception e) { return false; }&#xa;&#xa;                    // Perform the actual import. &#xa;                    if (insert) {&#xa;                        listModel.add(index, data);&#xa;                        tree.DefaultMutableTreeNode(index);&#xa;                    } else if( list = 7){&#xa;                    JOptionPane.showMessageDialog(null, &quot;You cannot take more then 6 courses&quot;);&#xa;                    }&#xa;                    else {&#xa;                        listModel.set(index, data);&#xa;                    }&#xa;                    return true;&#xa;&#xa;                    //return false;&#xa;                }&#xa;&#xa;                public int getSourceActions(JComponent c) {&#xa;                    return MOVE;&#xa;                }&#xa;&#xa;                protected Transferable createTransferable(JComponent c) {&#xa;                    JList list = (JList)c;&#xa;                    Object[] values = list.getSelectedValues();&#xa;&#xa;                    StringBuffer buff = new StringBuffer();&#xa;&#xa;                    for (int i = 0; i &lt; values.length; i++) {&#xa;                        Object val = values[i];&#xa;                        buff.append(val == null ? &quot;&quot; : val.toString());&#xa;                        if (i != values.length - 1) {&#xa;                            buff.append(&quot;\n&quot;);&#xa;                        }&#xa;                    }&#xa;                    return new StringSelection(buff.toString());&#xa;                }&#xa;            });"/>
-                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DefaultListModel listModel = new DefaultListModel();&#xa;        listModel.addElement(&quot;Add and drop courses&quot;);&#xa;listModel.addElement(&quot; &quot;);&#xa;listModel.addElement(&quot; &quot;);&#xa;listModel.addElement(&quot; &quot;);&#xa;listModel.addElement(&quot;&quot;);&#xa;listModel.addElement(&quot; &quot;);"/>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="//Create a tree.&#xa;DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode(&quot;Major&quot;);&#xa;DefaultMutableTreeNode folder = new DefaultMutableTreeNode(&quot;CSCI&quot;);&#xa;rootNode.add(folder);&#xa;try{&#xa;            String sql = &quot;select * from courses WHERE course_type = &apos;CSCI&apos;&quot;;&#xa;            pst = conn.prepareStatement(sql);&#xa;            rs = pst.executeQuery();&#xa;            while (rs.next()){&#xa;                String cid = rs.getString(&quot;course_id&quot;);&#xa;                DefaultMutableTreeNode majorCoruses = new DefaultMutableTreeNode(cid);&#xa;                folder.add(majorCoruses);&#xa;&#xa;            }&#xa;        } catch(Exception e){&#xa;            JOptionPane.showMessageDialog(null, e);&#xa;        }&#xa;DefaultMutableTreeNode subFolder = new DefaultMutableTreeNode(&quot;Math&quot;);&#xa;rootNode.add(subFolder);&#xa;try{&#xa;            String sql = &quot;select * from courses WHERE course_type = &apos;MATH&apos;&quot;;&#xa;            pst = conn.prepareStatement(sql);&#xa;            rs = pst.executeQuery();&#xa;            while (rs.next()){&#xa;                String cid = rs.getString(&quot;course_id&quot;);&#xa;                DefaultMutableTreeNode majorCoruses = new DefaultMutableTreeNode(cid);&#xa;                subFolder.add(majorCoruses);&#xa;&#xa;            }&#xa;        } catch(Exception e){&#xa;            JOptionPane.showMessageDialog(null, e);&#xa;        }&#xa;//DefaultMutableTreeNode anya = new DefaultMutableTreeNode(&quot;Anya&quot;);&#xa;//folder.add(anya);&#xa;//folder.add(new DefaultMutableTreeNode(&quot;Bongo&quot;));&#xa;&#xa;//anya.add(new DefaultMutableTreeNode(&quot;Winky&quot;));&#xa;DefaultTreeModel model = new DefaultTreeModel(rootNode);&#xa;tree = new JTree(model);&#xa;tree.getSelectionModel().setSelectionMode&#xa;(TreeSelectionModel.DISCONTIGUOUS_TREE_SELECTION);&#xa;tree.setDragEnabled(true);"/>
               </AuxValues>
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="jPanel2">
+        <Container class="javax.swing.JPanel" name="jPanel13">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="66" red="ff" type="rgb"/>
+              <Color blue="e1" green="e1" red="e1" type="rgb"/>
             </Property>
-            <Property name="name" type="java.lang.String" value="" noResource="true"/>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                <LineBorder/>
+              </Border>
+            </Property>
           </Properties>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="293" max="-2" attributes="0"/>
-                      <Component id="label1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="298" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jPanel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                              <Component id="jScrollPane4" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="label1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="20" max="32767" attributes="0"/>
+                      <Component id="jPanel14" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel5" min="-2" pref="20" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel9" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="java.awt.Label" name="label1">
+            <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
-                <Property name="name" type="java.lang.String" value="Fall Semester 1" noResource="true"/>
-                <Property name="text" type="java.lang.String" value="Fall Semester 1"/>
+                <Property name="text" type="java.lang.String" value="Course 1"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
               </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
-              </AccessibilityProperties>
             </Component>
+            <Component class="javax.swing.JLabel" name="jLabel2">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Course 2"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel3">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Course 3"/>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Course 4"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel5">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Course 5"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel9">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Course 6"/>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JPanel" name="jPanel14">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="cc" red="cc" type="rgb"/>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLabel198" pref="808" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel198" alignment="0" pref="27" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel198">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="                                                                                                                                Fall Semester 1"/>
+                    <Property name="horizontalTextPosition" type="int" value="0"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JList" name="list1">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                      <StringArray count="0"/>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value=""/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="list = new JList(listModel);&#xa;        //list.setVisibleRowCount(-1);&#xa;        list.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);&#xa;&#xa;        list.setTransferHandler(new TransferHandler() {&#xa;&#xa;                public boolean canImport(TransferHandler.TransferSupport info) {&#xa;                    // we only import Strings&#xa;                    if (!info.isDataFlavorSupported(DataFlavor.stringFlavor)) {&#xa;                        return false;&#xa;                    }&#xa;&#xa;                    JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();&#xa;                    if (dl.getIndex() == -1) {&#xa;                        return false;&#xa;                    }&#xa;                    return true;&#xa;                }&#xa;&#xa;                public boolean importData(TransferHandler.TransferSupport info) {&#xa;                    if (!info.isDrop()) {&#xa;                        return false;&#xa;                    }&#xa;&#xa;                    // Check for String flavor&#xa;                    if (!info.isDataFlavorSupported(DataFlavor.stringFlavor)) {&#xa;                        displayDropLocation(&quot;List doesn&apos;t accept a drop of this type.&quot;);&#xa;                        return false;&#xa;                    }&#xa;&#xa;                    JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();&#xa;                    DefaultListModel listModel = (DefaultListModel)list.getModel();&#xa;                    int index = dl.getIndex();&#xa;                    boolean insert = dl.isInsert();&#xa;                    // Get the current string under the drop.&#xa;                    String value = (String)listModel.getElementAt(index);&#xa;&#xa;                    // Get the string that is being dropped.&#xa;                    Transferable t = info.getTransferable();&#xa;                    String data;&#xa;                    try {&#xa;                        data = (String)t.getTransferData(DataFlavor.stringFlavor);&#xa;                    }&#xa;                    catch (Exception e) { return false; }&#xa;&#xa;                    // Perform the actual import. &#xa;                    if (insert) {&#xa;                        listModel.add(index, data);&#xa;                        tree.DefaultMutableTreeNode(index);&#xa;                    } else if( list = 7){&#xa;                    JOptionPane.showMessageDialog(null, &quot;You cannot take more then 6 courses&quot;);&#xa;                    }&#xa;                    else {&#xa;                        listModel.set(index, data);&#xa;                    }&#xa;                    return true;&#xa;&#xa;                    //return false;&#xa;                }&#xa;&#xa;                public int getSourceActions(JComponent c) {&#xa;                    return MOVE;&#xa;                }&#xa;&#xa;                protected Transferable createTransferable(JComponent c) {&#xa;                    JList list = (JList)c;&#xa;                    Object[] values = list.getSelectedValues();&#xa;&#xa;                    StringBuffer buff = new StringBuffer();&#xa;&#xa;                    for (int i = 0; i &lt; values.length; i++) {&#xa;                        Object val = values[i];&#xa;                        buff.append(val == null ? &quot;&quot; : val.toString());&#xa;                        if (i != values.length - 1) {&#xa;                            buff.append(&quot;\n&quot;);&#xa;                        }&#xa;                    }&#xa;                    return new StringSelection(buff.toString());&#xa;                }&#xa;            });"/>
+                    <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DefaultListModel listModel = new DefaultListModel();&#xa;        listModel.addElement(&quot;Add and drop courses&quot;);&#xa;listModel.addElement(&quot; &quot;);&#xa;listModel.addElement(&quot; &quot;);&#xa;listModel.addElement(&quot; &quot;);&#xa;listModel.addElement(&quot;&quot;);&#xa;listModel.addElement(&quot; &quot;);"/>
+                  </AuxValues>
+                </Component>
+              </SubComponents>
+            </Container>
           </SubComponents>
         </Container>
       </SubComponents>
