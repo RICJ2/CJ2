@@ -24,7 +24,7 @@ public class EditAccount extends javax.swing.JFrame {
 	mediator = m;
 	loginName = l;
 	conn = c;
-        initComponents();
+    initComponents();
     }
 
     /**
@@ -35,7 +35,10 @@ public class EditAccount extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+		Calendar now = Calendar.getInstance();
+		int year = now.get(Calendar.YEAR);
 
+		
         LeftJPanel = new javax.swing.JPanel();
         RightInnerJpanel = new javax.swing.JPanel();
         yearLabel = new javax.swing.JLabel();
@@ -52,8 +55,6 @@ public class EditAccount extends javax.swing.JFrame {
         editAccountButton = new javax.swing.JButton();
         majorLabel = new javax.swing.JLabel();
         yearComboBox = new javax.swing.JComboBox();
-        yearComboBox1 = new javax.swing.JComboBox();
-        yearComboBox2 = new javax.swing.JComboBox();
         lastNameLabel = new javax.swing.JLabel();
         emailLabel = new javax.swing.JLabel();
         majorComboBox = new javax.swing.JComboBox();
@@ -61,7 +62,7 @@ public class EditAccount extends javax.swing.JFrame {
         emailTextField = new javax.swing.JTextField();
         RICImgLabel = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         LeftJPanel.setBackground(new java.awt.Color(255, 255, 255));
         LeftJPanel.setPreferredSize(new java.awt.Dimension(361, 468));
@@ -70,7 +71,8 @@ public class EditAccount extends javax.swing.JFrame {
         RightInnerJpanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         yearLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        yearLabel.setText("Year:");
+        //yearLabel.setText("Year:");
+		yearLabel.setText("Start Year:");
 
         semesterLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         semesterLabel.setText("Semester:");
@@ -104,12 +106,6 @@ public class EditAccount extends javax.swing.JFrame {
         majorLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         majorLabel.setText("Major:");
 
-        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        yearComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        yearComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         lastNameLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lastNameLabel.setText("Last Name");
 
@@ -118,8 +114,19 @@ public class EditAccount extends javax.swing.JFrame {
 
         majorComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Computer Science - BA", "Computer Science - BS" }));
 
-        semesterComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        semesterComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Fall", "Spring", "Summer" }));
+		
+		yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { Integer.toString(year), Integer.toString(year+1), Integer.toString(year+2), Integer.toString(year+3) }));
 
+		firstNameText.setText(Student.getFirstName(loginName, conn));
+		lastNameText.setText(Student.getLastName(loginName, conn));
+		emailTextField.setText(Student.getEmail(loginName, conn));
+		passwordTextField.setText(Student.getPassword(loginName, conn));
+		confirmTextField.setText(Student.getConfirmPassword(loginName, conn));
+		semesterComboBox.setSelectedIndex(Integer.parseInt(Student.getSemester(loginName, conn)));
+		//majorComboBox.setSelectedIndex(Integer.parseInt(Student.getMajor(loginName, conn)));
+		//yearComboBox.setSelectedIndex(Integer.parseInt(Student.getYear(loginName, conn)) - year);
+		
         javax.swing.GroupLayout RightInnerJpanelLayout = new javax.swing.GroupLayout(RightInnerJpanel);
         RightInnerJpanel.setLayout(RightInnerJpanelLayout);
         RightInnerJpanelLayout.setHorizontalGroup(
