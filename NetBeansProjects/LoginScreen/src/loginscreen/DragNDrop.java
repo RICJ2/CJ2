@@ -21,7 +21,7 @@ import java.sql.PreparedStatement;
  *
  * @author jroberti
  */
-public class DragNdrop extends javax.swing.JFrame {   
+class DragNdrop extends javax.swing.JFrame {   
      Mediator mediator;
      Connection conn = null;
      ResultSet rs = null;
