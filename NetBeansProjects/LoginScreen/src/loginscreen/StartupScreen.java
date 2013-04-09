@@ -3420,11 +3420,6 @@ public class StartupScreen extends javax.swing.JFrame {
                 editAccountButtonMouseClicked(evt);
             }
         });
-        editAccountButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editAccountButtonActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
