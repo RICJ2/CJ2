@@ -3344,12 +3344,12 @@ public class StartupScreen extends javax.swing.JFrame {
         jLabel196.setForeground(new java.awt.Color(255, 255, 255));
         jLabel196.setText("Student Name: ");
 
-        jTextField1.setText("CSCI");
+        jTextField1.setText(Student.getMajor(loginName, conn));
 
         jLabel199.setForeground(new java.awt.Color(255, 255, 255));
         jLabel199.setText("Student Major:");
 
-        jTextField2.setText("Davey Jones");
+        jTextField2.setText(Student.getFirstName(loginName, conn) + " " + Student.getLastName(loginName, conn));
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
