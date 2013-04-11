@@ -52,8 +52,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="203" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="jScrollPane2" min="-2" pref="896" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jScrollPane2" pref="885" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -61,9 +60,9 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jScrollPane1" min="-2" pref="555" max="-2" attributes="0"/>
-                      <Component id="jScrollPane2" min="-2" pref="494" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jScrollPane1" pref="555" max="32767" attributes="0"/>
+                      <Component id="jScrollPane2" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="23" max="32767" attributes="0"/>
               </Group>
@@ -97,7 +96,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jPanel13" min="-2" max="-2" attributes="0"/>
                               <Component id="jPanel15" min="-2" max="-2" attributes="0"/>
@@ -108,7 +107,7 @@
                               <Component id="jPanel27" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jPanel25" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="19" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -116,10 +115,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                          <Component id="jPanel13" min="-2" pref="199" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                          <Component id="jPanel15" min="-2" pref="199" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                          <Component id="jPanel13" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jPanel15" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Component id="jPanel19" min="-2" pref="199" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                           <Component id="jPanel17" min="-2" pref="199" max="-2" attributes="0"/>
@@ -146,6 +145,9 @@
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
                       </Border>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[845, 190]"/>
                     </Property>
                   </Properties>
 
@@ -180,25 +182,22 @@
                               <Component id="jPanel16" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="15" pref="15" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
                                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                       <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                       <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                       <Component id="jLabel11" min="-2" pref="20" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel12" max="32767" attributes="0"/>
-                                      <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                      <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jScrollPane5" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="jScrollPane5" min="-2" max="-2" attributes="0"/>
                               </Group>
+                              <EmptySpace min="0" pref="5" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -283,7 +282,7 @@
                           </Properties>
                           <AuxValues>
                             <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="/****************************************************************************************/&#xa;list2 = new JList(listModel2);&#xa;        //list.setVisibleRowCount(-1);&#xa;        list2.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);&#xa;&#xa;        list2.setTransferHandler(new TransferHandler() {&#xa;&#xa;                public boolean canImport(TransferHandler.TransferSupport info) {&#xa;                    // we only import Strings&#xa;                    if (!info.isDataFlavorSupported(DataFlavor.stringFlavor)) {&#xa;                        return false;&#xa;                    }&#xa;&#xa;                    JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();&#xa;                    if (dl.getIndex() == -1) {&#xa;                        return false;&#xa;                    }&#xa;                    return true;&#xa;                }&#xa;&#xa;                public boolean importData(TransferHandler.TransferSupport info) {&#xa;                    if (!info.isDrop()) {&#xa;                        return false;&#xa;                    }&#xa;&#xa;                    // Check for String flavor&#xa;                    if (!info.isDataFlavorSupported(DataFlavor.stringFlavor)) {&#xa;                        displayDropLocation(&quot;List doesn&apos;t accept a drop of this type.&quot;);&#xa;                        return false;&#xa;                    }&#xa;&#xa;                    JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();&#xa;                    DefaultListModel listModel2 = (DefaultListModel)list2.getModel();&#xa;                    int index = dl.getIndex();&#xa;                    boolean insert = dl.isInsert();&#xa;                    // Get the current string under the drop.&#xa;                    String value = (String)listModel2.getElementAt(index);&#xa;&#xa;                    // Get the string that is being dropped.&#xa;                    Transferable t = info.getTransferable();&#xa;                    String data;&#xa;                    try {&#xa;                        data = (String)t.getTransferData(DataFlavor.stringFlavor);&#xa;                    }&#xa;                    catch (Exception e) { return false; }&#xa;&#xa;                    // Perform the actual import. &#xa;                    if (insert) {&#xa;                        listModel2.add(index, data);&#xa;                        tree.DefaultMutableTreeNode(index);&#xa;                    }&#xa;                    else {&#xa;                        listModel2.set(index, data);&#xa;                    }&#xa;                    return true;&#xa;&#xa;                    //return false;&#xa;                }&#xa;&#xa;                public int getSourceActions(JComponent c) {&#xa;                    return MOVE;&#xa;                }&#xa;&#xa;                protected Transferable createTransferable(JComponent c) {&#xa;                    JList list2 = (JList)c;&#xa;                    Object[] values = list2.getSelectedValues();&#xa;&#xa;                    StringBuffer buff = new StringBuffer();&#xa;&#xa;                    for (int i = 0; i &lt; values.length; i++) {&#xa;                        Object val = values[i];&#xa;                        buff.append(val == null ? &quot;&quot; : val.toString());&#xa;                        if (i != values.length - 1) {&#xa;                            buff.append(&quot;\n&quot;);&#xa;                        }&#xa;                    }&#xa;                    return new StringSelection(buff.toString());&#xa;                }&#xa;            });&#xa;/****************************************************************************************/"/>
-                            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DefaultListModel listModel2 = new DefaultListModel();&#xa;        listModel2.addElement(&quot;Add and drop courses&quot;);&#xa;listModel2.addElement(&quot; &quot;);&#xa;listModel2.addElement(&quot; &quot;);&#xa;listModel2.addElement(&quot; &quot;);&#xa;listModel2.addElement(&quot;&quot;);&#xa;listModel2.addElement(&quot; &quot;);"/>
+                            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DefaultListModel listModel2 = new DefaultListModel();&#xa;listModel2.addElement(&quot; &quot;);&#xa;listModel2.addElement(&quot; &quot;);&#xa;listModel2.addElement(&quot; &quot;);&#xa;listModel2.addElement(&quot; &quot;);&#xa;listModel2.addElement(&quot; &quot;);&#xa;listModel2.addElement(&quot; &quot;);"/>
                           </AuxValues>
                         </Component>
                       </SubComponents>
@@ -299,6 +298,9 @@
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
                       </Border>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[845, 190]"/>
                     </Property>
                   </Properties>
 
@@ -335,23 +337,21 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                                       <Component id="jLabel5" min="-2" pref="20" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jLabel9" max="32767" attributes="0"/>
-                                      <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="26" max="32767" attributes="0"/>
                                   </Group>
-                                  <Group type="102" attributes="0">
-                                      <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="jScrollPane4" pref="0" max="32767" attributes="0"/>
                               </Group>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -435,8 +435,8 @@
                             <Property name="toolTipText" type="java.lang.String" value=""/>
                           </Properties>
                           <AuxValues>
-                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="/****************************************************************************************/&#xa;list1 = new JList(listModel);&#xa;        //list.setVisibleRowCount(-1);&#xa;        list1.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);&#xa;&#xa;        list1.setTransferHandler(new TransferHandler() {&#xa;&#xa;                public boolean canImport(TransferHandler.TransferSupport info) {&#xa;                    // we only import Strings&#xa;                    if (!info.isDataFlavorSupported(DataFlavor.stringFlavor)) {&#xa;                        return false;&#xa;                    }&#xa;&#xa;                    JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();&#xa;                    if (dl.getIndex() == -1) {&#xa;                        return false;&#xa;                    }&#xa;                    return true;&#xa;                }&#xa;&#xa;                public boolean importData(TransferHandler.TransferSupport info) {&#xa;                    if (!info.isDrop()) {&#xa;                        return false;&#xa;                    }&#xa;&#xa;                    // Check for String flavor&#xa;                    if (!info.isDataFlavorSupported(DataFlavor.stringFlavor)) {&#xa;                        displayDropLocation(&quot;List doesn&apos;t accept a drop of this type.&quot;);&#xa;                        return false;&#xa;                    }&#xa;&#xa;                    JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();&#xa;                    DefaultListModel listModel = (DefaultListModel)list1.getModel();&#xa;                    int index = dl.getIndex();&#xa;                    boolean insert = dl.isInsert();&#xa;                    // Get the current string under the drop.&#xa;                    String value = (String)listModel.getElementAt(index);&#xa;&#xa;                    // Get the string that is being dropped.&#xa;                    Transferable t = info.getTransferable();&#xa;                    String data;&#xa;                    try {&#xa;                        data = (String)t.getTransferData(DataFlavor.stringFlavor);&#xa;                    }&#xa;                    catch (Exception e) { return false; }&#xa;&#xa;                    // Perform the actual import. &#xa;                    if (insert) {&#xa;                        listModel.add(index, data);&#xa;                        tree.DefaultMutableTreeNode(index);&#xa;                    }&#xa;                    else {&#xa;                        listModel.set(index, data);&#xa;                    }&#xa;                    return true;&#xa;&#xa;                    //return false;&#xa;                }&#xa;&#xa;                public int getSourceActions(JComponent c) {&#xa;                    return MOVE;&#xa;                }&#xa;&#xa;                protected Transferable createTransferable(JComponent c) {&#xa;                    JList list1 = (JList)c;&#xa;                    Object[] values = list1.getSelectedValues();&#xa;&#xa;                    StringBuffer buff = new StringBuffer();&#xa;&#xa;                    for (int i = 0; i &lt; values.length; i++) {&#xa;                        Object val = values[i];&#xa;                        buff.append(val == null ? &quot;&quot; : val.toString());&#xa;                        if (i != values.length - 1) {&#xa;                            buff.append(&quot;\n&quot;);&#xa;                        }&#xa;                    }&#xa;                    return new StringSelection(buff.toString());&#xa;                }&#xa;            });&#xa;/****************************************************************************************/"/>
-                            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DefaultListModel listModel = new DefaultListModel();&#xa;        listModel.addElement(&quot;Add and drop courses&quot;);&#xa;listModel.addElement(&quot; &quot;);&#xa;listModel.addElement(&quot; &quot;);&#xa;listModel.addElement(&quot; &quot;);&#xa;listModel.addElement(&quot;&quot;);&#xa;listModel.addElement(&quot; &quot;);"/>
+                            <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="/****************************************************************************************/&#xa;list1 = new JList(listModel1);&#xa;        //list.setVisibleRowCount(-1);&#xa;        list1.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);&#xa;&#xa;        list1.setTransferHandler(new TransferHandler() {&#xa;&#xa;                public boolean canImport(TransferHandler.TransferSupport info) {&#xa;                    // we only import Strings&#xa;                    if (!info.isDataFlavorSupported(DataFlavor.stringFlavor)) {&#xa;                        return false;&#xa;                    }&#xa;&#xa;                    JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();&#xa;                    if (dl.getIndex() == -1) {&#xa;                        return false;&#xa;                    }&#xa;                    return true;&#xa;                }&#xa;&#xa;                public boolean importData(TransferHandler.TransferSupport info) {&#xa;                    if (!info.isDrop()) {&#xa;                        return false;&#xa;                    }&#xa;&#xa;                    // Check for String flavor&#xa;                    if (!info.isDataFlavorSupported(DataFlavor.stringFlavor)) {&#xa;                        displayDropLocation(&quot;List doesn&apos;t accept a drop of this type.&quot;);&#xa;                        return false;&#xa;                    }&#xa;&#xa;                    JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();&#xa;                    DefaultListModel listModel1 = (DefaultListModel)list1.getModel();&#xa;                    int index = dl.getIndex();&#xa;                    boolean insert = dl.isInsert();&#xa;                    // Get the current string under the drop.&#xa;                    String value = (String)listModel1.getElementAt(index);&#xa;&#xa;                    // Get the string that is being dropped.&#xa;                    Transferable t = info.getTransferable();&#xa;                    String data;&#xa;                    try {&#xa;                        data = (String)t.getTransferData(DataFlavor.stringFlavor);&#xa;                    }&#xa;                    catch (Exception e) { return false; }&#xa;&#xa;                    // Perform the actual import. &#xa;                    if (insert) {&#xa;                        listModel1.add(index, data);&#xa;                        tree.DefaultMutableTreeNode(index);&#xa;                    }&#xa;                    else {&#xa;                        listModel1.set(index, data);&#xa;                    }&#xa;                    return true;&#xa;&#xa;                    //return false;&#xa;                }&#xa;&#xa;                public int getSourceActions(JComponent c) {&#xa;                    return MOVE;&#xa;                }&#xa;&#xa;                protected Transferable createTransferable(JComponent c) {&#xa;                    JList list1 = (JList)c;&#xa;                    Object[] values = list1.getSelectedValues();&#xa;&#xa;                    StringBuffer buff = new StringBuffer();&#xa;&#xa;                    for (int i = 0; i &lt; values.length; i++) {&#xa;                        Object val = values[i];&#xa;                        buff.append(val == null ? &quot;&quot; : val.toString());&#xa;                        if (i != values.length - 1) {&#xa;                            buff.append(&quot;\n&quot;);&#xa;                        }&#xa;                    }&#xa;                    return new StringSelection(buff.toString());&#xa;                }&#xa;            });&#xa;/****************************************************************************************/"/>
+                            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="DefaultListModel listModel1 = new DefaultListModel();&#xa;listModel1.addElement(&quot; &quot;);&#xa;listModel1.addElement(&quot; &quot;);&#xa;listModel1.addElement(&quot; &quot;);&#xa;listModel1.addElement(&quot; &quot;);&#xa;listModel1.addElement(&quot; &quot;);&#xa;listModel1.addElement(&quot; &quot;);"/>
                           </AuxValues>
                         </Component>
                       </SubComponents>
@@ -452,6 +452,9 @@
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
                       </Border>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[845, 190]"/>
                     </Property>
                   </Properties>
 
@@ -605,6 +608,9 @@
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
                       </Border>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[845, 190]"/>
                     </Property>
                   </Properties>
 
@@ -911,6 +917,9 @@
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                         <LineBorder/>
                       </Border>
+                    </Property>
+                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                      <Dimension value="[845, 190]"/>
                     </Property>
                   </Properties>
 
