@@ -31,7 +31,7 @@ class DragNdrop extends javax.swing.JFrame {
         mediator = m;
         conn = c;
         initComponents();
-        list1.setDropMode(DropMode.ON_OR_INSERT);
+        list1.setDropMode(DropMode.ON);
     }
    private void displayDropLocation(final String string) {
         SwingUtilities.invokeLater(new Runnable() {
