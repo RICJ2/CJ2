@@ -81,7 +81,7 @@ class DragNdrop extends javax.swing.JFrame {
         jPanel18 = new javax.swing.JPanel();
         jLabel200 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
-        list3 = new javax.swing.JList();
+        list4 = new javax.swing.JList();
         jPanel19 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
@@ -92,7 +92,7 @@ class DragNdrop extends javax.swing.JFrame {
         jPanel20 = new javax.swing.JPanel();
         jLabel201 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
-        list4 = new javax.swing.JList();
+        list3 = new javax.swing.JList();
         jPanel21 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
@@ -103,7 +103,7 @@ class DragNdrop extends javax.swing.JFrame {
         jPanel22 = new javax.swing.JPanel();
         jLabel202 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
-        list5 = new javax.swing.JList();
+        list6 = new javax.swing.JList();
         jPanel23 = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
@@ -114,7 +114,7 @@ class DragNdrop extends javax.swing.JFrame {
         jPanel24 = new javax.swing.JPanel();
         jLabel203 = new javax.swing.JLabel();
         jScrollPane9 = new javax.swing.JScrollPane();
-        list6 = new javax.swing.JList();
+        list5 = new javax.swing.JList();
         jPanel25 = new javax.swing.JPanel();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
@@ -125,7 +125,7 @@ class DragNdrop extends javax.swing.JFrame {
         jPanel26 = new javax.swing.JPanel();
         jLabel204 = new javax.swing.JLabel();
         jScrollPane10 = new javax.swing.JScrollPane();
-        list7 = new javax.swing.JList();
+        list8 = new javax.swing.JList();
         jPanel27 = new javax.swing.JPanel();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
@@ -136,29 +136,7 @@ class DragNdrop extends javax.swing.JFrame {
         jPanel28 = new javax.swing.JPanel();
         jLabel205 = new javax.swing.JLabel();
         jScrollPane11 = new javax.swing.JScrollPane();
-        list8 = new javax.swing.JList();
-        jPanel29 = new javax.swing.JPanel();
-        jLabel49 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
-        jLabel53 = new javax.swing.JLabel();
-        jLabel54 = new javax.swing.JLabel();
-        jPanel30 = new javax.swing.JPanel();
-        jLabel206 = new javax.swing.JLabel();
-        jScrollPane12 = new javax.swing.JScrollPane();
-        list9 = new javax.swing.JList();
-        jPanel31 = new javax.swing.JPanel();
-        jLabel55 = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
-        jLabel57 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        jLabel59 = new javax.swing.JLabel();
-        jLabel60 = new javax.swing.JLabel();
-        jPanel32 = new javax.swing.JPanel();
-        jLabel207 = new javax.swing.JLabel();
-        jScrollPane13 = new javax.swing.JScrollPane();
-        list10 = new javax.swing.JList();
+        list7 = new javax.swing.JList();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -244,19 +222,20 @@ class DragNdrop extends javax.swing.JFrame {
             .addComponent(jLabel199, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
         );
 
-        DefaultListModel listModel = new DefaultListModel();
-        listModel.addElement("Add and drop courses");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement("");
-        listModel.addElement(" ");
+        DefaultListModel listModel2 = new DefaultListModel();
+        listModel2.addElement("Add and drop courses");
+        listModel2.addElement(" ");
+        listModel2.addElement(" ");
+        listModel2.addElement(" ");
+        listModel2.addElement("");
+        listModel2.addElement(" ");
         list2.setToolTipText("");
-        list = new JList(listModel);
+        /****************************************************************************************/
+        list2 = new JList(listModel2);
         //list.setVisibleRowCount(-1);
-        list.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        list2.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
-        list.setTransferHandler(new TransferHandler() {
+        list2.setTransferHandler(new TransferHandler() {
 
             public boolean canImport(TransferHandler.TransferSupport info) {
                 // we only import Strings
@@ -283,11 +262,11 @@ class DragNdrop extends javax.swing.JFrame {
                 }
 
                 JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();
-                DefaultListModel listModel = (DefaultListModel)list.getModel();
+                DefaultListModel listModel2 = (DefaultListModel)list2.getModel();
                 int index = dl.getIndex();
                 boolean insert = dl.isInsert();
                 // Get the current string under the drop.
-                String value = (String)listModel.getElementAt(index);
+                String value = (String)listModel2.getElementAt(index);
 
                 // Get the string that is being dropped.
                 Transferable t = info.getTransferable();
@@ -299,13 +278,11 @@ class DragNdrop extends javax.swing.JFrame {
 
                 // Perform the actual import.
                 if (insert) {
-                    listModel.add(index, data);
+                    listModel2.add(index, data);
                     tree.DefaultMutableTreeNode(index);
-                } else if( list = 7){
-                    JOptionPane.showMessageDialog(null, "You cannot take more then 6 courses");
                 }
                 else {
-                    listModel.set(index, data);
+                    listModel2.set(index, data);
                 }
                 return true;
 
@@ -317,8 +294,8 @@ class DragNdrop extends javax.swing.JFrame {
             }
 
             protected Transferable createTransferable(JComponent c) {
-                JList list = (JList)c;
-                Object[] values = list.getSelectedValues();
+                JList list2 = (JList)c;
+                Object[] values = list2.getSelectedValues();
 
                 StringBuffer buff = new StringBuffer();
 
@@ -332,6 +309,7 @@ class DragNdrop extends javax.swing.JFrame {
                 return new StringSelection(buff.toString());
             }
         });
+        /****************************************************************************************/
         jScrollPane5.setViewportView(list2);
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
@@ -422,11 +400,12 @@ class DragNdrop extends javax.swing.JFrame {
         listModel.addElement("");
         listModel.addElement(" ");
         list1.setToolTipText("");
-        list = new JList(listModel);
+        /****************************************************************************************/
+        list1 = new JList(listModel);
         //list.setVisibleRowCount(-1);
-        list.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        list1.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
-        list.setTransferHandler(new TransferHandler() {
+        list1.setTransferHandler(new TransferHandler() {
 
             public boolean canImport(TransferHandler.TransferSupport info) {
                 // we only import Strings
@@ -453,7 +432,7 @@ class DragNdrop extends javax.swing.JFrame {
                 }
 
                 JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();
-                DefaultListModel listModel = (DefaultListModel)list.getModel();
+                DefaultListModel listModel = (DefaultListModel)list1.getModel();
                 int index = dl.getIndex();
                 boolean insert = dl.isInsert();
                 // Get the current string under the drop.
@@ -471,8 +450,6 @@ class DragNdrop extends javax.swing.JFrame {
                 if (insert) {
                     listModel.add(index, data);
                     tree.DefaultMutableTreeNode(index);
-                } else if( list = 7){
-                    JOptionPane.showMessageDialog(null, "You cannot take more then 6 courses");
                 }
                 else {
                     listModel.set(index, data);
@@ -487,8 +464,8 @@ class DragNdrop extends javax.swing.JFrame {
             }
 
             protected Transferable createTransferable(JComponent c) {
-                JList list = (JList)c;
-                Object[] values = list.getSelectedValues();
+                JList list1 = (JList)c;
+                Object[] values = list1.getSelectedValues();
 
                 StringBuffer buff = new StringBuffer();
 
@@ -502,6 +479,7 @@ class DragNdrop extends javax.swing.JFrame {
                 return new StringSelection(buff.toString());
             }
         });
+        /****************************************************************************************/
         jScrollPane4.setViewportView(list1);
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
@@ -584,19 +562,20 @@ class DragNdrop extends javax.swing.JFrame {
             .addComponent(jLabel200, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
         );
 
-        DefaultListModel listModel = new DefaultListModel();
-        listModel.addElement("Add and drop courses");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement("");
-        listModel.addElement(" ");
-        list3.setToolTipText("");
-        list = new JList(listModel);
+        DefaultListModel listModel4 = new DefaultListModel();
+        listModel4.addElement("Add and drop courses");
+        listModel4.addElement(" ");
+        listModel4.addElement(" ");
+        listModel4.addElement(" ");
+        listModel4.addElement("");
+        listModel4.addElement(" ");
+        list4.setToolTipText("");
+        /****************************************************************************************/
+        list4 = new JList(listModel4);
         //list.setVisibleRowCount(-1);
-        list.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        list4.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
-        list.setTransferHandler(new TransferHandler() {
+        list4.setTransferHandler(new TransferHandler() {
 
             public boolean canImport(TransferHandler.TransferSupport info) {
                 // we only import Strings
@@ -623,11 +602,11 @@ class DragNdrop extends javax.swing.JFrame {
                 }
 
                 JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();
-                DefaultListModel listModel = (DefaultListModel)list.getModel();
+                DefaultListModel listModel4 = (DefaultListModel)list4.getModel();
                 int index = dl.getIndex();
                 boolean insert = dl.isInsert();
                 // Get the current string under the drop.
-                String value = (String)listModel.getElementAt(index);
+                String value = (String)listModel4.getElementAt(index);
 
                 // Get the string that is being dropped.
                 Transferable t = info.getTransferable();
@@ -639,13 +618,11 @@ class DragNdrop extends javax.swing.JFrame {
 
                 // Perform the actual import.
                 if (insert) {
-                    listModel.add(index, data);
+                    listModel4.add(index, data);
                     tree.DefaultMutableTreeNode(index);
-                } else if( list = 7){
-                    JOptionPane.showMessageDialog(null, "You cannot take more then 6 courses");
                 }
                 else {
-                    listModel.set(index, data);
+                    listModel4.set(index, data);
                 }
                 return true;
 
@@ -657,8 +634,8 @@ class DragNdrop extends javax.swing.JFrame {
             }
 
             protected Transferable createTransferable(JComponent c) {
-                JList list = (JList)c;
-                Object[] values = list.getSelectedValues();
+                JList list4 = (JList)c;
+                Object[] values = list4.getSelectedValues();
 
                 StringBuffer buff = new StringBuffer();
 
@@ -672,7 +649,8 @@ class DragNdrop extends javax.swing.JFrame {
                 return new StringSelection(buff.toString());
             }
         });
-        jScrollPane6.setViewportView(list3);
+        /****************************************************************************************/
+        jScrollPane6.setViewportView(list4);
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
@@ -754,19 +732,20 @@ class DragNdrop extends javax.swing.JFrame {
             .addComponent(jLabel201, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
         );
 
-        DefaultListModel listModel = new DefaultListModel();
-        listModel.addElement("Add and drop courses");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement("");
-        listModel.addElement(" ");
-        list4.setToolTipText("");
-        list = new JList(listModel);
+        DefaultListModel listModel3 = new DefaultListModel();
+        listModel3.addElement("Add and drop courses");
+        listModel3.addElement(" ");
+        listModel3.addElement(" ");
+        listModel3.addElement(" ");
+        listModel3.addElement("");
+        listModel3.addElement(" ");
+        list3.setToolTipText("");
+        /****************************************************************************************/
+        list3 = new JList(listModel3);
         //list.setVisibleRowCount(-1);
-        list.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        list3.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
-        list.setTransferHandler(new TransferHandler() {
+        list3.setTransferHandler(new TransferHandler() {
 
             public boolean canImport(TransferHandler.TransferSupport info) {
                 // we only import Strings
@@ -793,11 +772,11 @@ class DragNdrop extends javax.swing.JFrame {
                 }
 
                 JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();
-                DefaultListModel listModel = (DefaultListModel)list.getModel();
+                DefaultListModel listModel3 = (DefaultListModel)list3.getModel();
                 int index = dl.getIndex();
                 boolean insert = dl.isInsert();
                 // Get the current string under the drop.
-                String value = (String)listModel.getElementAt(index);
+                String value = (String)listModel3.getElementAt(index);
 
                 // Get the string that is being dropped.
                 Transferable t = info.getTransferable();
@@ -809,13 +788,10 @@ class DragNdrop extends javax.swing.JFrame {
 
                 // Perform the actual import.
                 if (insert) {
-                    listModel.add(index, data);
+                    listModel3.add(index, data);
                     tree.DefaultMutableTreeNode(index);
-                } else if( list = 7){
-                    JOptionPane.showMessageDialog(null, "You cannot take more then 6 courses");
-                }
-                else {
-                    listModel.set(index, data);
+                }else {
+                    listModel3.set(index, data);
                 }
                 return true;
 
@@ -827,8 +803,8 @@ class DragNdrop extends javax.swing.JFrame {
             }
 
             protected Transferable createTransferable(JComponent c) {
-                JList list = (JList)c;
-                Object[] values = list.getSelectedValues();
+                JList list3 = (JList)c;
+                Object[] values = list3.getSelectedValues();
 
                 StringBuffer buff = new StringBuffer();
 
@@ -842,7 +818,8 @@ class DragNdrop extends javax.swing.JFrame {
                 return new StringSelection(buff.toString());
             }
         });
-        jScrollPane7.setViewportView(list4);
+        /****************************************************************************************/
+        jScrollPane7.setViewportView(list3);
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
@@ -924,19 +901,20 @@ class DragNdrop extends javax.swing.JFrame {
             .addComponent(jLabel202, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
         );
 
-        DefaultListModel listModel = new DefaultListModel();
-        listModel.addElement("Add and drop courses");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement("");
-        listModel.addElement(" ");
-        list5.setToolTipText("");
-        list = new JList(listModel);
+        DefaultListModel listModel6 = new DefaultListModel();
+        listModel6.addElement("Add and drop courses");
+        listModel6.addElement(" ");
+        listModel6.addElement(" ");
+        listModel6.addElement(" ");
+        listModel6.addElement("");
+        listModel6.addElement(" ");
+        list6.setToolTipText("");
+        /****************************************************************************************/
+        list6 = new JList(listModel6);
         //list.setVisibleRowCount(-1);
-        list.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        list6.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
-        list.setTransferHandler(new TransferHandler() {
+        list6.setTransferHandler(new TransferHandler() {
 
             public boolean canImport(TransferHandler.TransferSupport info) {
                 // we only import Strings
@@ -963,11 +941,11 @@ class DragNdrop extends javax.swing.JFrame {
                 }
 
                 JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();
-                DefaultListModel listModel = (DefaultListModel)list.getModel();
+                DefaultListModel listModel6 = (DefaultListModel)list6.getModel();
                 int index = dl.getIndex();
                 boolean insert = dl.isInsert();
                 // Get the current string under the drop.
-                String value = (String)listModel.getElementAt(index);
+                String value = (String)listModel6.getElementAt(index);
 
                 // Get the string that is being dropped.
                 Transferable t = info.getTransferable();
@@ -979,13 +957,11 @@ class DragNdrop extends javax.swing.JFrame {
 
                 // Perform the actual import.
                 if (insert) {
-                    listModel.add(index, data);
+                    listModel6.add(index, data);
                     tree.DefaultMutableTreeNode(index);
-                } else if( list = 7){
-                    JOptionPane.showMessageDialog(null, "You cannot take more then 6 courses");
                 }
                 else {
-                    listModel.set(index, data);
+                    listModel6.set(index, data);
                 }
                 return true;
 
@@ -997,8 +973,8 @@ class DragNdrop extends javax.swing.JFrame {
             }
 
             protected Transferable createTransferable(JComponent c) {
-                JList list = (JList)c;
-                Object[] values = list.getSelectedValues();
+                JList list6 = (JList)c;
+                Object[] values = list6.getSelectedValues();
 
                 StringBuffer buff = new StringBuffer();
 
@@ -1012,7 +988,8 @@ class DragNdrop extends javax.swing.JFrame {
                 return new StringSelection(buff.toString());
             }
         });
-        jScrollPane8.setViewportView(list5);
+        /***************************************************************************************/
+        jScrollPane8.setViewportView(list6);
 
         javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
         jPanel21.setLayout(jPanel21Layout);
@@ -1094,19 +1071,20 @@ class DragNdrop extends javax.swing.JFrame {
             .addComponent(jLabel203, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
         );
 
-        DefaultListModel listModel = new DefaultListModel();
-        listModel.addElement("Add and drop courses");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement("");
-        listModel.addElement(" ");
-        list6.setToolTipText("");
-        list = new JList(listModel);
+        DefaultListModel listModel5 = new DefaultListModel();
+        listModel5.addElement("Add and drop courses");
+        listModel5.addElement(" ");
+        listModel5.addElement(" ");
+        listModel5.addElement(" ");
+        listModel5.addElement("");
+        listModel5.addElement(" ");
+        list5.setToolTipText("");
+        /****************************************************************************************/
+        list5 = new JList(listModel5);
         //list.setVisibleRowCount(-1);
-        list.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        list5.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
-        list.setTransferHandler(new TransferHandler() {
+        list5.setTransferHandler(new TransferHandler() {
 
             public boolean canImport(TransferHandler.TransferSupport info) {
                 // we only import Strings
@@ -1133,11 +1111,11 @@ class DragNdrop extends javax.swing.JFrame {
                 }
 
                 JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();
-                DefaultListModel listModel = (DefaultListModel)list.getModel();
+                DefaultListModel listModel5 = (DefaultListModel)list5.getModel();
                 int index = dl.getIndex();
                 boolean insert = dl.isInsert();
                 // Get the current string under the drop.
-                String value = (String)listModel.getElementAt(index);
+                String value = (String)listModel5.getElementAt(index);
 
                 // Get the string that is being dropped.
                 Transferable t = info.getTransferable();
@@ -1149,13 +1127,11 @@ class DragNdrop extends javax.swing.JFrame {
 
                 // Perform the actual import.
                 if (insert) {
-                    listModel.add(index, data);
+                    listModel5.add(index, data);
                     tree.DefaultMutableTreeNode(index);
-                } else if( list = 7){
-                    JOptionPane.showMessageDialog(null, "You cannot take more then 6 courses");
                 }
                 else {
-                    listModel.set(index, data);
+                    listModel5.set(index, data);
                 }
                 return true;
 
@@ -1167,8 +1143,8 @@ class DragNdrop extends javax.swing.JFrame {
             }
 
             protected Transferable createTransferable(JComponent c) {
-                JList list = (JList)c;
-                Object[] values = list.getSelectedValues();
+                JList list5 = (JList)c;
+                Object[] values = list5.getSelectedValues();
 
                 StringBuffer buff = new StringBuffer();
 
@@ -1182,7 +1158,8 @@ class DragNdrop extends javax.swing.JFrame {
                 return new StringSelection(buff.toString());
             }
         });
-        jScrollPane9.setViewportView(list6);
+        /****************************************************************************************/
+        jScrollPane9.setViewportView(list5);
 
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
         jPanel23.setLayout(jPanel23Layout);
@@ -1248,7 +1225,7 @@ class DragNdrop extends javax.swing.JFrame {
 
         jPanel26.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel204.setText("                                                                                                                                Spring Semester 6");
+        jLabel204.setText("                                                                                                                                Spring Semester 8");
         jLabel204.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
@@ -1264,19 +1241,20 @@ class DragNdrop extends javax.swing.JFrame {
             .addComponent(jLabel204, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
         );
 
-        DefaultListModel listModel = new DefaultListModel();
-        listModel.addElement("Add and drop courses");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement("");
-        listModel.addElement(" ");
-        list7.setToolTipText("");
-        list = new JList(listModel);
+        DefaultListModel listModel8 = new DefaultListModel();
+        listModel8.addElement("Add and drop courses");
+        listModel8.addElement(" ");
+        listModel8.addElement(" ");
+        listModel8.addElement(" ");
+        listModel8.addElement("");
+        listModel8.addElement(" ");
+        list8.setToolTipText("");
+        /****************************************************************************************/
+        list8 = new JList(listModel8);
         //list.setVisibleRowCount(-1);
-        list.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        list8.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
-        list.setTransferHandler(new TransferHandler() {
+        list8.setTransferHandler(new TransferHandler() {
 
             public boolean canImport(TransferHandler.TransferSupport info) {
                 // we only import Strings
@@ -1303,11 +1281,11 @@ class DragNdrop extends javax.swing.JFrame {
                 }
 
                 JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();
-                DefaultListModel listModel = (DefaultListModel)list.getModel();
+                DefaultListModel listModel8 = (DefaultListModel)list8.getModel();
                 int index = dl.getIndex();
                 boolean insert = dl.isInsert();
                 // Get the current string under the drop.
-                String value = (String)listModel.getElementAt(index);
+                String value = (String)listModel8.getElementAt(index);
 
                 // Get the string that is being dropped.
                 Transferable t = info.getTransferable();
@@ -1319,13 +1297,11 @@ class DragNdrop extends javax.swing.JFrame {
 
                 // Perform the actual import.
                 if (insert) {
-                    listModel.add(index, data);
+                    listModel8.add(index, data);
                     tree.DefaultMutableTreeNode(index);
-                } else if( list = 7){
-                    JOptionPane.showMessageDialog(null, "You cannot take more then 6 courses");
                 }
                 else {
-                    listModel.set(index, data);
+                    listModel8.set(index, data);
                 }
                 return true;
 
@@ -1337,8 +1313,8 @@ class DragNdrop extends javax.swing.JFrame {
             }
 
             protected Transferable createTransferable(JComponent c) {
-                JList list = (JList)c;
-                Object[] values = list.getSelectedValues();
+                JList list8 = (JList)c;
+                Object[] values = list8.getSelectedValues();
 
                 StringBuffer buff = new StringBuffer();
 
@@ -1352,7 +1328,8 @@ class DragNdrop extends javax.swing.JFrame {
                 return new StringSelection(buff.toString());
             }
         });
-        jScrollPane10.setViewportView(list7);
+        /****************************************************************************************/
+        jScrollPane10.setViewportView(list8);
 
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
         jPanel25.setLayout(jPanel25Layout);
@@ -1418,7 +1395,7 @@ class DragNdrop extends javax.swing.JFrame {
 
         jPanel28.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel205.setText("                                                                                                                                Fall Semester 5");
+        jLabel205.setText("                                                                                                                                Fall Semester 7");
         jLabel205.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
@@ -1434,19 +1411,20 @@ class DragNdrop extends javax.swing.JFrame {
             .addComponent(jLabel205, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
         );
 
-        DefaultListModel listModel = new DefaultListModel();
-        listModel.addElement("Add and drop courses");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement("");
-        listModel.addElement(" ");
-        list8.setToolTipText("");
-        list = new JList(listModel);
+        DefaultListModel listModel7 = new DefaultListModel();
+        listModel7.addElement("Add and drop courses");
+        listModel7.addElement(" ");
+        listModel7.addElement(" ");
+        listModel7.addElement(" ");
+        listModel7.addElement("");
+        listModel7.addElement(" ");
+        list7.setToolTipText("");
+        /****************************************************************************************/
+        list7 = new JList(listModel7);
         //list.setVisibleRowCount(-1);
-        list.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        list7.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
-        list.setTransferHandler(new TransferHandler() {
+        list7.setTransferHandler(new TransferHandler() {
 
             public boolean canImport(TransferHandler.TransferSupport info) {
                 // we only import Strings
@@ -1473,11 +1451,11 @@ class DragNdrop extends javax.swing.JFrame {
                 }
 
                 JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();
-                DefaultListModel listModel = (DefaultListModel)list.getModel();
+                DefaultListModel listModel7 = (DefaultListModel)list7.getModel();
                 int index = dl.getIndex();
                 boolean insert = dl.isInsert();
                 // Get the current string under the drop.
-                String value = (String)listModel.getElementAt(index);
+                String value = (String)listModel7.getElementAt(index);
 
                 // Get the string that is being dropped.
                 Transferable t = info.getTransferable();
@@ -1489,13 +1467,11 @@ class DragNdrop extends javax.swing.JFrame {
 
                 // Perform the actual import.
                 if (insert) {
-                    listModel.add(index, data);
+                    listModel7.add(index, data);
                     tree.DefaultMutableTreeNode(index);
-                } else if( list = 7){
-                    JOptionPane.showMessageDialog(null, "You cannot take more then 6 courses");
                 }
                 else {
-                    listModel.set(index, data);
+                    listModel7.set(index, data);
                 }
                 return true;
 
@@ -1507,8 +1483,8 @@ class DragNdrop extends javax.swing.JFrame {
             }
 
             protected Transferable createTransferable(JComponent c) {
-                JList list = (JList)c;
-                Object[] values = list.getSelectedValues();
+                JList list7 = (JList)c;
+                Object[] values = list7.getSelectedValues();
 
                 StringBuffer buff = new StringBuffer();
 
@@ -1522,7 +1498,8 @@ class DragNdrop extends javax.swing.JFrame {
                 return new StringSelection(buff.toString());
             }
         });
-        jScrollPane11.setViewportView(list8);
+        /****************************************************************************************/
+        jScrollPane11.setViewportView(list7);
 
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
@@ -1569,346 +1546,6 @@ class DragNdrop extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        jPanel29.setBackground(new java.awt.Color(225, 225, 225));
-        jPanel29.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel49.setText("Course 1");
-        jLabel49.setToolTipText("");
-
-        jLabel50.setText("Course 2");
-
-        jLabel51.setText("Course 3");
-        jLabel51.setToolTipText("");
-
-        jLabel52.setText("Course 4");
-
-        jLabel53.setText("Course 5");
-
-        jLabel54.setText("Course 6");
-
-        jPanel30.setBackground(new java.awt.Color(204, 204, 204));
-
-        jLabel206.setText("                                                                                                                                Spring Semester 6");
-        jLabel206.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
-        jPanel30.setLayout(jPanel30Layout);
-        jPanel30Layout.setHorizontalGroup(
-            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel30Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel206, javax.swing.GroupLayout.PREFERRED_SIZE, 801, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel30Layout.setVerticalGroup(
-            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel206, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
-        );
-
-        DefaultListModel listModel = new DefaultListModel();
-        listModel.addElement("Add and drop courses");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement("");
-        listModel.addElement(" ");
-        list9.setToolTipText("");
-        list = new JList(listModel);
-        //list.setVisibleRowCount(-1);
-        list.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-
-        list.setTransferHandler(new TransferHandler() {
-
-            public boolean canImport(TransferHandler.TransferSupport info) {
-                // we only import Strings
-                if (!info.isDataFlavorSupported(DataFlavor.stringFlavor)) {
-                    return false;
-                }
-
-                JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();
-                if (dl.getIndex() == -1) {
-                    return false;
-                }
-                return true;
-            }
-
-            public boolean importData(TransferHandler.TransferSupport info) {
-                if (!info.isDrop()) {
-                    return false;
-                }
-
-                // Check for String flavor
-                if (!info.isDataFlavorSupported(DataFlavor.stringFlavor)) {
-                    displayDropLocation("List doesn't accept a drop of this type.");
-                    return false;
-                }
-
-                JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();
-                DefaultListModel listModel = (DefaultListModel)list.getModel();
-                int index = dl.getIndex();
-                boolean insert = dl.isInsert();
-                // Get the current string under the drop.
-                String value = (String)listModel.getElementAt(index);
-
-                // Get the string that is being dropped.
-                Transferable t = info.getTransferable();
-                String data;
-                try {
-                    data = (String)t.getTransferData(DataFlavor.stringFlavor);
-                }
-                catch (Exception e) { return false; }
-
-                // Perform the actual import.
-                if (insert) {
-                    listModel.add(index, data);
-                    tree.DefaultMutableTreeNode(index);
-                } else if( list = 7){
-                    JOptionPane.showMessageDialog(null, "You cannot take more then 6 courses");
-                }
-                else {
-                    listModel.set(index, data);
-                }
-                return true;
-
-                //return false;
-            }
-
-            public int getSourceActions(JComponent c) {
-                return MOVE;
-            }
-
-            protected Transferable createTransferable(JComponent c) {
-                JList list = (JList)c;
-                Object[] values = list.getSelectedValues();
-
-                StringBuffer buff = new StringBuffer();
-
-                for (int i = 0; i < values.length; i++) {
-                    Object val = values[i];
-                    buff.append(val == null ? "" : val.toString());
-                    if (i != values.length - 1) {
-                        buff.append("\n");
-                    }
-                }
-                return new StringSelection(buff.toString());
-            }
-        });
-        jScrollPane12.setViewportView(list9);
-
-        javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
-        jPanel29.setLayout(jPanel29Layout);
-        jPanel29Layout.setHorizontalGroup(
-            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel29Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel29Layout.createSequentialGroup()
-                        .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel49)
-                            .addComponent(jLabel50)
-                            .addComponent(jLabel51)
-                            .addComponent(jLabel52)
-                            .addComponent(jLabel53)
-                            .addComponent(jLabel54))
-                        .addGap(25, 25, 25)
-                        .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 743, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(15, 15, 15))
-        );
-        jPanel29Layout.setVerticalGroup(
-            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel29Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel29Layout.createSequentialGroup()
-                        .addComponent(jLabel49)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel50)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel51)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel52)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel54, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(90, 90, 90))
-                    .addGroup(jPanel29Layout.createSequentialGroup()
-                        .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-
-        jPanel31.setBackground(new java.awt.Color(225, 225, 225));
-        jPanel31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel55.setText("Course 1");
-        jLabel55.setToolTipText("");
-
-        jLabel56.setText("Course 2");
-
-        jLabel57.setText("Course 3");
-        jLabel57.setToolTipText("");
-
-        jLabel58.setText("Course 4");
-
-        jLabel59.setText("Course 5");
-
-        jLabel60.setText("Course 6");
-
-        jPanel32.setBackground(new java.awt.Color(204, 204, 204));
-
-        jLabel207.setText("                                                                                                                                Fall Semester 5");
-        jLabel207.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-
-        javax.swing.GroupLayout jPanel32Layout = new javax.swing.GroupLayout(jPanel32);
-        jPanel32.setLayout(jPanel32Layout);
-        jPanel32Layout.setHorizontalGroup(
-            jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel32Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel207, javax.swing.GroupLayout.PREFERRED_SIZE, 801, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel32Layout.setVerticalGroup(
-            jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel207, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
-        );
-
-        DefaultListModel listModel = new DefaultListModel();
-        listModel.addElement("Add and drop courses");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement(" ");
-        listModel.addElement("");
-        listModel.addElement(" ");
-        list10.setToolTipText("");
-        list = new JList(listModel);
-        //list.setVisibleRowCount(-1);
-        list.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
-
-        list.setTransferHandler(new TransferHandler() {
-
-            public boolean canImport(TransferHandler.TransferSupport info) {
-                // we only import Strings
-                if (!info.isDataFlavorSupported(DataFlavor.stringFlavor)) {
-                    return false;
-                }
-
-                JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();
-                if (dl.getIndex() == -1) {
-                    return false;
-                }
-                return true;
-            }
-
-            public boolean importData(TransferHandler.TransferSupport info) {
-                if (!info.isDrop()) {
-                    return false;
-                }
-
-                // Check for String flavor
-                if (!info.isDataFlavorSupported(DataFlavor.stringFlavor)) {
-                    displayDropLocation("List doesn't accept a drop of this type.");
-                    return false;
-                }
-
-                JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();
-                DefaultListModel listModel = (DefaultListModel)list.getModel();
-                int index = dl.getIndex();
-                boolean insert = dl.isInsert();
-                // Get the current string under the drop.
-                String value = (String)listModel.getElementAt(index);
-
-                // Get the string that is being dropped.
-                Transferable t = info.getTransferable();
-                String data;
-                try {
-                    data = (String)t.getTransferData(DataFlavor.stringFlavor);
-                }
-                catch (Exception e) { return false; }
-
-                // Perform the actual import.
-                if (insert) {
-                    listModel.add(index, data);
-                    tree.DefaultMutableTreeNode(index);
-                } else if( list = 7){
-                    JOptionPane.showMessageDialog(null, "You cannot take more then 6 courses");
-                }
-                else {
-                    listModel.set(index, data);
-                }
-                return true;
-
-                //return false;
-            }
-
-            public int getSourceActions(JComponent c) {
-                return MOVE;
-            }
-
-            protected Transferable createTransferable(JComponent c) {
-                JList list = (JList)c;
-                Object[] values = list.getSelectedValues();
-
-                StringBuffer buff = new StringBuffer();
-
-                for (int i = 0; i < values.length; i++) {
-                    Object val = values[i];
-                    buff.append(val == null ? "" : val.toString());
-                    if (i != values.length - 1) {
-                        buff.append("\n");
-                    }
-                }
-                return new StringSelection(buff.toString());
-            }
-        });
-        jScrollPane13.setViewportView(list10);
-
-        javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
-        jPanel31.setLayout(jPanel31Layout);
-        jPanel31Layout.setHorizontalGroup(
-            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel31Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel31Layout.createSequentialGroup()
-                        .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel55)
-                            .addComponent(jLabel56)
-                            .addComponent(jLabel57)
-                            .addComponent(jLabel58)
-                            .addComponent(jLabel59)
-                            .addComponent(jLabel60))
-                        .addGap(25, 25, 25)
-                        .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, 743, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(15, 15, 15))
-        );
-        jPanel31Layout.setVerticalGroup(
-            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel31Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel31Layout.createSequentialGroup()
-                        .addComponent(jLabel55)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel56)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel57)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel58)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel60, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(90, 90, 90))
-                    .addGroup(jPanel31Layout.createSequentialGroup()
-                        .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -1923,9 +1560,7 @@ class DragNdrop extends javax.swing.JFrame {
                     .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -1947,11 +1582,7 @@ class DragNdrop extends javax.swing.JFrame {
                 .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15)
                 .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15)
-                .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         jScrollPane2.setViewportView(jPanel1);
@@ -2020,8 +1651,6 @@ class DragNdrop extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel203;
     private javax.swing.JLabel jLabel204;
     private javax.swing.JLabel jLabel205;
-    private javax.swing.JLabel jLabel206;
-    private javax.swing.JLabel jLabel207;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -2052,20 +1681,8 @@ class DragNdrop extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -2086,16 +1703,10 @@ class DragNdrop extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
-    private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel30;
-    private javax.swing.JPanel jPanel31;
-    private javax.swing.JPanel jPanel32;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
-    private javax.swing.JScrollPane jScrollPane12;
-    private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
@@ -2104,7 +1715,6 @@ class DragNdrop extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JList list1;
-    private javax.swing.JList list10;
     private javax.swing.JList list2;
     private javax.swing.JList list3;
     private javax.swing.JList list4;
@@ -2112,7 +1722,6 @@ class DragNdrop extends javax.swing.JFrame {
     private javax.swing.JList list6;
     private javax.swing.JList list7;
     private javax.swing.JList list8;
-    private javax.swing.JList list9;
     private javax.swing.JTree tree;
     // End of variables declaration//GEN-END:variables
 }
