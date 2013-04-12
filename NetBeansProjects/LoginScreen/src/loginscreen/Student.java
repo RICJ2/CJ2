@@ -109,12 +109,14 @@ class Student{
 
     public static String getMajor(String loginN, Connection c){
         String result;
-        String user_query = "select * from users where login_Name = ?";
+        String user_query = "select * ,(select degree_desc from degree_prog where degree_prog.iddegree_prog = users.major) as degree_desc from users where login_Name = ?";
         try {
             prestmt = c.prepareStatement(user_query);
             prestmt.setString(1, loginN);
             rs = prestmt.executeQuery();
-            if (rs.next()) {result = rs.getString("major");}
+            if (rs.next())
+            {result = 
+            rs.getString("degree_desc");}
             else{result = "notFound";}}
         catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
@@ -189,19 +191,20 @@ class Student{
         }
 
         }
+        
         public static String geteditAccount(String loginN, Connection c){
         String result;
-         String user_query = "Select f_name, l_name, (select degree_desc from degree_prog where degree_prog.iddegree_prog = users.major), (select semester_desc from semesters where semester_id = users.sem_start), gr_date, s_email from users where login_name = ? ";
+         String user_query = "Select f_name, l_name, (select degree_desc from degree_prog where degree_prog.iddegree_prog = users.major)as degree_desc, (select semester_desc from semesters where semester_id = users.sem_start)as semester_desc, gr_date, s_email from users where login_name = ? ";
      try {
         prestmt = c.prepareStatement(user_query);
         prestmt.setString(1, loginN);
         rs = prestmt.executeQuery();
         if (rs.next()) {result =
-        rs.getString("f_name");
-        rs.getString("lname");
-        rs.getString("degree_desc");
-        rs.getString("semester_desc");
-        rs.getString("semester_desc");
+        rs.getString("f_name")+" "+
+        rs.getString("lname")+" "+
+        rs.getString("degree_desc")+" "+
+        rs.getString("semester_desc")+" "+
+        rs.getString("gr_date")+" "+
         rs.getString("s_email");}
         else{result = "notFound";}}
         catch (SQLException e) {
@@ -209,4 +212,27 @@ class Student{
             result = null;}
         return result;
         }
+        
+        public static void updateAccount(String firstN, String lastN, String major, String semester, String year, String email, String username, String password, String passval, Connection c){
+            String user_query = "Update INTO users (f_name, l_name, login_name, pword, pword_val,major, sem_start, gr_date, s_email)Values(?,?,?,?,?,(SELECT iddegree_prog from degree_prog where degree_desc = ?), (Select semester_id from semesters where semester_desc = ?),?,?)";  
+        try {
+            prestmt = c.prepareStatement(user_query);
+            prestmt.setString(1, firstN);
+            prestmt.setString(2, lastN);
+            prestmt.setString(3, username);
+            prestmt.setString(4, password);
+            prestmt.setString(5, passval);
+            prestmt.setString(6, major);
+            prestmt.setString(7, semester);
+            prestmt.setString(8, "2013");
+            prestmt.setString(9, email);
+            prestmt.execute();
+        }
+        catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
+
+        }
+
+
 }
