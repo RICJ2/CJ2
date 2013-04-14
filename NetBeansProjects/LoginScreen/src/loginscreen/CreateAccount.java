@@ -24,6 +24,7 @@ public class CreateAccount extends javax.swing.JFrame {
         mediator = m;
         conn = c;
         initComponents();
+        getRootPane().setDefaultButton(createAccountButton);
     }
 
     /**
