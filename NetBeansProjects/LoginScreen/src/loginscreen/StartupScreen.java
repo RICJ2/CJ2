@@ -1847,20 +1847,20 @@ public class StartupScreen extends javax.swing.JFrame {
             .addComponent(jLabel209, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
         );
 
-        DefaultListModel listModel1 = new DefaultListModel();
-        listModel1.addElement(" ");
-        listModel1.addElement(" ");
-        listModel1.addElement(" ");
-        listModel1.addElement(" ");
-        listModel1.addElement(" ");
-        listModel1.addElement(" ");
+        DefaultListModel listModel9 = new DefaultListModel();
+        listModel9.addElement(" ");
+        listModel9.addElement(" ");
+        listModel9.addElement(" ");
+        listModel9.addElement(" ");
+        listModel9.addElement(" ");
+        listModel9.addElement(" ");
         list9.setToolTipText("");
         /****************************************************************************************/
-        list1 = new JList(listModel1);
+        list9 = new JList(listModel9);
         //list.setVisibleRowCount(-1);
-        list1.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        list9.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
-        list1.setTransferHandler(new TransferHandler() {
+        list9.setTransferHandler(new TransferHandler() {
 
             public boolean canImport(TransferHandler.TransferSupport info) {
                 // we only import Strings
@@ -1887,11 +1887,11 @@ public class StartupScreen extends javax.swing.JFrame {
                 }
 
                 JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();
-                DefaultListModel listModel1 = (DefaultListModel)list1.getModel();
+                DefaultListModel listModel9 = (DefaultListModel)list9.getModel();
                 int index = dl.getIndex();
                 boolean insert = dl.isInsert();
                 // Get the current string under the drop.
-                String value = (String)listModel1.getElementAt(index);
+                String value = (String)listModel9.getElementAt(index);
 
                 // Get the string that is being dropped.
                 Transferable t = info.getTransferable();
@@ -1903,10 +1903,10 @@ public class StartupScreen extends javax.swing.JFrame {
 
                 // Perform the actual import.
                 if (insert) {
-                    listModel1.add(index, data);
+                    listModel9.add(index, data);
                 }
                 else {
-                    listModel1.set(index, data);
+                    listModel9.set(index, data);
                 }
                 return true;
 
@@ -1918,8 +1918,8 @@ public class StartupScreen extends javax.swing.JFrame {
             }
 
             protected Transferable createTransferable(JComponent c) {
-                JList list1 = (JList)c;
-                Object[] values = list1.getSelectedValues();
+                JList list9 = (JList)c;
+                Object[] values = list9.getSelectedValues();
 
                 StringBuffer buff = new StringBuffer();
 
@@ -2017,20 +2017,20 @@ public class StartupScreen extends javax.swing.JFrame {
             .addComponent(jLabel210, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
         );
 
-        DefaultListModel listModel1 = new DefaultListModel();
-        listModel1.addElement(" ");
-        listModel1.addElement(" ");
-        listModel1.addElement(" ");
-        listModel1.addElement(" ");
-        listModel1.addElement(" ");
-        listModel1.addElement(" ");
+        DefaultListModel listModel10 = new DefaultListModel();
+        listModel10.addElement(" ");
+        listModel10.addElement(" ");
+        listModel10.addElement(" ");
+        listModel10.addElement(" ");
+        listModel10.addElement(" ");
+        listModel10.addElement(" ");
         list10.setToolTipText("");
         /****************************************************************************************/
-        list1 = new JList(listModel1);
+        list10 = new JList(listModel10);
         //list.setVisibleRowCount(-1);
-        list1.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        list10.getSelectionModel().setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 
-        list1.setTransferHandler(new TransferHandler() {
+        list10.setTransferHandler(new TransferHandler() {
 
             public boolean canImport(TransferHandler.TransferSupport info) {
                 // we only import Strings
@@ -2057,11 +2057,11 @@ public class StartupScreen extends javax.swing.JFrame {
                 }
 
                 JList.DropLocation dl = (JList.DropLocation)info.getDropLocation();
-                DefaultListModel listModel1 = (DefaultListModel)list1.getModel();
+                DefaultListModel listModel10 = (DefaultListModel)list10.getModel();
                 int index = dl.getIndex();
                 boolean insert = dl.isInsert();
                 // Get the current string under the drop.
-                String value = (String)listModel1.getElementAt(index);
+                String value = (String)listModel10.getElementAt(index);
 
                 // Get the string that is being dropped.
                 Transferable t = info.getTransferable();
@@ -2073,10 +2073,10 @@ public class StartupScreen extends javax.swing.JFrame {
 
                 // Perform the actual import.
                 if (insert) {
-                    listModel1.add(index, data);
+                    listModel10.add(index, data);
                 }
                 else {
-                    listModel1.set(index, data);
+                    listModel10.set(index, data);
                 }
                 return true;
 
@@ -2088,8 +2088,8 @@ public class StartupScreen extends javax.swing.JFrame {
             }
 
             protected Transferable createTransferable(JComponent c) {
-                JList list1 = (JList)c;
-                Object[] values = list1.getSelectedValues();
+                JList list10 = (JList)c;
+                Object[] values = list10.getSelectedValues();
 
                 StringBuffer buff = new StringBuffer();
 
@@ -2158,16 +2158,15 @@ public class StartupScreen extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jPanel32, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jPanel30, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
-                        .addComponent(jPanel26, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel27, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel22, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel24, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
-                        .addComponent(jPanel17, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
-                        .addComponent(jPanel16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
-                        .addComponent(jPanel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
-                        .addComponent(jPanel20, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)))
+                    .addComponent(jPanel30, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
+                    .addComponent(jPanel26, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel27, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel22, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel24, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
+                    .addComponent(jPanel17, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
+                    .addComponent(jPanel16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
+                    .addComponent(jPanel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
+                    .addComponent(jPanel20, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE))
                 .addContainerGap(57, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
