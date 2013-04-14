@@ -518,7 +518,6 @@ public class StartupScreen extends javax.swing.JFrame {
                 // Perform the actual import.
                 if (insert) {
                     listModel2.add(index, data);
-                    tree.DefaultMutableTreeNode(index);
                 }
                 else {
                     listModel2.set(index, data);
@@ -690,7 +689,6 @@ public class StartupScreen extends javax.swing.JFrame {
                 // Perform the actual import.
                 if (insert) {
                     listModel1.add(index, data);
-                    tree.DefaultMutableTreeNode(index);
                 }
                 else {
                     listModel1.set(index, data);
@@ -861,7 +859,6 @@ public class StartupScreen extends javax.swing.JFrame {
                 // Perform the actual import.
                 if (insert) {
                     listModel4.add(index, data);
-                    tree.DefaultMutableTreeNode(index);
                 }
                 else {
                     listModel4.set(index, data);
@@ -1033,7 +1030,6 @@ public class StartupScreen extends javax.swing.JFrame {
                 // Perform the actual import.
                 if (insert) {
                     listModel3.add(index, data);
-                    tree.DefaultMutableTreeNode(index);
                 }else {
                     listModel3.set(index, data);
                 }
@@ -1203,7 +1199,6 @@ public class StartupScreen extends javax.swing.JFrame {
                 // Perform the actual import.
                 if (insert) {
                     listModel6.add(index, data);
-                    tree.DefaultMutableTreeNode(index);
                 }
                 else {
                     listModel6.set(index, data);
@@ -1373,7 +1368,6 @@ public class StartupScreen extends javax.swing.JFrame {
                 // Perform the actual import.
                 if (insert) {
                     listModel5.add(index, data);
-                    tree.DefaultMutableTreeNode(index);
                 }
                 else {
                     listModel5.set(index, data);
@@ -1544,7 +1538,6 @@ public class StartupScreen extends javax.swing.JFrame {
                 // Perform the actual import.
                 if (insert) {
                     listModel8.add(index, data);
-                    tree.DefaultMutableTreeNode(index);
                 }
                 else {
                     listModel8.set(index, data);
@@ -1715,7 +1708,6 @@ public class StartupScreen extends javax.swing.JFrame {
                 // Perform the actual import.
                 if (insert) {
                     listModel7.add(index, data);
-                    tree.DefaultMutableTreeNode(index);
                 }
                 else {
                     listModel7.set(index, data);
