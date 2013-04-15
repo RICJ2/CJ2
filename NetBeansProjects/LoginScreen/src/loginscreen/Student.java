@@ -135,6 +135,21 @@ class Student{
         return result;
     }
 
+	public static String getMajorNum(String loginN, Connection c){
+        String result;
+        String user_query = "select * from users where login_Name = ?";
+        try {
+            prestmt = c.prepareStatement(user_query);
+            prestmt.setString(1, loginN);
+            rs = prestmt.executeQuery();
+            if (rs.next()) {result = rs.getString("major");}
+            else{result = "notFound";}}
+        catch (SQLException e) {
+            JOptionPane.showMessageDialog(null, e);
+            result = null;}
+        return result;
+    }
+	
 	public static String getSemester(String loginN, Connection c){
         String result;
         String user_query = "select * from users where login_Name = ?";
