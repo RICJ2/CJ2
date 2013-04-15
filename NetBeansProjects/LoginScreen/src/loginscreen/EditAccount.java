@@ -130,7 +130,7 @@ public class EditAccount extends javax.swing.JFrame {
 		confirmTextField.setText(Student.getConfirmPassword(loginName, conn));
 		semesterComboBox.setSelectedIndex((Integer.parseInt(Student.getSemester(loginName, conn)) - 1));
 		majorComboBox.setSelectedIndex(18 - Integer.parseInt(Student.getMajorNum(loginName, conn)));
-		yearComboBox.setSelectedIndex(Integer.parseInt(Student.getYear(loginName, conn)) - year);
+		//yearComboBox.setSelectedIndex(Integer.parseInt(Student.getYear(loginName, conn)) - year);
 		
         javax.swing.GroupLayout RightInnerJpanelLayout = new javax.swing.GroupLayout(RightInnerJpanel);
         RightInnerJpanel.setLayout(RightInnerJpanelLayout);
