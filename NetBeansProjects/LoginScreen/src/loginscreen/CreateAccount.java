@@ -310,16 +310,18 @@ public class CreateAccount extends javax.swing.JFrame {
         //LoginScreenForm returnLogin = new LoginScreenForm ();
         //returnLogin.setVisible(true);
     }//GEN-LAST:event_cancelButtonActionPerformed
-    //when the create account buttom is <clicked> by the mouse the following fields are 
-    //captured and passed if the password and the validate password match. The values from 
+    //when the create account buttom is <clicked> by the mouse the following fields are
+    //captured and passed if the password and the validate password match. The values from
     //text fields are passed and the Student.createAccount method is called in the Student Class
     private void createAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createAccountButtonActionPerformed
+    //these fields will pass to the method createAccount in StudentJava. Each field below is in the same order as the method in
+        //StudentJava createAccount. This passing of information works because of we call the Student.createAccount below.
         if (passwordTextField.getText().equals(confirmTextField.getText())){
 		Student.createAccount(firstNameText.getText(), lastNameText.getText(),
                         (String)majorComboBox.getSelectedItem(), (String)semesterComboBox1.getSelectedItem(),
                         (String)yearComboBox.getSelectedItem(), emailTextField.getText(), usernameTextField.getText(),
                          passwordTextField.getText(),confirmTextField.getText(), conn);
-		mediator.createLoginScreen();				 
+		mediator.createLoginScreen();
         }
 	else{//if error on password entries this will capture and throw the message below.
 		JOptionPane.showMessageDialog(null, "Password and Comfirm Password do not match");
@@ -365,7 +367,7 @@ public class CreateAccount extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                
+
             }
         });
     }
