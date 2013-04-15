@@ -36,7 +36,7 @@ public class StartupScreen extends javax.swing.JFrame {
         ArrayList list;
         ArrayList<JComboBox> comboGrp1;
         //Fillcombo();
-		
+
 	// Method calls to fill combo boxes
 //        list = mediator.fillCombo("157", "201");
 //        for (int i = 0; i < list.size(); i++) {
@@ -81,7 +81,7 @@ public class StartupScreen extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
     }
-    
+
     private void displayDropLocation(final String string) {
         SwingUtilities.invokeLater(new Runnable() {
                 public void run() {
@@ -106,7 +106,7 @@ public class StartupScreen extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jPanel15 = new javax.swing.JPanel();
         jLabel196 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        javax.swing.JTextField jTextField1 = new javax.swing.JTextField();
         jLabel199 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel200 = new javax.swing.JLabel();
@@ -258,17 +258,16 @@ public class StartupScreen extends javax.swing.JFrame {
         jLabel196.setForeground(new java.awt.Color(255, 255, 255));
         jLabel196.setText("Student Name: ");
 
-        jTextField1.setText("CSCI");
+        jTextField1.setText(Student.getMajor(loginName, conn));
+        jTextField1.setToolTipText("");
+        jTextField1.setActionCommand("<Not Set>");
+        jTextField1.setName(""); // NOI18N
 
         jLabel199.setForeground(new java.awt.Color(255, 255, 255));
         jLabel199.setText("Student Major:");
 
+        jTextField2.setText(Student.getFullName(loginName, conn));
         jTextField2.setToolTipText("");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
 
         jLabel200.setForeground(new java.awt.Color(255, 255, 255));
         jLabel200.setText("Total Hours:");
@@ -278,8 +277,6 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jTextField3.setText("110");
 
-        jTextField4.setText("May 2013");
-
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
@@ -288,8 +285,8 @@ public class StartupScreen extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel196, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel199)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -317,6 +314,8 @@ public class StartupScreen extends javax.swing.JFrame {
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
+
+        jTextField1.getAccessibleContext().setAccessibleName("");
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/loginscreen/resources/ZRICBanner.jpg"))); // NOI18N
 
@@ -615,7 +614,7 @@ public class StartupScreen extends javax.swing.JFrame {
                         .addComponent(jLabel15)
                         .addGap(0, 35, Short.MAX_VALUE))
                     .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
                         .addContainerGap())))
         );
 
@@ -2167,7 +2166,7 @@ public class StartupScreen extends javax.swing.JFrame {
                     .addComponent(jPanel16, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
                     .addComponent(jPanel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE)
                     .addComponent(jPanel20, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 742, Short.MAX_VALUE))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2254,9 +2253,9 @@ public class StartupScreen extends javax.swing.JFrame {
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 4, Short.MAX_VALUE)
                 .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 4, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2279,10 +2278,6 @@ public class StartupScreen extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void logoutButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutButtonMouseClicked
        mediator.logout(conn);
@@ -2324,7 +2319,7 @@ public class StartupScreen extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
 
-                //new StartupScreen().setVisible(true);
+
 
             }
         });
@@ -2448,7 +2443,6 @@ public class StartupScreen extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
