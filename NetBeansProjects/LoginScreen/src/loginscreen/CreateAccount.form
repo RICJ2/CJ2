@@ -359,6 +359,7 @@
                 </Component>
                 <Component class="javax.swing.JComboBox" name="yearComboBox">
                   <Properties>
+                    <Property name="editable" type="boolean" value="true"/>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
                         <StringItem index="0" value="Item 1"/>
@@ -398,11 +399,10 @@
                 <Component class="javax.swing.JComboBox" name="semesterComboBox1">
                   <Properties>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                      <StringArray count="4">
-                        <StringItem index="0" value="Item 1"/>
-                        <StringItem index="1" value="Item 2"/>
-                        <StringItem index="2" value="Item 3"/>
-                        <StringItem index="3" value="Item 4"/>
+                      <StringArray count="3">
+                        <StringItem index="0" value="Spring"/>
+                        <StringItem index="1" value="Fall"/>
+                        <StringItem index="2" value="Summer"/>
                       </StringArray>
                     </Property>
                   </Properties>
