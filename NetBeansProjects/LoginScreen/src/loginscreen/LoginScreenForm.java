@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 public class LoginScreenForm extends javax.swing.JFrame {
     Mediator mediator;
     Connection conn = null;
-    
+
 
     /**
      * Creates new form LoginScreenForm
@@ -26,8 +26,8 @@ public class LoginScreenForm extends javax.swing.JFrame {
         conn = c;
         initComponents();
         getRootPane().setDefaultButton(jButton1);
-    }
 
+                }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -94,6 +94,7 @@ public class LoginScreenForm extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(0, 0, 255));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Sign in");
+        jButton1.setNextFocusableComponent(jButton3);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -118,6 +119,7 @@ public class LoginScreenForm extends javax.swing.JFrame {
         jButton3.setText("Create an Account");
         jButton3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+        jButton3.setRolloverEnabled(true);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -218,8 +220,8 @@ public class LoginScreenForm extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(0, 3, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 824, Short.MAX_VALUE)
+                .addGap(0, 5, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 826, Short.MAX_VALUE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
