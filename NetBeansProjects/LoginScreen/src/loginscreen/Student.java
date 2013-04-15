@@ -115,7 +115,7 @@ class Student{
             prestmt.setString(1, loginN);
             rs = prestmt.executeQuery();
             if (rs.next())
-            {result = 
+            {result =
             rs.getString("degree_desc");}
             else{result = "notFound";}}
         catch (SQLException e) {
@@ -170,7 +170,6 @@ class Student{
     }
 
 	public static void createAccount(String firstN, String lastN, String major, String semester, String year, String email, String username, String password, String passval, Connection c){
-//needed to have String passval added due to the expectation that there are nine(9) parameters but was only passing over 8 and with the select query embedded in the insert it made the problem stand out because of the uniqueness of the insert query. So on the CreateAccount java code I added in the confirmTextField.getText() and I am passing that to the passval. So to sum it up, we can't pass 'password' twice as a unique parameter value we needed to have something unique so I passed the actual password validator field.
             String user_query = "INSERT INTO users (f_name, l_name, login_name, pword, pword_val,major, sem_start, gr_date, s_email)Values(?,?,?,?,?,(SELECT iddegree_prog from degree_prog where degree_desc = ?), (Select semester_id from semesters where semester_desc = ?),?,?)";
        // String user_query = "INSERT INTO users (f_Name, l_Name, login_Name, pword, pword_val, major, sem_start, gr_date, s_email)VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
         try {
@@ -191,7 +190,7 @@ class Student{
         }
 
         }
-        
+
         public static String geteditAccount(String loginN, Connection c){
         String result;
          String user_query = "Select f_name, l_name, (select degree_desc from degree_prog where degree_prog.iddegree_prog = users.major)as degree_desc, (select semester_desc from semesters where semester_id = users.sem_start)as semester_desc, gr_date, s_email from users where login_name = ? ";
@@ -212,20 +211,19 @@ class Student{
             result = null;}
         return result;
         }
-        
-        public static void updateAccount(String firstN, String lastN, String major, String semester, String year, String email, String username, String password, String passval, Connection c){
-            String user_query = "Update INTO users (f_name, l_name, login_name, pword, pword_val,major, sem_start, gr_date, s_email)Values(?,?,?,?,?,(SELECT iddegree_prog from degree_prog where degree_desc = ?), (Select semester_id from semesters where semester_desc = ?),?,?)";  
+
+        public static void updateAccount(String firstN, String lastN, String major, String semester, String year, String email, String password, String passval, Connection c){
+            String user_query = "Update INTO users (f_name, l_name, login_name, pword, pword_val,major, sem_start, gr_date, s_email)Values(?,?,?,?,?,(SELECT iddegree_prog from degree_prog where degree_desc = ?) as iddegree_prog, (Select semester_id from semesters where semester_desc = ?)as semester_id,?,?)";
         try {
             prestmt = c.prepareStatement(user_query);
             prestmt.setString(1, firstN);
             prestmt.setString(2, lastN);
-            prestmt.setString(3, username);
-            prestmt.setString(4, password);
-            prestmt.setString(5, passval);
-            prestmt.setString(6, major);
-            prestmt.setString(7, semester);
-            prestmt.setString(8, "2013");
-            prestmt.setString(9, email);
+            prestmt.setString(3, password);
+            prestmt.setString(4, passval);
+            prestmt.setString(5, major);
+            prestmt.setString(6, semester);
+            prestmt.setString(7, year);
+            prestmt.setString(8, email);
             prestmt.execute();
         }
         catch (SQLException e) {
