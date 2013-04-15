@@ -36,7 +36,7 @@ public class StartupScreen extends javax.swing.JFrame {
         ArrayList list;
         ArrayList<JComboBox> comboGrp1;
         //Fillcombo();
-		
+
 	// Method calls to fill combo boxes
 //        list = mediator.fillCombo("157", "201");
 //        for (int i = 0; i < list.size(); i++) {
@@ -81,7 +81,7 @@ public class StartupScreen extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
         }
     }
-    
+
     private void displayDropLocation(final String string) {
         SwingUtilities.invokeLater(new Runnable() {
                 public void run() {
@@ -1935,6 +1935,8 @@ public class StartupScreen extends javax.swing.JFrame {
 
     private void editAccountButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editAccountButtonMouseClicked
         mediator.createEditScreen();
+
+
     }//GEN-LAST:event_editAccountButtonMouseClicked
 
 
