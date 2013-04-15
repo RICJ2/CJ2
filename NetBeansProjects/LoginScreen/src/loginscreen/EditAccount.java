@@ -26,6 +26,7 @@ public class EditAccount extends javax.swing.JFrame {
 	loginName = l;
 	conn = c;
     initComponents();
+    getRootPane().setDefaultButton(editAccountButton);
     }
 
     /**
