@@ -59,8 +59,6 @@ public class EditAccount extends javax.swing.JFrame {
         editAccountButton = new javax.swing.JButton();
         majorLabel = new javax.swing.JLabel();
         yearComboBox = new javax.swing.JComboBox();
-        yearComboBox1 = new javax.swing.JComboBox();
-        yearComboBox2 = new javax.swing.JComboBox();
         lastNameLabel = new javax.swing.JLabel();
         emailLabel = new javax.swing.JLabel();
         majorComboBox = new javax.swing.JComboBox();
@@ -115,13 +113,8 @@ public class EditAccount extends javax.swing.JFrame {
                 editAccountButtonMouseClicked(evt);
             }
         });
-        // editAccountButton.addActionListener(new java.awt.event.ActionListener() {
-            // public void actionPerformed(java.awt.event.ActionEvent evt) {
-                // editAccountButtonActionPerformed(evt);
-            // }
-        // });
-
-        majorLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        
+		majorLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         majorLabel.setText("Major:");
 
         lastNameLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -362,8 +355,6 @@ public class EditAccount extends javax.swing.JFrame {
     private javax.swing.JComboBox semesterComboBox;
     private javax.swing.JLabel semesterLabel;
     private javax.swing.JComboBox yearComboBox;
-    private javax.swing.JComboBox yearComboBox1;
-    private javax.swing.JComboBox yearComboBox2;
     private javax.swing.JLabel yearLabel;
     // End of variables declaration//GEN-END:variables
 }
