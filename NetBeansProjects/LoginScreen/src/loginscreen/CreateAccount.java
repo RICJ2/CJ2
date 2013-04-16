@@ -128,7 +128,9 @@ public class CreateAccount extends javax.swing.JFrame {
         majorLabel.setText("Major:");
 
         yearComboBox.setEditable(true);
-        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+		Calendar now = Calendar.getInstance();
+		int year = now.get(Calendar.YEAR);
+        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { Integer.toString(year), Integer.toString(year+1), Integer.toString(year+2), Integer.toString(year+3) }));
 
         lastNameLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         lastNameLabel.setText("Last Name");

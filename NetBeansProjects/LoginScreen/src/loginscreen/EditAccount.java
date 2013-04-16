@@ -6,6 +6,7 @@ package loginscreen;
 
 import java.sql.Connection;
 import java.util.Calendar;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -35,10 +36,11 @@ public class EditAccount extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+
 		Calendar now = Calendar.getInstance();
 		int year = now.get(Calendar.YEAR);
 
-		
+	
         LeftJPanel = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         RICImgLabel = new javax.swing.JLabel();
@@ -57,13 +59,15 @@ public class EditAccount extends javax.swing.JFrame {
         editAccountButton = new javax.swing.JButton();
         majorLabel = new javax.swing.JLabel();
         yearComboBox = new javax.swing.JComboBox();
+        yearComboBox1 = new javax.swing.JComboBox();
+        yearComboBox2 = new javax.swing.JComboBox();
         lastNameLabel = new javax.swing.JLabel();
         emailLabel = new javax.swing.JLabel();
         majorComboBox = new javax.swing.JComboBox();
         semesterComboBox = new javax.swing.JComboBox();
         emailTextField = new javax.swing.JTextField();
 
-		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         LeftJPanel.setBackground(new java.awt.Color(255, 255, 255));
         LeftJPanel.setPreferredSize(new java.awt.Dimension(361, 468));
@@ -76,8 +80,7 @@ public class EditAccount extends javax.swing.JFrame {
         RightInnerJpanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         yearLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        //yearLabel.setText("Year:");
-		yearLabel.setText("Start Year:");
+        yearLabel.setText("Start Year:");
 
         semesterLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         semesterLabel.setText("Semester:");
@@ -107,6 +110,16 @@ public class EditAccount extends javax.swing.JFrame {
         editAccountButton.setBackground(new java.awt.Color(0, 0, 255));
         editAccountButton.setForeground(new java.awt.Color(255, 255, 255));
         editAccountButton.setText("Save Changes");
+        editAccountButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                editAccountButtonMouseClicked(evt);
+            }
+        });
+        // editAccountButton.addActionListener(new java.awt.event.ActionListener() {
+            // public void actionPerformed(java.awt.event.ActionEvent evt) {
+                // editAccountButtonActionPerformed(evt);
+            // }
+        // });
 
         majorLabel.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         majorLabel.setText("Major:");
@@ -131,7 +144,7 @@ public class EditAccount extends javax.swing.JFrame {
 		semesterComboBox.setSelectedIndex((Integer.parseInt(Student.getSemester(loginName, conn)) - 1));
 		majorComboBox.setSelectedIndex(18 - Integer.parseInt(Student.getMajorNum(loginName, conn)));
 		yearComboBox.setSelectedIndex(Integer.parseInt(Student.getYear(loginName, conn)) - year);
-		
+
         javax.swing.GroupLayout RightInnerJpanelLayout = new javax.swing.GroupLayout(RightInnerJpanel);
         RightInnerJpanel.setLayout(RightInnerJpanelLayout);
         RightInnerJpanelLayout.setHorizontalGroup(
@@ -248,9 +261,9 @@ public class EditAccount extends javax.swing.JFrame {
         LeftJPanelLayout.setHorizontalGroup(
             LeftJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, LeftJPanelLayout.createSequentialGroup()
-                .addContainerGap(153, Short.MAX_VALUE)
+                .addContainerGap(152, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(124, Short.MAX_VALUE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
         LeftJPanelLayout.setVerticalGroup(
             LeftJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -279,6 +292,18 @@ public class EditAccount extends javax.swing.JFrame {
     private void cancelButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelButtonMouseClicked
         mediator.showStartup();
     }//GEN-LAST:event_cancelButtonMouseClicked
+
+    private void editAccountButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editAccountButtonMouseClicked
+        if (passwordTextField.getText().equals(confirmTextField.getText())){
+		Student.updateAccount(firstNameText.getText(), lastNameText.getText(), loginName, passwordTextField.getText(), confirmTextField.getText(),
+                        (String)majorComboBox.getSelectedItem(), (String)semesterComboBox.getSelectedItem(),
+                        (String)yearComboBox.getSelectedItem(), emailTextField.getText(), conn);
+		mediator.createStartupScreen(loginName);
+        }
+	else{//if error on password entries this will capture and throw the message below.
+		JOptionPane.showMessageDialog(null, "Password and Comfirm Password do not match");
+        }
+    }//GEN-LAST:event_editAccountButtonMouseClicked
 
     /**
      * @param args the command line arguments

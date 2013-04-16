@@ -44,6 +44,7 @@ class Mediator {
        start = new StartupScreen(this, ln, conn);
        start.setVisible(true);
        log.setVisible(false);
+       editAcc.setVisible(false);
    }
    
       public void createEditScreen(){
