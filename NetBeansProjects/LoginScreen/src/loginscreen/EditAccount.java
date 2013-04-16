@@ -291,7 +291,7 @@ public class EditAccount extends javax.swing.JFrame {
 		Student.updateAccount(firstNameText.getText(), lastNameText.getText(), loginName, passwordTextField.getText(), confirmTextField.getText(),
                         (String)majorComboBox.getSelectedItem(), (String)semesterComboBox.getSelectedItem(),
                         (String)yearComboBox.getSelectedItem(), emailTextField.getText(), conn);
-		mediator.createStartupScreen(loginName);
+		mediator.createStartupScreen2(loginName);
         }
 	else{//if error on password entries this will capture and throw the message below.
 		JOptionPane.showMessageDialog(null, "Password and Comfirm Password do not match");

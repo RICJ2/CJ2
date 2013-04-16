@@ -44,6 +44,11 @@ class Mediator {
        start = new StartupScreen(this, ln, conn);
        start.setVisible(true);
        log.setVisible(false);
+   }
+      public void createStartupScreen2(String ln){
+       loginName = ln;
+       start = new StartupScreen(this, ln, conn);
+       start.setVisible(true);
        editAcc.setVisible(false);
    }
    
