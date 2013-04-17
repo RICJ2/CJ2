@@ -218,11 +218,10 @@ class Student{
         }
 
         public static void updateAccount(String firstN, String lastN, String major, String semester,String year, String email,String password, String passval,String loginName,Connection c){
-            String user_query = "Update users (f_name = ? ,l_name=?, major = (SELECT iddegree_prog from degree_prog where degree_desc = ?), sem_start=(Select semester_id from semesters where semester_desc = ?), gr_date=?, s_email=?, pword=?, pword_val=?)where login_name = ? ";
+            String user_query = "Update users SET f_name = ? ,l_name=?, major = (select iddegree_prog from degree_prog where degree_desc = ?), sem_start=(Select semester_id from semesters where semester_desc = ?), gr_date=?, s_email=?, pword=?, pword_val=? where login_name = ? ";
 
         try {
             prestmt = c.prepareStatement(user_query);
-
             prestmt.setString(1, firstN);
             prestmt.setString(2, lastN);
             prestmt.setString(3, major);
@@ -233,11 +232,20 @@ class Student{
             prestmt.setString(8, passval);
             prestmt.setString(9, loginName);
             prestmt.execute();
+
         }
         catch (SQLException e) {
             JOptionPane.showMessageDialog(null, e);
         }
-
+//System.out.printf(firstN);
+//System.out.printf(lastN);
+//System.out.printf(major);
+//System.out.printf(semester);
+//System.out.printf(year);
+//System.out.printf(email);
+//System.out.printf(password);
+//System.out.printf(passval);
+//System.out.printf(loginName);
         }
         public static String geteditAccount(String loginN, Connection c){
         String result;
