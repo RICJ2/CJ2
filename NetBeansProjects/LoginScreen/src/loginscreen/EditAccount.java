@@ -289,9 +289,9 @@ public class EditAccount extends javax.swing.JFrame {
     private void editAccountButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editAccountButtonMouseClicked
         if (passwordTextField.getText().equals(confirmTextField.getText())){
 		Student.updateAccount(firstNameText.getText(), lastNameText.getText(),
-                        passwordTextField.getText(), confirmTextField.getText(),
                         (String)majorComboBox.getSelectedItem(), (String)semesterComboBox.getSelectedItem(),
-                        (String)yearComboBox.getSelectedItem(), emailTextField.getText(), conn);
+                        (String)yearComboBox.getSelectedItem(), emailTextField.getText(),
+                        passwordTextField.getText(), confirmTextField.getText(),loginName,conn);
 		mediator.createStartupScreen2(loginName);
         }
 	else{//if error on password entries this will capture and throw the message below.
