@@ -219,7 +219,8 @@ class Student{
 
         public static String geteditAccount(String loginN, Connection c){
         String result;
-         String user_query = "Select f_name, l_name, (select degree_desc from degree_prog where degree_prog.iddegree_prog = users.major)as degree_desc, (select semester_desc from semesters where semester_id = users.sem_start)as semester_desc, gr_date, s_email from users where login_name = ? ";
+         String user_query = "Select f_name, l_name, (select degree_desc from degree_prog where degree_prog.iddegree_prog = users.major)as degree_desc, (select semester_desc from semesters where semester_id = users.sem_start)"
+                           + "as semester_desc, gr_date, s_email from users where login_name = ? ";
      try {
         prestmt = c.prepareStatement(user_query);
         prestmt.setString(1, loginN);
@@ -238,19 +239,19 @@ class Student{
         return result;
         }
 
-        public static void updateAccount(String firstN, String lastN, String loginN , String password, String passval, String major, String semester, String year, String email,  Connection c){
-            String user_query = "Update INTO users (f_name, l_name, login_name, pword, pword_val,major, sem_start, gr_date, s_email)Values(?,?,?,?,?,(SELECT iddegree_prog from degree_prog where degree_desc = ?) as iddegree_prog, (Select semester_id from semesters where semester_desc = ?)as semester_id,?,?)";
+        public static void updateAccount(String firstN, String lastN , String password, String passval, String major, String semester, String year, String email,  Connection c){
+            String user_query = "Update INTO users (f_name, l_name, pword, login_name, pword_val, major, sem_start, gr_date, s_email)where login_name = loginN"
+                              + "Values(?,?,?,?,(SELECT iddegree_prog from degree_prog where degree_desc = ?),(Select semester_id from semesters where semester_desc = ?),?,?)";
         try {
             prestmt = c.prepareStatement(user_query);
             prestmt.setString(1, firstN);
             prestmt.setString(2, lastN);
-            prestmt.setString(3, loginN);
-            prestmt.setString(4, password);
-            prestmt.setString(5, passval);
-            prestmt.setString(6, major);
-            prestmt.setString(7, semester);
-            prestmt.setString(8, year);
-            prestmt.setString(9, email);
+            prestmt.setString(3, password);
+            prestmt.setString(4, passval);
+            prestmt.setString(5, major);
+            prestmt.setString(6, semester);
+            prestmt.setString(7, year);
+            prestmt.setString(8, email);
             prestmt.execute();
         }
         catch (SQLException e) {
