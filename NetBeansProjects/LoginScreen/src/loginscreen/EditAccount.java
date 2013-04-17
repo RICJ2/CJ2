@@ -288,7 +288,8 @@ public class EditAccount extends javax.swing.JFrame {
 
     private void editAccountButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editAccountButtonMouseClicked
         if (passwordTextField.getText().equals(confirmTextField.getText())){
-		Student.updateAccount(firstNameText.getText(), lastNameText.getText(), loginName, passwordTextField.getText(), confirmTextField.getText(),
+		Student.updateAccount(firstNameText.getText(), lastNameText.getText(),
+                        passwordTextField.getText(), confirmTextField.getText(),
                         (String)majorComboBox.getSelectedItem(), (String)semesterComboBox.getSelectedItem(),
                         (String)yearComboBox.getSelectedItem(), emailTextField.getText(), conn);
 		mediator.createStartupScreen2(loginName);
@@ -328,7 +329,7 @@ public class EditAccount extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-          
+
             }
         });
     }
