@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -90,18 +91,18 @@ class Student{
         return result;
     }
 
-    public static void setPassword(String loginN, String password, Connection c){
-	String user_query = "update users set pword = ? where login_Name = ?";
-        try {
-            prestmt = c.prepareStatement(user_query);
-            prestmt.setString(1, password);
-            prestmt.setString(2, loginN);
-            prestmt.executeUpdate();
-        }
-        catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-    }
+    // public static void setPassword(String loginN, String password, Connection c){
+	// String user_query = "update users set pword = ? where login_Name = ?";
+        // try {
+            // prestmt = c.prepareStatement(user_query);
+            // prestmt.setString(1, password);
+            // prestmt.setString(2, loginN);
+            // prestmt.executeUpdate();
+        // }
+        // catch (SQLException e) {
+            // JOptionPane.showMessageDialog(null, e);
+        // }
+    // }
 
 	public static String getConfirmPassword(String loginN, Connection c){
         String result;
@@ -269,7 +270,26 @@ class Student{
         return result;
         }
 
-
+    public static ArrayList getCourses(String loginN, Connection c){
+	ArrayList<String> courseList = new ArrayList();
+		
+	String user_query = "";
+		
+	try {
+	prestmt = c.prepareStatement(user_query);
+        prestmt.setString(1, loginN);
+        rs = prestmt.executeQuery();
+	int i = 0;
+        if (rs.next()) {
+            courseList.add(rs.getString("course" + i));
+            i++;
+	}}
+	//else{courseList = "notFound";}}
+        catch (SQLException e) {
+                JOptionPane.showMessageDialog(null, e);
+	}
+	return courseList;
+        }
 
 
 }

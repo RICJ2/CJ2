@@ -25,62 +25,50 @@ public class StartupScreen extends javax.swing.JFrame {
  Connection conn = null;
  ResultSet rs = null;
  PreparedStatement pst = null;
+ ArrayList<String> courseList = new ArrayList(Arrays.asList("Drag and Drop courses here.1", " ", " ", " ", " ", " ", "Drag and Drop courses here.2", " ", " ", " ", " ", " ", "Drag and Drop courses here.3", " ", " ", " ", " ", " ", "Drag and Drop courses here.4", " ", " ", " ", " ", " ", "Drag and Drop courses here.5", " ", " ", " ", " ", " ", "Drag and Drop courses here.6", " ", " ", " ", " ", " ", "Drag and Drop courses here.7", " ", " ", " ", " ", " ", "Drag and Drop courses here.8", " ", " ", " ", " ", " ", "Drag and Drop courses here.9", " ", " ", " ", " ", " ", "Drag and Drop courses here.10", " ", " ", " ", " ", " ", " ", " "));
     /**
      * Creates new form StartupScreen
      */
     public StartupScreen(Mediator m, String ln, Connection c) {
         mediator = m;
-	loginName = ln;
+		loginName = ln;
         conn = c;
         initComponents();
         ArrayList list;
         ArrayList<JComboBox> comboGrp1;
-        //Fillcombo();
+   }
+    // private void Fillcombo(){
 
-	// Method calls to fill combo boxes
-//        list = mediator.fillCombo("157", "201");
-//        for (int i = 0; i < list.size(); i++) {
-//	jComboBox1.addItem(list.get(i));
-//        jComboBox2.addItem(list.get(i));
-//        }
-//        comboGrp1 = new ArrayList<JComboBox>(jComboBox7, jComboBox8, jComboBox9, jComboBox10);
-//        list = mediator.fillCombo("201", "312");
-//        for (int i = 0; i < list.size(); i++) {
-//	comboGrp1.get(i).addItem(list.get(i));
-//        }
-    }
-    private void Fillcombo(){
-
-        try{
-            String sql = "select * from courses WHERE course_type = 'CSCI' AND course_num >= 157 AND course_num <= 201";
-            pst = conn.prepareStatement(sql);
-            rs = pst.executeQuery();
-            while (rs.next()){
-                String cid = rs.getString("course_id");
+        // try{
+            // String sql = "select * from courses WHERE course_type = 'CSCI' AND course_num >= 157 AND course_num <= 201";
+            // pst = conn.prepareStatement(sql);
+            // rs = pst.executeQuery();
+            // while (rs.next()){
+                // String cid = rs.getString("course_id");
 //                jComboBox1.addItem(cid);
 //                jComboBox2.addItem(cid);
 
                 /*for(int i = 1; i<48; i++){
                 jComboBox1.addItem(cid);*/
-            }
-        } catch(Exception e){
-            JOptionPane.showMessageDialog(null, e);
-        }
-        try{
-            String sql2 = "select * from courses WHERE course_type = 'CSCI' AND course_num >= 201 AND course_num <= 312";
-            pst = conn.prepareStatement(sql2);
-            rs = pst.executeQuery();
-            while (rs.next()){
-                String cid = rs.getString("course_id");
+            // }
+        // } catch(Exception e){
+            // JOptionPane.showMessageDialog(null, e);
+        // }
+        // try{
+            // String sql2 = "select * from courses WHERE course_type = 'CSCI' AND course_num >= 201 AND course_num <= 312";
+            // pst = conn.prepareStatement(sql2);
+            // rs = pst.executeQuery();
+            // while (rs.next()){
+                // String cid = rs.getString("course_id");
 //                jComboBox7.addItem(cid);
 //                jComboBox8.addItem(cid);
 //                jComboBox9.addItem(cid);
 //                jComboBox10.addItem(cid);
-            }
-        }catch(Exception e){
-            JOptionPane.showMessageDialog(null, e);
-        }
-    }
+            // }
+        // }catch(Exception e){
+            // JOptionPane.showMessageDialog(null, e);
+        // }
+    // }
 
     private void displayDropLocation(final String string) {
         SwingUtilities.invokeLater(new Runnable() {
@@ -260,7 +248,6 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jTextField1.setText(Student.getMajor(loginName, conn));
         jTextField1.setToolTipText("");
-        jTextField1.setActionCommand("<Not Set>");
         jTextField1.setName(""); // NOI18N
 
         jLabel199.setForeground(new java.awt.Color(255, 255, 255));
@@ -485,12 +472,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel2 = new DefaultListModel();
-        listModel2.addElement(" ");
-        listModel2.addElement(" ");
-        listModel2.addElement(" ");
-        listModel2.addElement(" ");
-        listModel2.addElement(" ");
-        listModel2.addElement(" ");
+        listModel2.addElement(courseList.get(6));
+        listModel2.addElement(courseList.get(7));
+        listModel2.addElement(courseList.get(8));
+        listModel2.addElement(courseList.get(9));
+        listModel2.addElement(courseList.get(10));
+        listModel2.addElement(courseList.get(11));
         list2.setToolTipText("");
         /****************************************************************************************/
         list2 = new JList(listModel2);
@@ -656,12 +643,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel1 = new DefaultListModel();
-        listModel1.addElement(" ");
-        listModel1.addElement(" ");
-        listModel1.addElement(" ");
-        listModel1.addElement(" ");
-        listModel1.addElement(" ");
-        listModel1.addElement(" ");
+        listModel1.addElement(courseList.get(0));
+        listModel1.addElement(courseList.get(1));
+        listModel1.addElement(courseList.get(2));
+        listModel1.addElement(courseList.get(3));
+        listModel1.addElement(courseList.get(4));
+        listModel1.addElement(courseList.get(5));
         list1.setToolTipText("");
         /****************************************************************************************/
         list1 = new JList(listModel1);
@@ -826,12 +813,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel4 = new DefaultListModel();
-        listModel4.addElement("Add and drop courses");
-        listModel4.addElement(" ");
-        listModel4.addElement(" ");
-        listModel4.addElement(" ");
-        listModel4.addElement("");
-        listModel4.addElement(" ");
+		listModel4.addElement(courseList.get(18));
+        listModel4.addElement(courseList.get(19));
+        listModel4.addElement(courseList.get(20));
+        listModel4.addElement(courseList.get(21));
+        listModel4.addElement(courseList.get(22));
+        listModel4.addElement(courseList.get(23));
         list4.setToolTipText("");
         /****************************************************************************************/
         list4 = new JList(listModel4);
@@ -997,12 +984,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel3 = new DefaultListModel();
-        listModel3.addElement("Add and drop courses");
-        listModel3.addElement(" ");
-        listModel3.addElement(" ");
-        listModel3.addElement(" ");
-        listModel3.addElement("");
-        listModel3.addElement(" ");
+		listModel3.addElement(courseList.get(12));
+        listModel3.addElement(courseList.get(13));
+        listModel3.addElement(courseList.get(14));
+        listModel3.addElement(courseList.get(15));
+        listModel3.addElement(courseList.get(16));
+        listModel3.addElement(courseList.get(17));
         list3.setToolTipText("");
         /****************************************************************************************/
         list3 = new JList(listModel3);
@@ -1166,12 +1153,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel6 = new DefaultListModel();
-        listModel6.addElement("Add and drop courses");
-        listModel6.addElement(" ");
-        listModel6.addElement(" ");
-        listModel6.addElement(" ");
-        listModel6.addElement("");
-        listModel6.addElement(" ");
+		listModel6.addElement(courseList.get(30));
+        listModel6.addElement(courseList.get(31));
+        listModel6.addElement(courseList.get(32));
+        listModel6.addElement(courseList.get(33));
+        listModel6.addElement(courseList.get(34));
+        listModel6.addElement(courseList.get(35));
         list6.setToolTipText("");
         /****************************************************************************************/
         list6 = new JList(listModel6);
@@ -1336,12 +1323,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel5 = new DefaultListModel();
-        listModel5.addElement("Add and drop courses");
-        listModel5.addElement(" ");
-        listModel5.addElement(" ");
-        listModel5.addElement(" ");
-        listModel5.addElement("");
-        listModel5.addElement(" ");
+		listModel5.addElement(courseList.get(24));
+        listModel5.addElement(courseList.get(25));
+        listModel5.addElement(courseList.get(26));
+        listModel5.addElement(courseList.get(27));
+        listModel5.addElement(courseList.get(28));
+        listModel5.addElement(courseList.get(29));
         list5.setToolTipText("");
         /****************************************************************************************/
         list5 = new JList(listModel5);
@@ -1505,13 +1492,13 @@ public class StartupScreen extends javax.swing.JFrame {
             .addComponent(jLabel207, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
         );
 
-        DefaultListModel listModel8 = new DefaultListModel();
-        listModel8.addElement("Add and drop courses");
-        listModel8.addElement(" ");
-        listModel8.addElement(" ");
-        listModel8.addElement(" ");
-        listModel8.addElement("");
-        listModel8.addElement(" ");
+        DefaultListModel listModel8 = new DefaultListModel();		
+        listModel8.addElement(courseList.get(42));
+        listModel8.addElement(courseList.get(43));
+        listModel8.addElement(courseList.get(44));
+        listModel8.addElement(courseList.get(45));
+        listModel8.addElement(courseList.get(46));
+        listModel8.addElement(courseList.get(47));
         list8.setToolTipText("");
         /****************************************************************************************/
         list8 = new JList(listModel8);
@@ -1676,12 +1663,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel7 = new DefaultListModel();
-        listModel7.addElement("Add and drop courses");
-        listModel7.addElement(" ");
-        listModel7.addElement(" ");
-        listModel7.addElement(" ");
-        listModel7.addElement("");
-        listModel7.addElement(" ");
+		listModel7.addElement(courseList.get(36));
+        listModel7.addElement(courseList.get(37));
+        listModel7.addElement(courseList.get(38));
+        listModel7.addElement(courseList.get(39));
+        listModel7.addElement(courseList.get(40));
+        listModel7.addElement(courseList.get(41));
         list7.setToolTipText("");
         /****************************************************************************************/
         list7 = new JList(listModel7);
@@ -1847,12 +1834,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel9 = new DefaultListModel();
-        listModel9.addElement(" ");
-        listModel9.addElement(" ");
-        listModel9.addElement(" ");
-        listModel9.addElement(" ");
-        listModel9.addElement(" ");
-        listModel9.addElement(" ");
+        listModel9.addElement(courseList.get(48));
+        listModel9.addElement(courseList.get(49));
+        listModel9.addElement(courseList.get(50));
+        listModel9.addElement(courseList.get(51));
+        listModel9.addElement(courseList.get(52));
+        listModel9.addElement(courseList.get(53));
         list9.setToolTipText("");
         /****************************************************************************************/
         list9 = new JList(listModel9);
@@ -2017,12 +2004,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel10 = new DefaultListModel();
-        listModel10.addElement(" ");
-        listModel10.addElement(" ");
-        listModel10.addElement(" ");
-        listModel10.addElement(" ");
-        listModel10.addElement(" ");
-        listModel10.addElement(" ");
+        listModel10.addElement(courseList.get(54));
+        listModel10.addElement(courseList.get(55));
+        listModel10.addElement(courseList.get(56));
+        listModel10.addElement(courseList.get(57));
+        listModel10.addElement(courseList.get(58));
+        listModel10.addElement(courseList.get(59));
         list10.setToolTipText("");
         /****************************************************************************************/
         list10 = new JList(listModel10);
@@ -2103,6 +2090,32 @@ public class StartupScreen extends javax.swing.JFrame {
             }
         });
         /****************************************************************************************/
+		// semester labels
+		if (Student.getSemester(loginName, conn).equals("1")){
+			jLabel210.setText("                                                                                                                                Fall Semester 1");
+			jLabel210.setText("                                                                                                                                Spring Semester 2");
+			jLabel210.setText("                                                                                                                                Fall Semester 3");
+			jLabel210.setText("                                                                                                                                Spring Semester 4");
+			jLabel210.setText("                                                                                                                                Fall Semester 5");
+			jLabel210.setText("                                                                                                                                Spring Semester 6");
+			jLabel210.setText("                                                                                                                                Fall Semester 7");
+			jLabel210.setText("                                                                                                                                Spring Semester 8");
+			jLabel210.setText("                                                                                                                                Fall Semester 9");
+			jLabel210.setText("                                                                                                                                Spring Semester 10");
+		}
+		if (Student.getSemester(loginName, conn).equals("2")){
+			jLabel210.setText("                                                                                                                                Spring Semester 1");
+			jLabel210.setText("                                                                                                                                Fall Semester 2");
+			jLabel210.setText("                                                                                                                                Spring Semester 3");
+			jLabel210.setText("                                                                                                                                Fall Semester 4");
+			jLabel210.setText("                                                                                                                                Spring Semester 5");
+			jLabel210.setText("                                                                                                                                Fall Semester 6");
+			jLabel210.setText("                                                                                                                                Spring Semester 7");
+			jLabel210.setText("                                                                                                                                Fall Semester 8");
+			jLabel210.setText("                                                                                                                                Spring Semester 9");
+			jLabel210.setText("                                                                                                                                Fall Semester 10");
+		}
+		/****************************************************************************************/
         jScrollPane13.setViewportView(list10);
 
         javax.swing.GroupLayout jPanel32Layout = new javax.swing.GroupLayout(jPanel32);
