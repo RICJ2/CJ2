@@ -18,7 +18,7 @@ class Mediator {
     String loginName;
     LoginScreenForm log;
     CreateAccount acc;
-    StartupScreen start;
+    StartupScreen start, start1;
     EditAccount editAcc;
     DragNdrop drag;
     PreparedStatement prestmt;
@@ -50,6 +50,13 @@ class Mediator {
        start = new StartupScreen(this, ln, conn);
        start.setVisible(true);
        editAcc.setVisible(false);
+   }
+   public void reloadStartupScreen(String ln){
+       loginName = ln;
+	   start1 = start;
+	   start = new StartupScreen(this, ln, conn);
+       start.setVisible(true);
+	   start1.setVisible(false);
    }
    
       public void createEditScreen(){

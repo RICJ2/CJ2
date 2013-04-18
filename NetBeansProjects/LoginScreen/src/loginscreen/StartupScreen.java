@@ -27,6 +27,8 @@ public class StartupScreen extends javax.swing.JFrame {
  PreparedStatement pst = null;
  ArrayList<String> courseList = new ArrayList(Arrays.asList("Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " "));
  ArrayList<String> courseListBA = new ArrayList(Arrays.asList("MATH_212", "CSCI_157", "CSCI_201", " ", " ", " ", "MATH_436", "CSCI_221", "CSCI_305", "CSCI_312", " ", " ", "CSCI_313", "CSCI_315", " ", " ", " ", " ", "CSCI_325", "CSCI_423", "CSCI_435", "CSCI_455", " ", " ", "CSCI_401", "CSCI_415", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " "));   
+ ArrayList<String> courseListBS = new ArrayList(Arrays.asList("MATH_212", "CSCI_157", "CSCI_201", " ", " ", " ", "MATH_436", "CSCI_221", "CSCI_305", "CSCI_312", " ", " ", "CSCI_313", "CSCI_315", " ", " ", " ", " ", "CSCI_325", "CSCI_423", "CSCI_435", "CSCI_455", " ", " ", "CSCI_401", "CSCI_415", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " "));   
+	
 	/**
      * Creates new form StartupScreen
      */
@@ -473,12 +475,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel2 = new DefaultListModel();
-        listModel2.addElement(courseList.get(6));
-        listModel2.addElement(courseList.get(7));
-        listModel2.addElement(courseList.get(8));
-        listModel2.addElement(courseList.get(9));
-        listModel2.addElement(courseList.get(10));
-        listModel2.addElement(courseList.get(11));
+        //listModel2.addElement(courseList.get(6));
+        //listModel2.addElement(courseList.get(7));
+        //listModel2.addElement(courseList.get(8));
+        //listModel2.addElement(courseList.get(9));
+        //listModel2.addElement(courseList.get(10));
+        //listModel2.addElement(courseList.get(11));
         list2.setToolTipText("");
         /****************************************************************************************/
         list2 = new JList(listModel2);
@@ -644,12 +646,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel1 = new DefaultListModel();
-        listModel1.addElement(courseList.get(0));
-        listModel1.addElement(courseList.get(1));
-        listModel1.addElement(courseList.get(2));
-        listModel1.addElement(courseList.get(3));
-        listModel1.addElement(courseList.get(4));
-        listModel1.addElement(courseList.get(5));
+        //listModel1.addElement(courseList.get(0));
+        //listModel1.addElement(courseList.get(1));
+        //listModel1.addElement(courseList.get(2));
+        //listModel1.addElement(courseList.get(3));
+        //listModel1.addElement(courseList.get(4));
+        //listModel1.addElement(courseList.get(5));
         list1.setToolTipText("");
         /****************************************************************************************/
         list1 = new JList(listModel1);
@@ -814,12 +816,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel4 = new DefaultListModel();
-		listModel4.addElement(courseList.get(18));
-        listModel4.addElement(courseList.get(19));
-        listModel4.addElement(courseList.get(20));
-        listModel4.addElement(courseList.get(21));
-        listModel4.addElement(courseList.get(22));
-        listModel4.addElement(courseList.get(23));
+		//listModel4.addElement(courseList.get(18));
+        //listModel4.addElement(courseList.get(19));
+        //listModel4.addElement(courseList.get(20));
+        //listModel4.addElement(courseList.get(21));
+        //listModel4.addElement(courseList.get(22));
+        //listModel4.addElement(courseList.get(23));
         list4.setToolTipText("");
         /****************************************************************************************/
         list4 = new JList(listModel4);
@@ -985,12 +987,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel3 = new DefaultListModel();
-		listModel3.addElement(courseList.get(12));
-        listModel3.addElement(courseList.get(13));
-        listModel3.addElement(courseList.get(14));
-        listModel3.addElement(courseList.get(15));
-        listModel3.addElement(courseList.get(16));
-        listModel3.addElement(courseList.get(17));
+		//listModel3.addElement(courseList.get(12));
+        //listModel3.addElement(courseList.get(13));
+        //listModel3.addElement(courseList.get(14));
+        //listModel3.addElement(courseList.get(15));
+        //listModel3.addElement(courseList.get(16));
+        //listModel3.addElement(courseList.get(17));
         list3.setToolTipText("");
         /****************************************************************************************/
         list3 = new JList(listModel3);
@@ -1154,12 +1156,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel6 = new DefaultListModel();
-		listModel6.addElement(courseList.get(30));
-        listModel6.addElement(courseList.get(31));
-        listModel6.addElement(courseList.get(32));
-        listModel6.addElement(courseList.get(33));
-        listModel6.addElement(courseList.get(34));
-        listModel6.addElement(courseList.get(35));
+		//listModel6.addElement(courseList.get(30));
+        //listModel6.addElement(courseList.get(31));
+        //listModel6.addElement(courseList.get(32));
+        //listModel6.addElement(courseList.get(33));
+        //listModel6.addElement(courseList.get(34));
+        //listModel6.addElement(courseList.get(35));
         list6.setToolTipText("");
         /****************************************************************************************/
         list6 = new JList(listModel6);
@@ -1324,13 +1326,13 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel5 = new DefaultListModel();
-		listModel5.addElement(courseList.get(24));
-        listModel5.addElement(courseList.get(25));
-        listModel5.addElement(courseList.get(26));
-        listModel5.addElement(courseList.get(27));
-        listModel5.addElement(courseList.get(28));
-        listModel5.addElement(courseList.get(29));
-        list5.setToolTipText("");
+		//listModel5.addElement(courseList.get(24));
+        //listModel5.addElement(courseList.get(25));
+        //listModel5.addElement(courseList.get(26));
+        //listModel5.addElement(courseList.get(27));
+        //listModel5.addElement(courseList.get(28));
+        //listModel5.addElement(courseList.get(29));
+        //list5.setToolTipText("");
         /****************************************************************************************/
         list5 = new JList(listModel5);
         //list.setVisibleRowCount(-1);
@@ -1494,12 +1496,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel8 = new DefaultListModel();		
-        listModel8.addElement(courseList.get(42));
-        listModel8.addElement(courseList.get(43));
-        listModel8.addElement(courseList.get(44));
-        listModel8.addElement(courseList.get(45));
-        listModel8.addElement(courseList.get(46));
-        listModel8.addElement(courseList.get(47));
+        //listModel8.addElement(courseList.get(42));
+        //listModel8.addElement(courseList.get(43));
+        //listModel8.addElement(courseList.get(44));
+        //listModel8.addElement(courseList.get(45));
+        //listModel8.addElement(courseList.get(46));
+        //listModel8.addElement(courseList.get(47));
         list8.setToolTipText("");
         /****************************************************************************************/
         list8 = new JList(listModel8);
@@ -1664,12 +1666,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel7 = new DefaultListModel();
-		listModel7.addElement(courseList.get(36));
-        listModel7.addElement(courseList.get(37));
-        listModel7.addElement(courseList.get(38));
-        listModel7.addElement(courseList.get(39));
-        listModel7.addElement(courseList.get(40));
-        listModel7.addElement(courseList.get(41));
+		//listModel7.addElement(courseList.get(36));
+        //listModel7.addElement(courseList.get(37));
+        //listModel7.addElement(courseList.get(38));
+        //listModel7.addElement(courseList.get(39));
+        //listModel7.addElement(courseList.get(40));
+        //listModel7.addElement(courseList.get(41));
         list7.setToolTipText("");
         /****************************************************************************************/
         list7 = new JList(listModel7);
@@ -1835,12 +1837,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel9 = new DefaultListModel();
-        listModel9.addElement(courseList.get(48));
-        listModel9.addElement(courseList.get(49));
-        listModel9.addElement(courseList.get(50));
-        listModel9.addElement(courseList.get(51));
-        listModel9.addElement(courseList.get(52));
-        listModel9.addElement(courseList.get(53));
+        //listModel9.addElement(courseList.get(48));
+        //listModel9.addElement(courseList.get(49));
+        //listModel9.addElement(courseList.get(50));
+        //listModel9.addElement(courseList.get(51));
+        //listModel9.addElement(courseList.get(52));
+        //listModel9.addElement(courseList.get(53));
         list9.setToolTipText("");
         /****************************************************************************************/
         list9 = new JList(listModel9);
@@ -2005,12 +2007,12 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel10 = new DefaultListModel();
-        listModel10.addElement(courseList.get(54));
-        listModel10.addElement(courseList.get(55));
-        listModel10.addElement(courseList.get(56));
-        listModel10.addElement(courseList.get(57));
-        listModel10.addElement(courseList.get(58));
-        listModel10.addElement(courseList.get(59));
+        //listModel10.addElement(courseList.get(54));
+        //listModel10.addElement(courseList.get(55));
+        //listModel10.addElement(courseList.get(56));
+        //listModel10.addElement(courseList.get(57));
+        //listModel10.addElement(courseList.get(58));
+        //listModel10.addElement(courseList.get(59));
         list10.setToolTipText("");
         /****************************************************************************************/
         list10 = new JList(listModel10);
@@ -2091,6 +2093,37 @@ public class StartupScreen extends javax.swing.JFrame {
             }
         });
         /****************************************************************************************/
+		int major = Integer.parseInt(Student.getMajorNum(loginName, conn));
+		ArrayList<String> courseL = new ArrayList();
+		if (major == 17){
+		courseL = courseListBA;}
+		if (major == 18){
+		courseL = courseListBS;}
+		
+		for (int i = 0; i < 60; i++){
+		if (i >= 0 && i < 6){ 	
+		listModel1.addElement(courseL.get(i));}
+		if (i > 5 && i < 12){ 	
+		listModel2.addElement(courseL.get(i));}
+		if (i > 11 && i < 18){ 	
+		listModel3.addElement(courseL.get(i));}
+		if (i > 17 && i < 24){ 	
+		listModel4.addElement(courseL.get(i));}
+		if (i > 23 && i < 30){ 	
+		listModel5.addElement(courseL.get(i));}
+		if (i > 29 && i < 36){ 	
+		listModel6.addElement(courseL.get(i));}
+		if (i > 35 && i < 42){ 	
+		listModel7.addElement(courseL.get(i));}
+		if (i > 41 && i < 48){ 	
+		listModel8.addElement(courseL.get(i));}
+		if (i > 47 && i < 54){ 	
+		listModel9.addElement(courseL.get(i));}		
+		if (i > 53 && i < 60){ 	
+		listModel10.addElement(courseL.get(i));}
+		}
+		
+		/****************************************************************************************/
 		// semester labels
 		if (Student.getSemester(loginName, conn).equals("1")){
 			jLabel198.setText("                                                                                                                      Fall Semester " + Student.getYear(loginName, conn));
@@ -2213,6 +2246,11 @@ public class StartupScreen extends javax.swing.JFrame {
         saveButton.setText("Save Changes");
 
         cancelButton.setText("Cancel Changes");
+		cancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cancelButtonMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -2301,7 +2339,10 @@ public class StartupScreen extends javax.swing.JFrame {
         mediator.createEditScreen();
     }//GEN-LAST:event_editAccountButtonMouseClicked
 
-
+	private void cancelButtonMouseClicked(java.awt.event.MouseEvent evt) {
+        mediator.reloadStartupScreen(loginName);
+    } 
+	
     /**
      * @param args the command line arguments
      */
