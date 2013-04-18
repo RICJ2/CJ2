@@ -25,8 +25,9 @@ public class StartupScreen extends javax.swing.JFrame {
  Connection conn = null;
  ResultSet rs = null;
  PreparedStatement pst = null;
- ArrayList<String> courseList = new ArrayList(Arrays.asList("Drag and Drop courses here.1", " ", " ", " ", " ", " ", "Drag and Drop courses here.2", " ", " ", " ", " ", " ", "Drag and Drop courses here.3", " ", " ", " ", " ", " ", "Drag and Drop courses here.4", " ", " ", " ", " ", " ", "Drag and Drop courses here.5", " ", " ", " ", " ", " ", "Drag and Drop courses here.6", " ", " ", " ", " ", " ", "Drag and Drop courses here.7", " ", " ", " ", " ", " ", "Drag and Drop courses here.8", " ", " ", " ", " ", " ", "Drag and Drop courses here.9", " ", " ", " ", " ", " ", "Drag and Drop courses here.10", " ", " ", " ", " ", " ", " ", " "));
-    /**
+ ArrayList<String> courseList = new ArrayList(Arrays.asList("Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " "));
+ ArrayList<String> courseListBA = new ArrayList(Arrays.asList("MATH_212", "CSCI_157", "CSCI_201", " ", " ", " ", "MATH_436", "CSCI_221", "CSCI_305", "CSCI_312", " ", " ", "CSCI_313", "CSCI_315", " ", " ", " ", " ", "CSCI_325", "CSCI_423", "CSCI_435", "CSCI_455", " ", " ", "CSCI_401", "CSCI_415", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " "));   
+	/**
      * Creates new form StartupScreen
      */
     public StartupScreen(Mediator m, String ln, Connection c) {
@@ -454,7 +455,7 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jPanel19.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel202.setText("                                                                                                                                Spring Semester 2");
+        //jLabel202.setText("                                                                                                                                Spring Semester 2");
         jLabel202.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
@@ -625,7 +626,7 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jPanel14.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel198.setText("                                                                                                                                Fall Semester 1");
+        //jLabel198.setText("                                                                                                                                Fall Semester 1");
         jLabel198.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
@@ -795,7 +796,7 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jPanel18.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel203.setText("                                                                                                                                Spring Semester 4");
+        //jLabel203.setText("                                                                                                                                Spring Semester 4");
         jLabel203.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
@@ -966,7 +967,7 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jPanel21.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel204.setText("                                                                                                                                Fall Semester 3");
+        //jLabel204.setText("                                                                                                                                Fall Semester 3");
         jLabel204.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
@@ -1135,7 +1136,7 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jPanel23.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel205.setText("                                                                                                                                Spring Semester 6");
+        //jLabel205.setText("                                                                                                                                Spring Semester 6");
         jLabel205.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
@@ -1305,7 +1306,7 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jPanel25.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel206.setText("                                                                                                                                Fall Semester 5");
+        //jLabel206.setText("                                                                                                                                Fall Semester 5");
         jLabel206.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
@@ -1475,7 +1476,7 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jPanel29.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel207.setText("                                                                                                                                Spring Semester 8");
+        //jLabel207.setText("                                                                                                                                Spring Semester 8");
         jLabel207.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
@@ -1645,7 +1646,7 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jPanel28.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel208.setText("                                                                                                                                Fall Semester 7");
+        //jLabel208.setText("                                                                                                                                Fall Semester 7");
         jLabel208.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
@@ -1816,7 +1817,7 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jPanel31.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel209.setText("                                                                                                                                Fall Semester 9");
+        //jLabel209.setText("                                                                                                                                Fall Semester 9");
         jLabel209.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
@@ -1986,7 +1987,7 @@ public class StartupScreen extends javax.swing.JFrame {
 
         jPanel33.setBackground(new java.awt.Color(204, 204, 204));
 
-        jLabel210.setText("                                                                                                                                Spring Semester 9");
+        //jLabel210.setText("                                                                                                                                Spring Semester 9");
         jLabel210.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
@@ -2092,28 +2093,28 @@ public class StartupScreen extends javax.swing.JFrame {
         /****************************************************************************************/
 		// semester labels
 		if (Student.getSemester(loginName, conn).equals("1")){
-			jLabel210.setText("                                                                                                                                Fall Semester 1");
-			jLabel210.setText("                                                                                                                                Spring Semester 2");
-			jLabel210.setText("                                                                                                                                Fall Semester 3");
-			jLabel210.setText("                                                                                                                                Spring Semester 4");
-			jLabel210.setText("                                                                                                                                Fall Semester 5");
-			jLabel210.setText("                                                                                                                                Spring Semester 6");
-			jLabel210.setText("                                                                                                                                Fall Semester 7");
-			jLabel210.setText("                                                                                                                                Spring Semester 8");
-			jLabel210.setText("                                                                                                                                Fall Semester 9");
-			jLabel210.setText("                                                                                                                                Spring Semester 10");
+			jLabel198.setText("                                                                                                                      Fall Semester " + Student.getYear(loginName, conn));
+			jLabel202.setText("                                                                                                                      Spring Semester " + Student.getYear(loginName, conn));
+			jLabel204.setText("                                                                                                                      Fall Semester " + Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + 1));
+			jLabel203.setText("                                                                                                                      Spring Semester " + Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + 1));
+			jLabel206.setText("                                                                                                                      Fall Semester " + Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + 2));
+			jLabel205.setText("                                                                                                                      Spring Semester " + Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + 2));
+			jLabel208.setText("                                                                                                                      Fall Semester " + Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + 3));
+			jLabel207.setText("                                                                                                                      Spring Semester " + Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + 3));
+			jLabel209.setText("                                                                                                                      Fall Semester " + Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + 4));
+			jLabel210.setText("                                                                                                                      Spring Semester " + Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + 4));
 		}
 		if (Student.getSemester(loginName, conn).equals("2")){
-			jLabel210.setText("                                                                                                                                Spring Semester 1");
-			jLabel210.setText("                                                                                                                                Fall Semester 2");
-			jLabel210.setText("                                                                                                                                Spring Semester 3");
-			jLabel210.setText("                                                                                                                                Fall Semester 4");
-			jLabel210.setText("                                                                                                                                Spring Semester 5");
-			jLabel210.setText("                                                                                                                                Fall Semester 6");
-			jLabel210.setText("                                                                                                                                Spring Semester 7");
-			jLabel210.setText("                                                                                                                                Fall Semester 8");
-			jLabel210.setText("                                                                                                                                Spring Semester 9");
-			jLabel210.setText("                                                                                                                                Fall Semester 10");
+			jLabel198.setText("                                                                                                                      Spring Semester " + Student.getYear(loginName, conn));
+			jLabel202.setText("                                                                                                                      Fall Semester " + Student.getYear(loginName, conn));
+			jLabel204.setText("                                                                                                                      Spring Semester " + Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + 1));
+			jLabel203.setText("                                                                                                                      Fall Semester " + Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + 1));
+			jLabel206.setText("                                                                                                                      Spring Semester " + Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + 2));
+			jLabel205.setText("                                                                                                                      Fall Semester " + Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + 2));
+			jLabel208.setText("                                                                                                                      Spring Semester " + Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + 3));
+			jLabel207.setText("                                                                                                                      Fall Semester " + Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + 3));
+			jLabel209.setText("                                                                                                                      Spring Semester " + Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + 4));
+			jLabel210.setText("                                                                                                                      Fall Semester " + Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + 4));
 		}
 		/****************************************************************************************/
         jScrollPane13.setViewportView(list10);
