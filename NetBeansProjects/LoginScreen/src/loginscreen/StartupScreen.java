@@ -11,6 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import javax.swing.*;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
@@ -25,10 +26,12 @@ public class StartupScreen extends javax.swing.JFrame {
  Connection conn = null;
  ResultSet rs = null;
  PreparedStatement pst = null;
- ArrayList<String> courseList = new ArrayList(Arrays.asList("Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " "));
+ ArrayList<String> screenCourseList = new ArrayList();
+ ArrayList<String> courseList = new ArrayList();
  ArrayList<String> courseListBA = new ArrayList(Arrays.asList("MATH_212", "CSCI_157", "CSCI_201", " ", " ", " ", "MATH_436", "CSCI_221", "CSCI_305", "CSCI_312", " ", " ", "CSCI_313", "CSCI_315", " ", " ", " ", " ", "CSCI_325", "CSCI_423", "CSCI_435", "CSCI_455", " ", " ", "CSCI_401", "CSCI_415", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " "));   
  ArrayList<String> courseListBS = new ArrayList(Arrays.asList("MATH_212", "CSCI_157", "CSCI_201", " ", " ", " ", "MATH_436", "CSCI_221", "CSCI_305", "CSCI_312", " ", " ", "CSCI_313", "CSCI_315", " ", " ", " ", " ", "CSCI_325", "CSCI_423", "CSCI_435", "CSCI_455", " ", " ", "CSCI_401", "CSCI_415", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " ", "Drag and Drop courses here.", " ", " ", " ", " ", " "));   
-	
+ DefaultListModel alist1, alist2, alist3, alist4, alist5, alist6, alist7, alist8, alist9, alist10;
+ 
 	/**
      * Creates new form StartupScreen
      */
@@ -40,39 +43,7 @@ public class StartupScreen extends javax.swing.JFrame {
         ArrayList list;
         ArrayList<JComboBox> comboGrp1;
    }
-    // private void Fillcombo(){
-
-        // try{
-            // String sql = "select * from courses WHERE course_type = 'CSCI' AND course_num >= 157 AND course_num <= 201";
-            // pst = conn.prepareStatement(sql);
-            // rs = pst.executeQuery();
-            // while (rs.next()){
-                // String cid = rs.getString("course_id");
-//                jComboBox1.addItem(cid);
-//                jComboBox2.addItem(cid);
-
-                /*for(int i = 1; i<48; i++){
-                jComboBox1.addItem(cid);*/
-            // }
-        // } catch(Exception e){
-            // JOptionPane.showMessageDialog(null, e);
-        // }
-        // try{
-            // String sql2 = "select * from courses WHERE course_type = 'CSCI' AND course_num >= 201 AND course_num <= 312";
-            // pst = conn.prepareStatement(sql2);
-            // rs = pst.executeQuery();
-            // while (rs.next()){
-                // String cid = rs.getString("course_id");
-//                jComboBox7.addItem(cid);
-//                jComboBox8.addItem(cid);
-//                jComboBox9.addItem(cid);
-//                jComboBox10.addItem(cid);
-            // }
-        // }catch(Exception e){
-            // JOptionPane.showMessageDialog(null, e);
-        // }
-    // }
-
+  
     private void displayDropLocation(final String string) {
         SwingUtilities.invokeLater(new Runnable() {
                 public void run() {
@@ -266,6 +237,8 @@ public class StartupScreen extends javax.swing.JFrame {
         jLabel201.setText("Graduation Date:");
 
         jTextField3.setText("110");
+		
+		jTextField4.setText(calculateGraduation());
 
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
@@ -475,6 +448,7 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel2 = new DefaultListModel();
+		alist2 = listModel2;
         //listModel2.addElement(courseList.get(6));
         //listModel2.addElement(courseList.get(7));
         //listModel2.addElement(courseList.get(8));
@@ -646,6 +620,7 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel1 = new DefaultListModel();
+		alist1 = listModel1;
         //listModel1.addElement(courseList.get(0));
         //listModel1.addElement(courseList.get(1));
         //listModel1.addElement(courseList.get(2));
@@ -816,6 +791,7 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel4 = new DefaultListModel();
+		alist4 = listModel4;
 		//listModel4.addElement(courseList.get(18));
         //listModel4.addElement(courseList.get(19));
         //listModel4.addElement(courseList.get(20));
@@ -987,6 +963,7 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel3 = new DefaultListModel();
+		alist3 = listModel3;
 		//listModel3.addElement(courseList.get(12));
         //listModel3.addElement(courseList.get(13));
         //listModel3.addElement(courseList.get(14));
@@ -1156,6 +1133,7 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel6 = new DefaultListModel();
+		alist6 = listModel6;
 		//listModel6.addElement(courseList.get(30));
         //listModel6.addElement(courseList.get(31));
         //listModel6.addElement(courseList.get(32));
@@ -1326,6 +1304,7 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel5 = new DefaultListModel();
+		alist5 = listModel5;
 		//listModel5.addElement(courseList.get(24));
         //listModel5.addElement(courseList.get(25));
         //listModel5.addElement(courseList.get(26));
@@ -1495,7 +1474,8 @@ public class StartupScreen extends javax.swing.JFrame {
             .addComponent(jLabel207, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE)
         );
 
-        DefaultListModel listModel8 = new DefaultListModel();		
+        DefaultListModel listModel8 = new DefaultListModel();
+		alist8 = listModel8;		
         //listModel8.addElement(courseList.get(42));
         //listModel8.addElement(courseList.get(43));
         //listModel8.addElement(courseList.get(44));
@@ -1666,6 +1646,7 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel7 = new DefaultListModel();
+		alist7 = listModel7;
 		//listModel7.addElement(courseList.get(36));
         //listModel7.addElement(courseList.get(37));
         //listModel7.addElement(courseList.get(38));
@@ -1837,6 +1818,7 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel9 = new DefaultListModel();
+		alist9 = listModel9;
         //listModel9.addElement(courseList.get(48));
         //listModel9.addElement(courseList.get(49));
         //listModel9.addElement(courseList.get(50));
@@ -2007,6 +1989,7 @@ public class StartupScreen extends javax.swing.JFrame {
         );
 
         DefaultListModel listModel10 = new DefaultListModel();
+		alist10 = listModel10;
         //listModel10.addElement(courseList.get(54));
         //listModel10.addElement(courseList.get(55));
         //listModel10.addElement(courseList.get(56));
@@ -2244,6 +2227,11 @@ public class StartupScreen extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jPanel1);
 
         saveButton.setText("Save Changes");
+		saveButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                saveButtonMouseClicked(evt);
+            }
+        });
 
         cancelButton.setText("Cancel Changes");
 		cancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2338,11 +2326,90 @@ public class StartupScreen extends javax.swing.JFrame {
     private void editAccountButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editAccountButtonMouseClicked
         mediator.createEditScreen();
     }//GEN-LAST:event_editAccountButtonMouseClicked
+	
+	private void saveButtonMouseClicked(java.awt.event.MouseEvent evt) {
+		calculateGraduation();
+		Student.updateCourses(screenCourseList, loginName, conn);
+    }
 
-	private void cancelButtonMouseClicked(java.awt.event.MouseEvent evt) {
+    private void cancelButtonMouseClicked(java.awt.event.MouseEvent evt) {
         mediator.reloadStartupScreen(loginName);
     } 
 	
+    private String calculateGraduation() {
+        String date = "Unknown";
+        int result = 0;
+
+        for (int i = 0; i < 6; i++) {
+            //String stuff = alist1.get(i);
+            screenCourseList.add(i, (String) alist1.get(i));
+            screenCourseList.add(i + 6, (String) alist2.get(i));
+            screenCourseList.add(i + 12, (String) alist3.get(i));
+            screenCourseList.add(i + 18, (String) alist4.get(i));
+            screenCourseList.add(i + 24, (String) alist5.get(i));
+            screenCourseList.add(i + 30, (String) alist6.get(i));
+            screenCourseList.add(i + 36, (String) alist7.get(i));
+            screenCourseList.add(i + 42, (String) alist8.get(i));
+            screenCourseList.add(i + 48, (String) alist9.get(i));
+            screenCourseList.add(i + 54, (String) alist10.get(i));
+        }
+
+        if (screenCourseList.containsAll(Student.getDegreeProgram(loginName, conn))) {
+            ArrayList<Integer> listStatus = new ArrayList();
+            for (int i = 0; i < 6; i++) {
+                if (((String) alist1.get(1)).equals(" ")) {
+                    listStatus.set(0, listStatus.get(0) + 1);
+                }
+                if (((String) alist2.get(1)).equals(" ")) {
+                    listStatus.set(1, listStatus.get(1) + 1);
+                }
+                if (((String) alist3.get(1)).equals(" ")) {
+                    listStatus.set(2, listStatus.get(2) + 1);
+                }
+                if (((String) alist4.get(1)).equals(" ")) {
+                    listStatus.set(3, listStatus.get(3) + 1);
+                }
+                if (((String) alist5.get(1)).equals(" ")) {
+                    listStatus.set(4, listStatus.get(4) + 1);
+                }
+                if (((String) alist6.get(1)).equals(" ")) {
+                    listStatus.set(5, listStatus.get(5) + 1);
+                }
+                if (((String) alist7.get(1)).equals(" ")) {
+                    listStatus.set(6, listStatus.get(6) + 1);
+                }
+                if (((String) alist8.get(1)).equals(" ")) {
+                    listStatus.set(7, listStatus.get(7) + 1);
+                }
+                if (((String) alist9.get(1)).equals(" ")) {
+                    listStatus.set(8, listStatus.get(8) + 1);
+                }
+                if (((String) alist10.get(1)).equals(" ")) {
+                    listStatus.set(9, listStatus.get(9) + 1);
+                }
+            }
+            for (int i = 9; i >= 0; i--) {
+                if (listStatus.get(i) == 0) {
+                    result = i;
+                }
+            }
+            date = Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + result / 2);
+
+            if ((result % 2) == 0) {
+                date = Student.getSemester(loginName, conn) + date;
+            } else {
+                if (Student.getSemester(loginName, conn).equals("Fall")) {
+                    date = "Spring" + date;
+                } else {
+                    date = "Fall" + date;
+                }
+            }
+            return date;
+        } else {
+            return date;
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
