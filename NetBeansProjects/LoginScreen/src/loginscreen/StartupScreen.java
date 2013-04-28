@@ -2116,9 +2116,9 @@ public class StartupScreen extends javax.swing.JFrame {
 		alist9 = listModel9;
 		alist10 = listModel10;
 		jTextField4.setText(calculateGraduation());
-		System.out.println(listModel1.toString());
-		System.out.println("This is ListModel");
-		System.out.println(alist1.get(0));
+		//System.out.println(listModel1.toString());
+		//System.out.println("This is ListModel");
+		//System.out.println(alist1.get(0));
 		
 		/****************************************************************************************/
 		// semester labels
