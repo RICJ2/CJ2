@@ -2350,7 +2350,8 @@ public class StartupScreen extends javax.swing.JFrame {
     private void cancelButtonMouseClicked(java.awt.event.MouseEvent evt) {
         mediator.reloadStartupScreen(loginName);
     } 
-	
+
+    // This almost works right does not check for pre req and get major course list does not give variances in course choices
     private String calculateGraduation() {
         String date = "Unknown";
         int result = 0;
