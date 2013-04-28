@@ -674,11 +674,18 @@ public class StartupScreen extends javax.swing.JFrame {
                 catch (Exception e) { return false; }
 
                 // Perform the actual import.
+				boolean verify = Mediator.prereqVerify(data, screenCourseList);
                 if (insert) {
                     listModel1.add(index, data);
                 }
                 else {
+					if (verify == true){
                     listModel1.set(index, data);
+					calculateGraduation();
+					}
+					else {
+					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					}
                 }
                 return true;
 

@@ -157,5 +157,14 @@ class Mediator {
 			JOptionPane.showMessageDialog(null, e);
 		}
 		return folderClasses2;	
-	}	
+	}
+        
+        public static boolean prereqVerify (String d, ArrayList cl){
+           boolean verified = true;
+           if (d.equals("MATH_436   Discrete Mathematics   3cr")){
+               String prereq = "MATH_212   Calculus I   4cr";
+               verified = cl.contains(prereq);
+           }
+            return verified;
+        }
 }
