@@ -368,19 +368,24 @@ public class StartupScreen extends javax.swing.JFrame {
         DefaultMutableTreeNode rootNode = new DefaultMutableTreeNode("Major");
         DefaultMutableTreeNode folder = new DefaultMutableTreeNode("CSCI");
         rootNode.add(folder);
-        try{
-            String sql = "select * from courses WHERE course_type = 'CSCI'";
-            pst = conn.prepareStatement(sql);
-            rs = pst.executeQuery();
-            while (rs.next()){
-                String cid = rs.getString("course_id");
-                DefaultMutableTreeNode majorCoruses = new DefaultMutableTreeNode(cid);
-                folder.add(majorCoruses);
+		
+		ArrayList<String> folderClasses = new ArrayList(Arrays.asList("MATH_212", "CSCI_157", "CSCI_201"));
+		for (int i = 0; i < folderClasses.size(); i++){
+			DefaultMutableTreeNode majorCoruses = new DefaultMutableTreeNode(folderClasses.get(i));
+			folder.add(majorCoruses);}
+        // try{
+            // String sql = "select * from courses WHERE course_type = 'CSCI'";
+            // pst = conn.prepareStatement(sql);
+            // rs = pst.executeQuery();
+            // while (rs.next()){
+                // String cid = rs.getString("course_id");
+                // DefaultMutableTreeNode majorCoruses = new DefaultMutableTreeNode(cid);
+                // folder.add(majorCoruses);
 
-            }
-        } catch(Exception e){
-            JOptionPane.showMessageDialog(null, e);
-        }
+            // }
+        // } catch(Exception e){
+            // JOptionPane.showMessageDialog(null, e);
+        //}
         DefaultMutableTreeNode subFolder = new DefaultMutableTreeNode("Math");
         rootNode.add(subFolder);
         try{
