@@ -6,7 +6,9 @@ package loginscreen;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import javax.swing.JOptionPane;
 
 /**
@@ -64,11 +66,11 @@ class Mediator {
        editAcc.setVisible(true);
        start.setVisible(false);
    }
-      public void createDragNdrop(){
-          drag = new DragNdrop(this, conn);
-          drag.setVisible(true);
-          log.setVisible(false);
-      }
+      // public void createDragNdrop(){
+          // drag = new DragNdrop(this, conn);
+          // drag.setVisible(true);
+          // log.setVisible(false);
+      // }
     public void createLoginScreen(){
        log.setVisible(true);
        acc.setVisible(false);
@@ -111,6 +113,25 @@ class Mediator {
         return l;
     }
    
-   
+	public ArrayList fillDragNDrop(String step, String loginN, Connection conn){
+		ArrayList<String> folderClasses = new ArrayList(Arrays.asList("MATH_212", "CSCI_157", "CSCI_201"));
+		
+	String user_query = "";
+		
+	//try {
+//	prestmt = conn.prepareStatement(user_query);
+//        prestmt.setString(1, loginN);
+//        rs = prestmt.executeQuery();
+//	int i = 0;
+//        if (rs.next()) {
+//            folderClasses.add(rs.getString("course" + i));
+//            i++;
+//	}}
+//	//else{courseList = "notFound";}}
+//        catch (SQLException e) {
+//                JOptionPane.showMessageDialog(null, e);
+	//}
+	return folderClasses;
+        }
    
 }

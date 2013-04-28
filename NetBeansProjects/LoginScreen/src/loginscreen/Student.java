@@ -312,32 +312,32 @@ class Student{
 		
 	String user_query = "";
 		
-	try {
-	prestmt = c.prepareStatement(user_query);
-        prestmt.setString(1, loginN);
-        rs = prestmt.executeQuery();
-	int i = 0;
-        if (rs.next()) {
-            courseList.add(rs.getString("course" + i));
-            i++;
-	}}
-	//else{courseList = "notFound";}}
-        catch (SQLException e) {
-                JOptionPane.showMessageDialog(null, e);
-	}
+//	try {
+//	prestmt = c.prepareStatement(user_query);
+//        prestmt.setString(1, loginN);
+//        rs = prestmt.executeQuery();
+//	int i = 0;
+//        if (rs.next()) {
+//            courseList.add(rs.getString("course" + i));
+//            i++;
+//	}}
+//	//else{courseList = "notFound";}}
+//        catch (SQLException e) {
+//                JOptionPane.showMessageDialog(null, e);
+//	}
 	return courseList;
         }	
 
 	public static void updateCourses(ArrayList list,String loginName,Connection c){
 	
             String user_query = "";
-        try {
-            prestmt = c.prepareStatement(user_query);
-            prestmt.execute();
-
-        }
-        catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e);
-        }	
+//        try {
+//            prestmt = c.prepareStatement(user_query);
+//            prestmt.execute();
+//
+//        }
+//        catch (SQLException e) {
+//            JOptionPane.showMessageDialog(null, e);
+//        }	
 }
 }

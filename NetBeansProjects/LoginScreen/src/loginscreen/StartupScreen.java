@@ -369,7 +369,7 @@ public class StartupScreen extends javax.swing.JFrame {
         DefaultMutableTreeNode folder = new DefaultMutableTreeNode("CSCI");
         rootNode.add(folder);
 		
-		ArrayList<String> folderClasses = new ArrayList(Arrays.asList("MATH_212", "CSCI_157", "CSCI_201"));
+		ArrayList<String> folderClasses = mediator.fillDragNDrop("1", loginName, conn);
 		for (int i = 0; i < folderClasses.size(); i++){
 			DefaultMutableTreeNode majorCoruses = new DefaultMutableTreeNode(folderClasses.get(i));
 			folder.add(majorCoruses);}
