@@ -2122,7 +2122,7 @@ public class StartupScreen extends javax.swing.JFrame {
 		alist8 = listModel8;
 		alist9 = listModel9;
 		alist10 = listModel10;
-		jTextField4.setText(calculateGraduation());
+		calculateGraduation();
 		//System.out.println(listModel1.toString());
 		//System.out.println("This is ListModel");
 		//System.out.println(alist1.get(0));
@@ -2358,7 +2358,7 @@ public class StartupScreen extends javax.swing.JFrame {
     } 
 
     // This almost works right does not check for pre req and get major course list does not give variances in course choices
-    private String calculateGraduation() {
+    private void calculateGraduation() {
         String date = "Unknown";
         int result = 0;
 		
@@ -2411,23 +2411,25 @@ public class StartupScreen extends javax.swing.JFrame {
             }
             for (int i = 9; i >= 0; i--) {
                 if (listStatus.get(i) == 6) {
-                    result = i;
-                }
+                     result = i;
+                 }
+                else {result = i;
+                break;}
             }
             date = Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + result / 2);
-
-            if ((result % 2) == 1) {
+		
+            if ((result % 2) == 0) {
                 date = Student.getSemesterString(loginName, conn) + " " + date;
-            } else {
+             } else {
                 if (Student.getSemester(loginName, conn).equals("1")) {
                     date = "Spring " + date;
                 } else {
                     date = "Fall " + date;
                 }
             }
-            return date;
+			jTextField4.setText(date);
         } else {
-            return date;
+			jTextField4.setText(date);
         }
     }
     
