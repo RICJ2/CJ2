@@ -95,43 +95,67 @@ class Mediator {
 		editAcc.setVisible(false);
 	}	
    
-    public ArrayList fillCombo(String course1, String course2){
-		ArrayList <String> l = new ArrayList ();
-        
-            String sql = "select * from courses WHERE course_type = 'CSCI' AND course_num >= ? AND course_num <= ?";
-        try{ 
-            prestmt = conn.prepareStatement(sql);
-            prestmt.setString(1, course1);
-            prestmt.setString(1, course2);
-            rs = prestmt.executeQuery();
-            while (rs.next()){
-                l.add("CSCI" + rs.getString("course_id") + rs.getString("course_title"));
-            }
-        } catch(Exception e){
-            JOptionPane.showMessageDialog(null, e);
-        }
-        return l;
-    }
-   
 	public ArrayList fillDragNDrop(String step, String loginN, Connection conn){
-		ArrayList<String> folderClasses = new ArrayList(Arrays.asList("MATH_212", "CSCI_157", "CSCI_201"));
-		
-	String user_query = "";
-		
-	//try {
-//	prestmt = conn.prepareStatement(user_query);
-//        prestmt.setString(1, loginN);
-//        rs = prestmt.executeQuery();
-//	int i = 0;
-//        if (rs.next()) {
-//            folderClasses.add(rs.getString("course" + i));
-//            i++;
-//	}}
-//	//else{courseList = "notFound";}}
-//        catch (SQLException e) {
-//                JOptionPane.showMessageDialog(null, e);
-	//}
-	return folderClasses;
-        }
-   
+		ArrayList<String> folderClasses = new ArrayList();	
+		String user_query = "SELECT courses.course_id , courses.course_title, courses.cr_hours, dd.course_series FROM degree_details as dd left join courses on dd.course_degID = courses.id_number left join degree_prog on dd.degree_progID = degree_prog.iddegree_prog where course_series ='171'";
+		try{						
+			prestmt = conn.prepareStatement(user_query);
+			rs = prestmt.executeQuery();
+			while (rs.next()) {						
+					folderClasses.add(rs.getString("course_id")+"   "+ rs.getString("course_title")+"   "+rs.getString("courses.cr_hours")+"cr");				
+			}
+		}			
+		catch (SQLException e) {
+			JOptionPane.showMessageDialog(null, e);
+		}
+		return folderClasses;	
+	}					
+	
+	public ArrayList fillDragNDrop2(String step, String loginN, Connection conn){
+		ArrayList<String> folderClasses2 = new ArrayList();		 	
+		String user_query = "SELECT courses.course_id , courses.course_title, courses.cr_hours, dd.course_series FROM degree_details as dd left join courses on dd.course_degID = courses.id_number left join degree_prog on dd.degree_progID = degree_prog.iddegree_prog where course_series ='172'";
+		try{				
+			prestmt = conn.prepareStatement(user_query);
+			rs = prestmt.executeQuery();
+			while (rs.next()) {						
+				folderClasses2.add(rs.getString("course_id")+"   "+ rs.getString("course_title")+"   "+rs.getString("courses.cr_hours")+"cr");			
+			}				
+		}
+		catch (SQLException e) {
+			JOptionPane.showMessageDialog(null, e);
+		}
+		return folderClasses2;	
+	}
+	
+	public ArrayList fillDragNDrop3(String step, String loginN, Connection conn){
+		ArrayList<String> folderClasses2 = new ArrayList();		 	
+		String user_query = "SELECT courses.course_id , courses.course_title, courses.cr_hours, dd.course_series FROM degree_details as dd left join courses on dd.course_degID = courses.id_number left join degree_prog on dd.degree_progID = degree_prog.iddegree_prog where course_series ='173'";
+		try{				
+			prestmt = conn.prepareStatement(user_query);
+			rs = prestmt.executeQuery();
+			while (rs.next()) {						
+				folderClasses2.add(rs.getString("course_id")+"   "+ rs.getString("course_title")+"   "+rs.getString("courses.cr_hours")+"cr");			
+			}				
+		}
+		catch (SQLException e) {
+			JOptionPane.showMessageDialog(null, e);
+		}
+		return folderClasses2;	
+	}
+	
+	public ArrayList fillDragNDrop4(String step, String loginN, Connection conn){
+		ArrayList<String> folderClasses2 = new ArrayList();		 	
+		String user_query = "SELECT courses.course_id , courses.course_title, courses.cr_hours, dd.course_series FROM degree_details as dd left join courses on dd.course_degID = courses.id_number left join degree_prog on dd.degree_progID = degree_prog.iddegree_prog where course_series ='174'";
+		try{				
+			prestmt = conn.prepareStatement(user_query);
+			rs = prestmt.executeQuery();
+			while (rs.next()) {						
+				folderClasses2.add(rs.getString("course_id")+"   "+ rs.getString("course_title")+"   "+rs.getString("courses.cr_hours")+"cr");			
+			}				
+		}
+		catch (SQLException e) {
+			JOptionPane.showMessageDialog(null, e);
+		}
+		return folderClasses2;	
+	}	
 }

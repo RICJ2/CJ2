@@ -372,40 +372,34 @@ public class StartupScreen extends javax.swing.JFrame {
 		ArrayList<String> folderClasses = mediator.fillDragNDrop("1", loginName, conn);
 		for (int i = 0; i < folderClasses.size(); i++){
 			DefaultMutableTreeNode majorCoruses = new DefaultMutableTreeNode(folderClasses.get(i));
-			folder.add(majorCoruses);}
-        // try{
-            // String sql = "select * from courses WHERE course_type = 'CSCI'";
-            // pst = conn.prepareStatement(sql);
-            // rs = pst.executeQuery();
-            // while (rs.next()){
-                // String cid = rs.getString("course_id");
-                // DefaultMutableTreeNode majorCoruses = new DefaultMutableTreeNode(cid);
-                // folder.add(majorCoruses);
+			folder.add(majorCoruses); 
+		}
+			
+		DefaultMutableTreeNode subFolder1 = new DefaultMutableTreeNode("CSCI: Three Additional Courses From");
+        rootNode.add(subFolder1);
+		
+		ArrayList<String> folderClasses2 = mediator.fillDragNDrop2("1", loginName, conn);
+		for (int i = 0; i < folderClasses2.size(); i++){
+			DefaultMutableTreeNode majorCoruses = new DefaultMutableTreeNode(folderClasses2.get(i));
+			subFolder1.add(majorCoruses);
+		}
+		DefaultMutableTreeNode subFolder2 = new DefaultMutableTreeNode("CSCI: Cognates");
+        rootNode.add(subFolder2);
+		
+		ArrayList<String> folderClasses3 = mediator.fillDragNDrop3("1", loginName, conn);
+		for (int i = 0; i < folderClasses3.size(); i++){
+			DefaultMutableTreeNode majorCoruses = new DefaultMutableTreeNode(folderClasses3.get(i));
+			subFolder2.add(majorCoruses);
+		}
+		DefaultMutableTreeNode subFolder3 = new DefaultMutableTreeNode("CSCI: Math");
+        rootNode.add(subFolder3);
+		
+		ArrayList<String> folderClasses4 = mediator.fillDragNDrop4("1", loginName, conn);
+		for (int i = 0; i < folderClasses4.size(); i++){
+			DefaultMutableTreeNode majorCoruses = new DefaultMutableTreeNode(folderClasses4.get(i));
+			subFolder3.add(majorCoruses);
+		}
 
-            // }
-        // } catch(Exception e){
-            // JOptionPane.showMessageDialog(null, e);
-        //}
-        DefaultMutableTreeNode subFolder = new DefaultMutableTreeNode("Math");
-        rootNode.add(subFolder);
-        try{
-            String sql = "select * from courses WHERE course_type = 'MATH'";
-            pst = conn.prepareStatement(sql);
-            rs = pst.executeQuery();
-            while (rs.next()){
-                String cid = rs.getString("course_id");
-                DefaultMutableTreeNode majorCoruses = new DefaultMutableTreeNode(cid);
-                subFolder.add(majorCoruses);
-
-            }
-        } catch(Exception e){
-            JOptionPane.showMessageDialog(null, e);
-        }
-        //DefaultMutableTreeNode anya = new DefaultMutableTreeNode("Anya");
-        //folder.add(anya);
-        //folder.add(new DefaultMutableTreeNode("Bongo"));
-
-        //anya.add(new DefaultMutableTreeNode("Winky"));
         DefaultTreeModel model = new DefaultTreeModel(rootNode);
         tree = new JTree(model);
         tree.getSelectionModel().setSelectionMode
