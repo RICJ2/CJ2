@@ -502,11 +502,18 @@ public class StartupScreen extends javax.swing.JFrame {
                 catch (Exception e) { return false; }
 
                 // Perform the actual import.
-                if (insert) {
+                boolean verify = Mediator.prereqVerify(data, screenCourseList);
+				if (insert) {
                     listModel2.add(index, data);
                 }
                 else {
+					if (verify == true){
                     listModel2.set(index, data);
+					calculateGraduation();
+					}
+					else {
+					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					}
                 }
                 return true;
 
@@ -852,11 +859,18 @@ public class StartupScreen extends javax.swing.JFrame {
                 catch (Exception e) { return false; }
 
                 // Perform the actual import.
+				boolean verify = Mediator.prereqVerify(data, screenCourseList);
                 if (insert) {
                     listModel4.add(index, data);
                 }
                 else {
+					if (verify == true){
                     listModel4.set(index, data);
+					calculateGraduation();
+					}
+					else {
+					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					}
                 }
                 return true;
 
@@ -1024,10 +1038,17 @@ public class StartupScreen extends javax.swing.JFrame {
                 catch (Exception e) { return false; }
 
                 // Perform the actual import.
+				boolean verify = Mediator.prereqVerify(data, screenCourseList);
                 if (insert) {
                     listModel3.add(index, data);
                 }else {
+					if (verify == true){
                     listModel3.set(index, data);
+					calculateGraduation();
+					}
+					else {
+					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					}
                 }
                 return true;
 
@@ -1194,11 +1215,18 @@ public class StartupScreen extends javax.swing.JFrame {
                 catch (Exception e) { return false; }
 
                 // Perform the actual import.
+				boolean verify = Mediator.prereqVerify(data, screenCourseList);
                 if (insert) {
                     listModel6.add(index, data);
                 }
                 else {
+					if (verify == true){
                     listModel6.set(index, data);
+					calculateGraduation();
+					}
+					else {
+					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					}
                 }
                 return true;
 
@@ -1365,11 +1393,18 @@ public class StartupScreen extends javax.swing.JFrame {
                 catch (Exception e) { return false; }
 
                 // Perform the actual import.
+				boolean verify = Mediator.prereqVerify(data, screenCourseList);
                 if (insert) {
                     listModel5.add(index, data);
                 }
                 else {
+					if (verify == true){
                     listModel5.set(index, data);
+					calculateGraduation();
+					}
+					else {
+					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					}
                 }
                 return true;
 
@@ -1536,11 +1571,18 @@ public class StartupScreen extends javax.swing.JFrame {
                 catch (Exception e) { return false; }
 
                 // Perform the actual import.
+				boolean verify = Mediator.prereqVerify(data, screenCourseList);
                 if (insert) {
                     listModel8.add(index, data);
                 }
                 else {
+					if (verify == true){
                     listModel8.set(index, data);
+					calculateGraduation();
+					}
+					else {
+					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					}
                 }
                 return true;
 
@@ -1707,11 +1749,18 @@ public class StartupScreen extends javax.swing.JFrame {
                 catch (Exception e) { return false; }
 
                 // Perform the actual import.
+				boolean verify = Mediator.prereqVerify(data, screenCourseList);
                 if (insert) {
                     listModel7.add(index, data);
                 }
                 else {
+					if (verify == true){
                     listModel7.set(index, data);
+					calculateGraduation();
+					}
+					else {
+					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					}
                 }
                 return true;
 
@@ -1879,11 +1928,18 @@ public class StartupScreen extends javax.swing.JFrame {
                 catch (Exception e) { return false; }
 
                 // Perform the actual import.
+				boolean verify = Mediator.prereqVerify(data, screenCourseList);
                 if (insert) {
                     listModel9.add(index, data);
                 }
                 else {
+					if (verify == true){
                     listModel9.set(index, data);
+					calculateGraduation();
+					}
+					else {
+					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					}
                 }
                 return true;
 
@@ -2050,11 +2106,18 @@ public class StartupScreen extends javax.swing.JFrame {
                 catch (Exception e) { return false; }
 
                 // Perform the actual import.
+				boolean verify = Mediator.prereqVerify(data, screenCourseList);
                 if (insert) {
                     listModel10.add(index, data);
                 }
                 else {
+					if (verify == true){
                     listModel10.set(index, data);
+					calculateGraduation();
+					}
+					else {
+					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					}
                 }
                 return true;
 
