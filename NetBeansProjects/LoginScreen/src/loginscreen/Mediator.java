@@ -167,4 +167,10 @@ class Mediator {
            }
             return verified;
         }
+        
+        public static boolean dupCourse (String d, ArrayList cl){
+           boolean dupC;
+            dupC = cl.contains(d);
+            return dupC;
+        }
 }
