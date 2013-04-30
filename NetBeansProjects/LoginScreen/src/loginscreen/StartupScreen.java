@@ -503,17 +503,24 @@ public class StartupScreen extends javax.swing.JFrame {
 
                 // Perform the actual import.
                 boolean verify = Mediator.prereqVerify(data, screenCourseList);
+				boolean dupC = Mediator.dupCourse(data, screenCourseList);
 				if (insert) {
                     listModel2.add(index, data);
                 }
                 else {
-					if (verify == true){
-                    listModel2.set(index, data);
-					calculateGraduation();
+					if (dupC == false){
+						if (verify == true){
+						listModel2.set(index, data);
+						calculateGraduation();
+						}
+						else {
+						JOptionPane.showMessageDialog(null, "Prerequisite not met");
+						}
 					}
 					else {
-					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					JOptionPane.showMessageDialog(null, "Course already in list");
 					}
+					
                 }
                 return true;
 
@@ -682,17 +689,24 @@ public class StartupScreen extends javax.swing.JFrame {
 
                 // Perform the actual import.
 				boolean verify = Mediator.prereqVerify(data, screenCourseList);
+				boolean dupC = Mediator.dupCourse(data, screenCourseList);
                 if (insert) {
                     listModel1.add(index, data);
                 }
                 else {
-					if (verify == true){
-                    listModel1.set(index, data);
-					calculateGraduation();
+					if (dupC == false){
+						if (verify == true){
+						listModel1.set(index, data);
+						calculateGraduation();
+						}
+						else {
+						JOptionPane.showMessageDialog(null, "Prerequisite not met");
+						}
 					}
 					else {
-					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					JOptionPane.showMessageDialog(null, "Course already in list");
 					}
+					
                 }
                 return true;
 
@@ -860,16 +874,22 @@ public class StartupScreen extends javax.swing.JFrame {
 
                 // Perform the actual import.
 				boolean verify = Mediator.prereqVerify(data, screenCourseList);
+				boolean dupC = Mediator.dupCourse(data, screenCourseList);
                 if (insert) {
                     listModel4.add(index, data);
                 }
                 else {
-					if (verify == true){
-                    listModel4.set(index, data);
-					calculateGraduation();
+					if (dupC == false){
+						if (verify == true){
+						listModel4.set(index, data);
+						calculateGraduation();
+						}
+						else {
+						JOptionPane.showMessageDialog(null, "Prerequisite not met");
+						}
 					}
 					else {
-					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					JOptionPane.showMessageDialog(null, "Course already in list");
 					}
                 }
                 return true;
@@ -1039,15 +1059,21 @@ public class StartupScreen extends javax.swing.JFrame {
 
                 // Perform the actual import.
 				boolean verify = Mediator.prereqVerify(data, screenCourseList);
+				boolean dupC = Mediator.dupCourse(data, screenCourseList);
                 if (insert) {
                     listModel3.add(index, data);
                 }else {
-					if (verify == true){
-                    listModel3.set(index, data);
-					calculateGraduation();
+					if (dupC == false){
+						if (verify == true){
+						listModel3.set(index, data);
+						calculateGraduation();
+						}
+						else {
+						JOptionPane.showMessageDialog(null, "Prerequisite not met");
+						}
 					}
 					else {
-					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					JOptionPane.showMessageDialog(null, "Course already in list");
 					}
                 }
                 return true;
@@ -1216,16 +1242,22 @@ public class StartupScreen extends javax.swing.JFrame {
 
                 // Perform the actual import.
 				boolean verify = Mediator.prereqVerify(data, screenCourseList);
+				boolean dupC = Mediator.dupCourse(data, screenCourseList);
                 if (insert) {
                     listModel6.add(index, data);
                 }
                 else {
-					if (verify == true){
-                    listModel6.set(index, data);
-					calculateGraduation();
+					if (dupC == false){
+						if (verify == true){
+						listModel6.set(index, data);
+						calculateGraduation();
+						}
+						else {
+						JOptionPane.showMessageDialog(null, "Prerequisite not met");
+						}
 					}
 					else {
-					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					JOptionPane.showMessageDialog(null, "Course already in list");
 					}
                 }
                 return true;
@@ -1394,16 +1426,22 @@ public class StartupScreen extends javax.swing.JFrame {
 
                 // Perform the actual import.
 				boolean verify = Mediator.prereqVerify(data, screenCourseList);
+				boolean dupC = Mediator.dupCourse(data, screenCourseList);
                 if (insert) {
                     listModel5.add(index, data);
                 }
                 else {
-					if (verify == true){
-                    listModel5.set(index, data);
-					calculateGraduation();
+					if (dupC == false){
+						if (verify == true){
+						listModel5.set(index, data);
+						calculateGraduation();
+						}
+						else {
+						JOptionPane.showMessageDialog(null, "Prerequisite not met");
+						}
 					}
 					else {
-					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					JOptionPane.showMessageDialog(null, "Course already in list");
 					}
                 }
                 return true;
@@ -1572,16 +1610,22 @@ public class StartupScreen extends javax.swing.JFrame {
 
                 // Perform the actual import.
 				boolean verify = Mediator.prereqVerify(data, screenCourseList);
+				boolean dupC = Mediator.dupCourse(data, screenCourseList);
                 if (insert) {
                     listModel8.add(index, data);
                 }
                 else {
-					if (verify == true){
-                    listModel8.set(index, data);
-					calculateGraduation();
+					if (dupC == false){
+						if (verify == true){
+						listModel8.set(index, data);
+						calculateGraduation();
+						}
+						else {
+						JOptionPane.showMessageDialog(null, "Prerequisite not met");
+						}
 					}
 					else {
-					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					JOptionPane.showMessageDialog(null, "Course already in list");
 					}
                 }
                 return true;
@@ -1750,16 +1794,22 @@ public class StartupScreen extends javax.swing.JFrame {
 
                 // Perform the actual import.
 				boolean verify = Mediator.prereqVerify(data, screenCourseList);
+				boolean dupC = Mediator.dupCourse(data, screenCourseList);
                 if (insert) {
                     listModel7.add(index, data);
                 }
                 else {
-					if (verify == true){
-                    listModel7.set(index, data);
-					calculateGraduation();
+					if (dupC == false){
+						if (verify == true){
+						listModel7.set(index, data);
+						calculateGraduation();
+						}
+						else {
+						JOptionPane.showMessageDialog(null, "Prerequisite not met");
+						}
 					}
 					else {
-					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					JOptionPane.showMessageDialog(null, "Course already in list");
 					}
                 }
                 return true;
@@ -1929,16 +1979,22 @@ public class StartupScreen extends javax.swing.JFrame {
 
                 // Perform the actual import.
 				boolean verify = Mediator.prereqVerify(data, screenCourseList);
+				boolean dupC = Mediator.dupCourse(data, screenCourseList);
                 if (insert) {
                     listModel9.add(index, data);
                 }
                 else {
-					if (verify == true){
-                    listModel9.set(index, data);
-					calculateGraduation();
+					if (dupC == false){
+						if (verify == true){
+						listModel9.set(index, data);
+						calculateGraduation();
+						}
+						else {
+						JOptionPane.showMessageDialog(null, "Prerequisite not met");
+						}
 					}
 					else {
-					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					JOptionPane.showMessageDialog(null, "Course already in list");
 					}
                 }
                 return true;
@@ -2107,16 +2163,22 @@ public class StartupScreen extends javax.swing.JFrame {
 
                 // Perform the actual import.
 				boolean verify = Mediator.prereqVerify(data, screenCourseList);
+				boolean dupC = Mediator.dupCourse(data, screenCourseList);
                 if (insert) {
                     listModel10.add(index, data);
                 }
                 else {
-					if (verify == true){
-                    listModel10.set(index, data);
-					calculateGraduation();
+					if (dupC == false){
+						if (verify == true){
+						listModel10.set(index, data);
+						calculateGraduation();
+						}
+						else {
+						JOptionPane.showMessageDialog(null, "Prerequisite not met");
+						}
 					}
 					else {
-					JOptionPane.showMessageDialog(null, "Prerequisite not met");
+					JOptionPane.showMessageDialog(null, "Course already in list");
 					}
                 }
                 return true;
@@ -2424,20 +2486,22 @@ public class StartupScreen extends javax.swing.JFrame {
     private void calculateGraduation() {
         String date = "Unknown";
         int result = 0;
+        ArrayList<String> screenCourseList1 = new ArrayList(Arrays.asList(" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "));
+        
 		
         for (int i = 0; i < 6; i++) {
-            screenCourseList.add(i, (String) alist1.get(i));
-            screenCourseList.add(i + 6, (String) alist2.get(i));
-            screenCourseList.add(i + 12, (String) alist3.get(i));
-            screenCourseList.add(i + 18, (String) alist4.get(i));
-            screenCourseList.add(i + 24, (String) alist5.get(i));
-            screenCourseList.add(i + 30, (String) alist6.get(i));
-            screenCourseList.add(i + 36, (String) alist7.get(i));
-            screenCourseList.add(i + 42, (String) alist8.get(i));
-            screenCourseList.add(i + 48, (String) alist9.get(i));
-            screenCourseList.add(i + 54, (String) alist10.get(i));
+            screenCourseList1.add(i, (String) alist1.get(i));
+            screenCourseList1.add(i + 6, (String) alist2.get(i));
+            screenCourseList1.add(i + 12, (String) alist3.get(i));
+            screenCourseList1.add(i + 18, (String) alist4.get(i));
+            screenCourseList1.add(i + 24, (String) alist5.get(i));
+            screenCourseList1.add(i + 30, (String) alist6.get(i));
+            screenCourseList1.add(i + 36, (String) alist7.get(i));
+            screenCourseList1.add(i + 42, (String) alist8.get(i));
+            screenCourseList1.add(i + 48, (String) alist9.get(i));
+            screenCourseList1.add(i + 54, (String) alist10.get(i));
         }
-
+        screenCourseList = screenCourseList1;
         if (screenCourseList.containsAll(Student.getDegreeProgram(loginName, conn))) {
             ArrayList<Integer> listStatus = new ArrayList(Arrays.asList(0, 0, 0, 0, 0, 0, 0, 0, 0, 0));
             for (int i = 0; i < 6; i++) {
