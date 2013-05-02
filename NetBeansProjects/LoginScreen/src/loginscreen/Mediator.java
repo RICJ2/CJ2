@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author ChrisO
+ * @author CJ2
  */
 //declarations
 class Mediator {
