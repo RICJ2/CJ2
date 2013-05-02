@@ -11,16 +11,14 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author jroberti
+ * @author CJ2
  */
 public class LoginScreenForm extends javax.swing.JFrame {
     Mediator mediator;
     Connection conn = null;
 
 
-    /**
-     * Creates new form LoginScreenForm
-     */
+    // Creates new form LoginScreenForm
     public LoginScreenForm(Mediator m, Connection c) {
         mediator = m;
         conn = c;
@@ -251,7 +249,8 @@ public class LoginScreenForm extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    //This method is executed when a user is logging into the program
+    //it checks for validation of login name and password
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
        String userName = username.getText();
@@ -289,7 +288,7 @@ public class LoginScreenForm extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         mediator.newCreateAccountPage();
     }//GEN-LAST:event_jButton3ActionPerformed
-
+//When the can't access account button is selected
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         JOptionPane.showMessageDialog(null, "Become a Software Engineer and program a fix for your problem!!!!!");
     }//GEN-LAST:event_jLabel8MouseClicked

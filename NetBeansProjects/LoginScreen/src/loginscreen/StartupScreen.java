@@ -18,8 +18,9 @@ import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreeSelectionModel;
 /**
  *
- * @author jroberti
+ * @author CJ2
  */
+//Method to populate via an array list the courses for the users degree program
 public class StartupScreen extends javax.swing.JFrame {
  Mediator mediator;
  String loginName;
@@ -28,10 +29,10 @@ public class StartupScreen extends javax.swing.JFrame {
  PreparedStatement pst = null;
  ArrayList<String> screenCourseList = new ArrayList(Arrays.asList(" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "));
  ArrayList<String> courseList = new ArrayList();
- ArrayList<String> courseListBA = new ArrayList(Arrays.asList("MATH_212 Calculus I 4cr", "CSCI_157 Introduction to Algorithmic Thinking 3cr", "CSCI_201 Computer Programming I 3cr", " ", " ", " ", "MATH_436 Discrete Mathematics 3cr", "CSCI_221 Computer Programming II 3cr", "CSCI_305 Functional Programming 3cr", "CSCI_312 Computer Organization and Architecture I 4cr", " ", " ", "CSCI_313 Computer Organization and Architecture II 3cr", "CSCI_315 Information Structures 3cr", " ", " ", " ", " ", "CSCI_325 Organization of Programming Languages 3cr", "CSCI_423 Analysis of Algorithms 4cr", "CSCI_435 Operating Systems 3cr", "CSCI_455 Database Systems 3cr", " ", " ", "CSCI_401 Software Engineering 3cr", "CSCI_415 Software Testing 4cr", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "));   
- ArrayList<String> courseListBS = new ArrayList(Arrays.asList("MATH_212 Calculus I 4cr", "CSCI_157 Introduction to Algorithmic Thinking 3cr", "CSCI_201 Computer Programming I 3cr", "ENGL_231 Writing for Digital and Multimedia 4cr", "PHIL_206 Ethics 3cr", " ", "MATH_213 Calculus II 4cr", "CSCI_221 Computer Programming II 3cr", "CSCI_305 Functional Programming 3cr", "CSCI_312 Computer Organization and Architecture I 4cr", " ", " ", "CSCI_313 Computer Organization and Architecture II 3cr", "CSCI_315 Information Structures 3cr", "MATH_436 Discrete Mathematics 3cr", "MATH_248 Business Statistics I 4cr", " ", " ", "CSCI_325 Organization of Programming Languages 3cr", "CSCI_423 Analysis of Algorithms 4cr", "CSCI_435 Operating Systems 3cr", "CSCI_455 Database Systems 3cr", " ", " ", "CSCI_401 Software Engineering 3cr", "CSCI_415 Software Testing 4cr", "MATH_431 Number Theory 3cr", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "));   
+ ArrayList<String> courseListBA = new ArrayList(Arrays.asList("MATH_212   Calculus I   4cr", "CSCI_157   Introduction to Algorithmic Thinking   3cr", "CSCI_201   Computer Programming I   3cr", " ", " ", " ", "MATH_436   Discrete Mathematics   3cr", "CSCI_221   Computer Programming II   3cr", "CSCI_305   Functional Programming   3cr", "CSCI_312   Computer Organization and Architecture I   4cr", " ", " ", "CSCI_313   Computer Organization and Architecture II   3cr", "CSCI_315   Information Structures   3cr", " ", " ", " ", " ", "CSCI_325   Organization of Programming Languages   3cr", "CSCI_423   Analysis of Algorithms   4cr", "CSCI_435 Operating Systems   3cr", "CSCI_455   Database Systems   3cr", " ", " ", "CSCI_401   Software Engineering   3cr", "CSCI_415   Software Testing   4cr", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "));   
+ ArrayList<String> courseListBS = new ArrayList(Arrays.asList("MATH_212   Calculus I   4cr", "CSCI_157   Introduction to Algorithmic Thinking   3cr", "CSCI_201   Computer Programming I   3cr", "ENGL_231   Writing for Digital and Multimedia   4cr", "PHIL_206   Ethics   3cr", " ", "MATH_213   Calculus II   4cr", "CSCI_221   Computer Programming II   3cr", "CSCI_305   Functional Programming   3cr", "CSCI_312   Computer Organization and Architecture I   4cr", " ", " ", "CSCI_313   Computer Organization and Architecture II   3cr", "CSCI_315   Information Structures   3cr", "MATH_436   Discrete Mathematics   3cr", "MATH_248   Business Statistics I   4cr", " ", " ", "CSCI_325   Organization of Programming Languages   3cr", "CSCI_423   Analysis of Algorithms   4cr", "CSCI_435   Operating Systems   3cr", "CSCI_455   Database Systems   3cr", " ", " ", "CSCI_401   Software Engineering   3cr", "CSCI_415   Software Testing   4cr", "MATH_431   Number Theory   3cr", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "));   
  DefaultListModel alist1, alist2, alist3, alist4, alist5, alist6, alist7, alist8, alist9, alist10;
- 
+
 	/**
      * Creates new form StartupScreen
      */
@@ -43,7 +44,8 @@ public class StartupScreen extends javax.swing.JFrame {
         ArrayList list;
         ArrayList<JComboBox> comboGrp1;
    }
-  
+    //method is used in conjunction with the array and when a selection is attempted
+    //to do a drag and drop
     private void displayDropLocation(final String string) {
         SwingUtilities.invokeLater(new Runnable() {
                 public void run() {
@@ -2472,7 +2474,7 @@ public class StartupScreen extends javax.swing.JFrame {
     private void editAccountButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editAccountButtonMouseClicked
         mediator.createEditScreen();
     }//GEN-LAST:event_editAccountButtonMouseClicked
-	
+
 	private void saveButtonMouseClicked(java.awt.event.MouseEvent evt) {
 		calculateGraduation();
 		Student.updateCourses(screenCourseList, loginName, conn);
@@ -2480,15 +2482,16 @@ public class StartupScreen extends javax.swing.JFrame {
 
     private void cancelButtonMouseClicked(java.awt.event.MouseEvent evt) {
         mediator.reloadStartupScreen(loginName);
-    } 
+    }
 
-    // This almost works right does not check for pre req and get major course list does not give variances in course choices
+    // This almost works right does not check for pre req and get major course list
+    //does not give variances in course choices (for future use)
     private void calculateGraduation() {
         String date = "Unknown";
         int result = 0;
         ArrayList<String> screenCourseList1 = new ArrayList(Arrays.asList(" ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "));
-        
-		
+
+
         for (int i = 0; i < 6; i++) {
             screenCourseList1.add(i, (String) alist1.get(i));
             screenCourseList1.add(i + 6, (String) alist2.get(i));
@@ -2544,7 +2547,7 @@ public class StartupScreen extends javax.swing.JFrame {
                 break;}
             }
             date = Integer.toString(Integer.parseInt(Student.getYear(loginName, conn)) + result / 2);
-		
+
             if ((result % 2) == 0) {
                 date = Student.getSemesterString(loginName, conn) + " " + date;
              } else {
@@ -2559,7 +2562,7 @@ public class StartupScreen extends javax.swing.JFrame {
 			jTextField4.setText(date);
         }
     }
-    
+
     /**
      * @param args the command line arguments
      */

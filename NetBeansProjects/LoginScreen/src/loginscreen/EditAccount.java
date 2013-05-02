@@ -135,7 +135,7 @@ public class EditAccount extends javax.swing.JFrame {
 		passwordTextField.setText(Student.getPassword(loginName, conn));
 		confirmTextField.setText(Student.getConfirmPassword(loginName, conn));
 		semesterComboBox.setSelectedIndex((Integer.parseInt(Student.getSemester(loginName, conn)) - 1));
-		majorComboBox.setSelectedIndex(18 - Integer.parseInt(Student.getMajorNum(loginName, conn)));
+		majorComboBox.setSelectedIndex((Integer.parseInt(Student.getMajorNum(loginName, conn)) + 1) - 18);
 		yearComboBox.setSelectedIndex(Integer.parseInt(Student.getYear(loginName, conn)) - year);
 
         javax.swing.GroupLayout RightInnerJpanelLayout = new javax.swing.GroupLayout(RightInnerJpanel);
@@ -285,7 +285,7 @@ public class EditAccount extends javax.swing.JFrame {
     private void cancelButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelButtonMouseClicked
         mediator.showStartup();
     }//GEN-LAST:event_cancelButtonMouseClicked
-
+    //method to retrieve the passed data and populate the text fields
     private void editAccountButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editAccountButtonMouseClicked
         if (passwordTextField.getText().equals(confirmTextField.getText())){
 		Student.updateAccount(firstNameText.getText(), lastNameText.getText(),
