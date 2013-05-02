@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Chris
+ * @author CJ2
  */
 //declaration of the variables for this class
 public class CreateAccount extends javax.swing.JFrame {

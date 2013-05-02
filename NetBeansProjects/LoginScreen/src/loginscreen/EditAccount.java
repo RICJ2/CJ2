@@ -285,7 +285,7 @@ public class EditAccount extends javax.swing.JFrame {
     private void cancelButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cancelButtonMouseClicked
         mediator.showStartup();
     }//GEN-LAST:event_cancelButtonMouseClicked
-
+    //method to retrieve the passed data and populate the text fields
     private void editAccountButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editAccountButtonMouseClicked
         if (passwordTextField.getText().equals(confirmTextField.getText())){
 		Student.updateAccount(firstNameText.getText(), lastNameText.getText(),

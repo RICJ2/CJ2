@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author ChrisO
+ * @author CJ2
  */
 public class DataB {
 
@@ -21,7 +21,8 @@ public class DataB {
     static ResultSet rs;
     public DataB()
     {}
-
+// THIS CLASS IS USED AS THE MAIN CONNECTION TO THE DATABASE ANY CALLS FOR CONNECTIVITY ARE
+    //DONE THRU THIS CLASS.
     public static Connection openConnectDb(){
 
         try{
